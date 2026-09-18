@@ -1,0 +1,5677 @@
+{
+  "systems": {
+    "battery": {
+      "label": "Battery",
+      "description": "The 12 V battery, its terminals and the earth strap, and the current that the parked car takes",
+      "entry": "q_bat_start"
+    },
+    "alternator": {
+      "label": "Alternator and belt",
+      "description": "The alternator, its regulator and diodes, and the auxiliary belt that drives it",
+      "entry": "q_alt_symptom"
+    },
+    "starter": {
+      "label": "Starter motor",
+      "description": "The starter motor and its solenoid",
+      "entry": "q_sta_symptom"
+    },
+    "fuel_pump": {
+      "label": "Fuel pump and filter",
+      "description": "The in-tank fuel pump, its relay, and the fuel filter",
+      "entry": "q_fp_symptom"
+    },
+    "injectors": {
+      "label": "Fuel injectors",
+      "description": "The fuel injectors and the fuel mixture that they give",
+      "entry": "q_inj_symptom"
+    },
+    "ignition": {
+      "label": "Ignition",
+      "description": "The ignition coils, the spark plugs and the crankshaft position sensor",
+      "entry": "q_ign_symptom"
+    },
+    "cooling_fan": {
+      "label": "Radiator fan",
+      "description": "The radiator fan motor, its fuse and its relay",
+      "entry": "q_fan_when"
+    },
+    "thermostat": {
+      "label": "Thermostat",
+      "description": "The thermostat that controls the coolant flow through the radiator",
+      "entry": "q_th_symptom"
+    },
+    "water_pump": {
+      "label": "Water pump and coolant circuit",
+      "description": "The water pump, the coolant hoses and the head gasket",
+      "entry": "q_wp_symptom"
+    },
+    "brakes": {
+      "label": "Brakes",
+      "description": "The pads, the discs, the calipers and the brake hydraulics",
+      "entry": "q_brk_symptom"
+    },
+    "abs": {
+      "label": "ABS",
+      "description": "The wheel speed sensors and the ABS pump and valve module",
+      "entry": "q_abs_codes"
+    },
+    "wheel_bearings": {
+      "label": "Wheel bearings and drive shafts",
+      "description": "The wheel bearings, the hubs and the constant velocity joints",
+      "entry": "q_whl_noise"
+    },
+    "can_bus": {
+      "label": "CAN bus",
+      "description": "The CAN network wires, connectors and the gateway module",
+      "entry": "q_can_symptom"
+    },
+    "ecu": {
+      "label": "Engine ECU",
+      "description": "The engine control unit, its power supply and the immobiliser",
+      "entry": "q_ecu_symptom"
+    },
+    "clutch": {
+      "label": "Clutch",
+      "description": "The clutch plate, the clutch hydraulics and the dual-mass flywheel",
+      "entry": "q_clu_symptom"
+    },
+    "exhaust": {
+      "label": "Exhaust",
+      "description": "The exhaust pipes and boxes, the catalytic converter and the oxygen sensors",
+      "entry": "q_exh_symptom"
+    }
+  },
+  "symptoms": {
+    "slow_crank": {
+      "label": "Slow crank",
+      "description": "The engine turns slowly when the driver starts it"
+    },
+    "click_no_crank": {
+      "label": "Click, no crank",
+      "description": "One click or rapid clicks at the start, and the engine does not turn"
+    },
+    "dim_lights": {
+      "label": "Dim lights",
+      "description": "The headlights or the dashboard lights are dimmer than normal"
+    },
+    "flat_after_standing": {
+      "label": "Flat after standing",
+      "description": "The battery is flat after the car stands for a night or a few days"
+    },
+    "low_resting_voltage": {
+      "label": "Low resting voltage",
+      "description": "Sensor value: the resting battery voltage is less than 12.2 V"
+    },
+    "old_battery": {
+      "label": "Old battery",
+      "description": "Service history: the battery is more than five years old"
+    },
+    "terminal_corrosion": {
+      "label": "Terminal corrosion",
+      "description": "Technician note: a white or green deposit on the battery terminals"
+    },
+    "jump_start_history": {
+      "label": "Recent jump starts",
+      "description": "Service history: the car needed a jump start in the last month"
+    },
+    "battery_light": {
+      "label": "Battery light while driving",
+      "description": "The battery warning light comes on while the engine runs"
+    },
+    "low_charge_voltage": {
+      "label": "Low charge voltage",
+      "description": "Code P0562, or a charge voltage of less than 13.2 V at 2000 rpm"
+    },
+    "belt_squeal": {
+      "label": "Belt squeal",
+      "description": "A squeal from the engine bay, worst at a cold start or with the lights and heater on"
+    },
+    "flickering_lights": {
+      "label": "Flickering lights",
+      "description": "The lights flicker or pulse with the engine speed"
+    },
+    "starter_grind": {
+      "label": "Starter grind",
+      "description": "A grinding or whirring noise from the starter at the start"
+    },
+    "starter_intermittent": {
+      "label": "Starter works sometimes",
+      "description": "The starter works on some attempts and not on others"
+    },
+    "crank_no_start": {
+      "label": "Cranks but does not fire",
+      "description": "The engine turns at normal speed but does not start"
+    },
+    "no_pump_prime": {
+      "label": "No fuel pump hum",
+      "description": "No hum from the fuel tank for two seconds when the ignition turns on"
+    },
+    "low_fuel_pressure": {
+      "label": "Low fuel pressure",
+      "description": "Code P0087, or a fuel rail pressure less than the specification"
+    },
+    "lean_code": {
+      "label": "Lean mixture code",
+      "description": "Code P0171 or P0174, the fuel mixture is too lean"
+    },
+    "hesitation": {
+      "label": "Hesitation",
+      "description": "The engine hesitates or stumbles when the driver accelerates hard"
+    },
+    "power_loss": {
+      "label": "Loss of power",
+      "description": "The car lacks power, most at high speed or up a hill"
+    },
+    "fuel_filter_overdue": {
+      "label": "Fuel filter overdue",
+      "description": "Service history: the fuel filter change is overdue"
+    },
+    "single_misfire_code": {
+      "label": "One-cylinder misfire code",
+      "description": "Code P0301 to P0304, a misfire on one cylinder"
+    },
+    "random_misfire_code": {
+      "label": "Random misfire code",
+      "description": "Code P0300, misfires on more than one cylinder"
+    },
+    "rough_idle": {
+      "label": "Rough idle",
+      "description": "The engine shakes or idles unevenly when the car is stationary"
+    },
+    "flashing_mil": {
+      "label": "Flashing engine light",
+      "description": "The engine warning light flashes while the car drives"
+    },
+    "high_fuel_use": {
+      "label": "High fuel use",
+      "description": "The fuel consumption is higher than normal"
+    },
+    "plugs_overdue": {
+      "label": "Spark plugs overdue",
+      "description": "Service history: the spark plug change is overdue"
+    },
+    "no_rpm_signal": {
+      "label": "No rpm signal",
+      "description": "Code P0335, or the rpm reads zero while the engine cranks"
+    },
+    "overheat_gauge": {
+      "label": "Overheats",
+      "description": "The temperature gauge goes into the red, or a coolant temperature warning comes on"
+    },
+    "overheat_in_traffic": {
+      "label": "Overheats in traffic",
+      "description": "The engine overheats when the car is stationary or in slow traffic"
+    },
+    "overheat_on_road": {
+      "label": "Overheats at speed",
+      "description": "The engine overheats at a steady speed on the open road"
+    },
+    "coolant_temp_high": {
+      "label": "High coolant temperature",
+      "description": "Code P0217, or a coolant temperature of more than 110 °C"
+    },
+    "fan_not_running": {
+      "label": "Fan does not run",
+      "description": "Technician note: the radiator fan does not run when the engine is hot"
+    },
+    "heater_cold": {
+      "label": "Cold heater",
+      "description": "The heater blows cold or only warm air"
+    },
+    "slow_warm_up": {
+      "label": "Slow warm-up",
+      "description": "The temperature gauge stays low or takes a long time to rise"
+    },
+    "p0128_code": {
+      "label": "Thermostat code",
+      "description": "Code P0128, the coolant temperature stays below the thermostat temperature"
+    },
+    "coolant_loss": {
+      "label": "Coolant loss",
+      "description": "The coolant level drops between top-ups"
+    },
+    "coolant_puddle": {
+      "label": "Coolant puddle",
+      "description": "A pink, blue or green puddle under the front of the car"
+    },
+    "sweet_smell": {
+      "label": "Sweet smell",
+      "description": "A sweet smell of coolant near the car or in the cabin"
+    },
+    "white_smoke": {
+      "label": "White smoke",
+      "description": "Thick white smoke with a sweet smell from the exhaust"
+    },
+    "brake_squeal": {
+      "label": "Brake squeal or grind",
+      "description": "A squeal or a metal grind when the driver brakes"
+    },
+    "brake_vibration": {
+      "label": "Brake vibration",
+      "description": "The pedal or the steering wheel shakes when the driver brakes"
+    },
+    "pull_when_braking": {
+      "label": "Pulls when braking",
+      "description": "The car pulls to one side when the driver brakes"
+    },
+    "hot_wheel": {
+      "label": "Hot wheel",
+      "description": "Technician note: one wheel is much hotter than the others after a drive"
+    },
+    "burning_smell": {
+      "label": "Burning smell",
+      "description": "A burning smell after a drive, a hill start or a tow"
+    },
+    "soft_pedal": {
+      "label": "Soft brake pedal",
+      "description": "The brake pedal is soft or spongy, or goes down too far"
+    },
+    "brake_warning_light": {
+      "label": "Brake warning light",
+      "description": "The red brake warning light is on"
+    },
+    "low_brake_fluid": {
+      "label": "Low brake fluid",
+      "description": "Technician note: the brake fluid level is below the minimum mark"
+    },
+    "abs_light": {
+      "label": "ABS light",
+      "description": "The ABS warning light is on"
+    },
+    "wheel_speed_code": {
+      "label": "Wheel speed code",
+      "description": "Code C0035 to C0050, a wheel speed sensor signal fault"
+    },
+    "traction_light": {
+      "label": "Traction control light",
+      "description": "The traction or stability control light is on"
+    },
+    "wheel_hum": {
+      "label": "Wheel hum",
+      "description": "A hum or drone from one wheel that rises with the road speed"
+    },
+    "click_on_turns": {
+      "label": "Click on turns",
+      "description": "A click or a knock from a front wheel on full lock"
+    },
+    "split_boot": {
+      "label": "Split drive shaft boot",
+      "description": "Technician note: a split drive shaft boot, and grease on the wheel arch"
+    },
+    "lost_comm_code": {
+      "label": "Lost communication code",
+      "description": "Code U0100 to U0155, a module lost communication on the bus"
+    },
+    "many_warning_lights": {
+      "label": "Many warning lights",
+      "description": "Several warning lights come on at the same time, or the gauges drop to zero"
+    },
+    "no_scan_link": {
+      "label": "No scan tool link",
+      "description": "The scan tool cannot connect to the engine ECU"
+    },
+    "security_light": {
+      "label": "Security light",
+      "description": "The key or security light flashes on the dashboard"
+    },
+    "water_ingress": {
+      "label": "Water ingress",
+      "description": "Technician note: water in a footwell, or corrosion at a connector"
+    },
+    "revs_no_speed": {
+      "label": "Revs without speed",
+      "description": "The engine revs rise but the road speed does not, in a high gear"
+    },
+    "hard_gear_change": {
+      "label": "Hard gear change",
+      "description": "The gears are hard to engage or grind, most at a standstill"
+    },
+    "clutch_pedal_floor": {
+      "label": "Clutch pedal to the floor",
+      "description": "The clutch pedal goes to the floor or stays down"
+    },
+    "idle_rattle": {
+      "label": "Rattle at idle",
+      "description": "A rattle from the gearbox area at idle that stops when the clutch pedal is down"
+    },
+    "pull_away_judder": {
+      "label": "Judder when pulling away",
+      "description": "The car shudders when it pulls away in first gear"
+    },
+    "loud_exhaust": {
+      "label": "Loud exhaust",
+      "description": "A loud exhaust, or a tick or blow at a cold start"
+    },
+    "cat_code": {
+      "label": "Catalyst code",
+      "description": "Code P0420, the catalytic converter efficiency is below the threshold"
+    },
+    "rotten_egg_smell": {
+      "label": "Rotten egg smell",
+      "description": "A smell of rotten eggs from the exhaust"
+    },
+    "o2_code": {
+      "label": "Oxygen sensor code",
+      "description": "Code P0130 to P0141, an oxygen sensor circuit or response fault"
+    }
+  },
+  "diagnoses": {
+    "flat_battery": {
+      "label": "Flat battery",
+      "description": "The battery is healthy but has too little charge to turn the starter",
+      "systems": [
+        "battery",
+        "starter"
+      ],
+      "prior": 0.12,
+      "explains": [
+        "slow_crank",
+        "click_no_crank",
+        "dim_lights",
+        "low_resting_voltage",
+        "jump_start_history"
+      ],
+      "causes": [],
+      "fix": [
+        "Measure the resting voltage across the battery terminals with the engine off.",
+        "Connect a smart charger and charge the battery to 12.6 V or more.",
+        "Do a load test on the charged battery.",
+        "Start the engine and measure the charge voltage at 2000 rpm, 13.8 V to 14.7 V.",
+        "Ask the customer about short trips or lights left on, and record the answer."
+      ]
+    },
+    "battery_end_of_life": {
+      "label": "Battery at end of life",
+      "description": "The battery no longer holds a charge, so it fails a load test even after a full charge",
+      "systems": [
+        "battery"
+      ],
+      "prior": 0.08,
+      "explains": [
+        "slow_crank",
+        "flat_after_standing",
+        "low_resting_voltage",
+        "old_battery"
+      ],
+      "causes": [],
+      "fix": [
+        "Charge the battery fully and do a load test to confirm the failure.",
+        "Connect a memory saver to the diagnostic socket.",
+        "Disconnect the negative terminal, then the positive terminal, and remove the clamp.",
+        "Install a new battery with the correct capacity and cold-crank rating.",
+        "Connect the positive terminal, then the negative terminal.",
+        "Register the new battery with the diagnostic tool if the car has a battery monitor.",
+        "Measure the charge voltage at 2000 rpm, 13.8 V to 14.7 V."
+      ]
+    },
+    "battery_terminals": {
+      "label": "Corroded or loose battery terminals",
+      "description": "Corrosion or a loose clamp at the battery terminals or the earth strap blocks the current",
+      "systems": [
+        "battery"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "click_no_crank",
+        "dim_lights",
+        "terminal_corrosion",
+        "starter_intermittent"
+      ],
+      "causes": [],
+      "fix": [
+        "Disconnect the negative terminal first, then the positive terminal.",
+        "Clean the posts and the clamps with a terminal brush and a baking soda solution.",
+        "Examine the cables and the earth strap for corrosion under the insulation.",
+        "Replace a clamp or a cable that has corrosion under the insulation.",
+        "Connect the positive terminal first, then the negative terminal, and tighten to the torque value.",
+        "Apply terminal protection grease.",
+        "Do a start test and measure the voltage drop across each connection, 0.2 V maximum."
+      ]
+    },
+    "parasitic_drain": {
+      "label": "Parasitic drain",
+      "description": "A circuit takes current while the car is parked and makes the battery go flat",
+      "systems": [
+        "battery",
+        "alternator"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "flat_after_standing",
+        "low_resting_voltage",
+        "jump_start_history"
+      ],
+      "causes": [
+        "flat_battery"
+      ],
+      "fix": [
+        "Charge the battery fully.",
+        "Lock the car and wait until the control units go to sleep, approximately 30 minutes.",
+        "Connect a clamp meter to the battery negative cable and measure the current.",
+        "Remove fuses one at a time and find the circuit that stops the drain.",
+        "Repair or replace the part on that circuit.",
+        "Measure the sleep current again, 50 mA maximum."
+      ]
+    },
+    "alternator_failure": {
+      "label": "Alternator failure",
+      "description": "The alternator or its regulator gives too little or too much charge voltage",
+      "systems": [
+        "alternator"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "battery_light",
+        "low_charge_voltage",
+        "dim_lights",
+        "flickering_lights"
+      ],
+      "causes": [
+        "flat_battery"
+      ],
+      "fix": [
+        "Measure the charge voltage at 2000 rpm with the lights and the fan on.",
+        "Disconnect the battery negative terminal.",
+        "Release the belt tension and remove the auxiliary belt from the alternator pulley.",
+        "Disconnect the alternator cables and remove the alternator.",
+        "Install the new alternator and connect the cables.",
+        "Install the belt, then connect the battery negative terminal.",
+        "Measure the charge voltage again, 13.8 V to 14.7 V."
+      ]
+    },
+    "aux_belt_slip": {
+      "label": "Slipping auxiliary belt",
+      "description": "The auxiliary belt is worn, glazed or loose, so it slips on the alternator pulley",
+      "systems": [
+        "alternator"
+      ],
+      "prior": 0.04,
+      "explains": [
+        "belt_squeal",
+        "battery_light",
+        "low_charge_voltage"
+      ],
+      "causes": [],
+      "fix": [
+        "Examine the belt for cracks, glazing and missing ribs.",
+        "Examine the tensioner and the idler pulleys for noise and play.",
+        "Release the tensioner and remove the belt.",
+        "Replace the tensioner if it has play or a weak spring.",
+        "Install a new belt on the correct routing.",
+        "Run the engine with full electrical load and listen for a squeal."
+      ]
+    },
+    "alternator_diode_leak": {
+      "label": "Leaking alternator diode",
+      "description": "A defective rectifier diode lets current flow back through the alternator while the car is parked",
+      "systems": [
+        "alternator",
+        "battery"
+      ],
+      "prior": 0.02,
+      "explains": [
+        "flat_after_standing",
+        "low_resting_voltage",
+        "jump_start_history",
+        "flickering_lights"
+      ],
+      "causes": [
+        "flat_battery"
+      ],
+      "fix": [
+        "Charge the battery fully.",
+        "Measure the sleep current with a clamp meter on the battery negative cable.",
+        "Disconnect the alternator B+ lead and measure the sleep current again.",
+        "Do an AC ripple test at the battery with the engine at 2000 rpm, 0.5 V AC maximum.",
+        "Replace the alternator or its rectifier.",
+        "Measure the sleep current again, 50 mA maximum."
+      ]
+    },
+    "starter_motor_worn": {
+      "label": "Worn starter motor",
+      "description": "The brushes, the bearings or the armature of the starter are worn, so it turns slowly or grinds",
+      "systems": [
+        "starter"
+      ],
+      "prior": 0.04,
+      "explains": [
+        "slow_crank",
+        "starter_grind",
+        "starter_intermittent"
+      ],
+      "causes": [],
+      "fix": [
+        "Disconnect the battery negative terminal.",
+        "Remove the starter supply cable and the solenoid trigger wire.",
+        "Remove the starter motor mounting bolts and remove the starter motor.",
+        "Examine the flywheel ring gear for damaged teeth.",
+        "Install the new starter motor and tighten the bolts to the torque value.",
+        "Connect the cables and the battery negative terminal.",
+        "Do five start tests and listen for a clean engagement."
+      ]
+    },
+    "starter_solenoid": {
+      "label": "Starter solenoid failure",
+      "description": "The solenoid contacts are burnt, so the solenoid clicks but sends no current to the starter motor",
+      "systems": [
+        "starter"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "click_no_crank",
+        "starter_intermittent"
+      ],
+      "causes": [],
+      "fix": [
+        "Measure the voltage at the solenoid trigger terminal while the key is at start.",
+        "Measure the voltage at the motor terminal of the solenoid during the same attempt.",
+        "Disconnect the battery negative terminal.",
+        "Remove the starter motor.",
+        "Replace the solenoid, or the starter assembly if the solenoid is not a separate part.",
+        "Install the starter and tighten the bolts to the torque value.",
+        "Connect the battery and do five start tests."
+      ]
+    },
+    "fuel_pump_failed": {
+      "label": "Fuel pump failure",
+      "description": "The in-tank fuel pump does not supply fuel pressure, so the engine cranks but does not fire",
+      "systems": [
+        "fuel_pump"
+      ],
+      "prior": 0.04,
+      "explains": [
+        "crank_no_start",
+        "no_pump_prime",
+        "low_fuel_pressure"
+      ],
+      "causes": [],
+      "fix": [
+        "Examine the fuel pump fuse and relay, and replace a defective part.",
+        "Connect a fuel pressure gauge to the fuel rail and measure the pressure at ignition on.",
+        "Release the fuel pressure and disconnect the battery negative terminal.",
+        "Remove the rear seat base or the access cover over the pump.",
+        "Replace the fuel pump module and install a new seal.",
+        "Connect the battery, turn the ignition on and examine the pump for leaks.",
+        "Measure the fuel pressure again and do a start test."
+      ]
+    },
+    "fuel_pump_weak": {
+      "label": "Weak fuel pump",
+      "description": "The fuel pump runs but cannot hold the fuel pressure at high load",
+      "systems": [
+        "fuel_pump",
+        "injectors"
+      ],
+      "prior": 0.04,
+      "explains": [
+        "low_fuel_pressure",
+        "lean_code",
+        "hesitation",
+        "power_loss"
+      ],
+      "causes": [],
+      "fix": [
+        "Connect a fuel pressure gauge and measure the pressure at idle and at full load.",
+        "Measure the pump delivery volume in 30 s.",
+        "Release the fuel pressure and disconnect the battery negative terminal.",
+        "Remove the access cover and replace the fuel pump module with a new seal.",
+        "Connect the battery and examine the pump for leaks.",
+        "Measure the fuel pressure at full load on a road test."
+      ]
+    },
+    "fuel_filter_clogged": {
+      "label": "Clogged fuel filter",
+      "description": "A blocked fuel filter lets the fuel pressure fall at high load",
+      "systems": [
+        "fuel_pump"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "low_fuel_pressure",
+        "hesitation",
+        "power_loss",
+        "fuel_filter_overdue"
+      ],
+      "causes": [
+        "fuel_pump_weak"
+      ],
+      "fix": [
+        "Release the fuel pressure.",
+        "Disconnect the battery negative terminal.",
+        "Remove the fuel filter and catch the fuel in a container.",
+        "Install the new filter with the flow arrow in the correct direction.",
+        "Connect the battery and turn the ignition on to prime the system.",
+        "Examine the filter connections for leaks.",
+        "Measure the fuel pressure at full load during a road test."
+      ]
+    },
+    "injector_clogged": {
+      "label": "Clogged injectors",
+      "description": "Deposits restrict the injectors, so all cylinders get too little fuel",
+      "systems": [
+        "injectors",
+        "fuel_pump"
+      ],
+      "prior": 0.04,
+      "explains": [
+        "lean_code",
+        "hesitation",
+        "random_misfire_code",
+        "rough_idle"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the fuel trims at idle and at 2500 rpm.",
+        "Do a smoke test on the intake to find a vacuum leak.",
+        "Remove the fuel rail and the injectors.",
+        "Do a flow test and clean the injectors in an ultrasonic cleaner.",
+        "Replace an injector that stays below 90 percent of its rated flow.",
+        "Install the injectors with new seals and clear the fuel trims.",
+        "Do a road test and read the fuel trims again, within 10 percent."
+      ]
+    },
+    "injector_stuck": {
+      "label": "Stuck injector",
+      "description": "One injector sticks open or closed, so one cylinder misfires",
+      "systems": [
+        "injectors",
+        "ignition"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "single_misfire_code",
+        "rough_idle",
+        "flashing_mil",
+        "high_fuel_use"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the misfire codes and find the cylinder.",
+        "Do an injector balance test.",
+        "Release the fuel pressure and disconnect the battery negative terminal.",
+        "Remove the defective injector.",
+        "Install the new injector with new seals.",
+        "Code the injector to the ECU with the diagnostic tool if the ECU requires it.",
+        "Clear the codes and do a road test under load."
+      ]
+    },
+    "ignition_coil": {
+      "label": "Ignition coil failure",
+      "description": "One coil gives a weak or no spark, so one cylinder misfires",
+      "systems": [
+        "ignition",
+        "injectors"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "single_misfire_code",
+        "rough_idle",
+        "flashing_mil",
+        "hesitation"
+      ],
+      "causes": [
+        "catalytic_converter_blocked"
+      ],
+      "fix": [
+        "Read the misfire codes and find the cylinder.",
+        "Disconnect the connector of the coil on that cylinder.",
+        "Remove the coil.",
+        "Examine the spark plug of that cylinder and replace it if it is worn.",
+        "Install the new coil and connect it.",
+        "Clear the codes and do a road test under load."
+      ]
+    },
+    "spark_plugs_worn": {
+      "label": "Worn spark plugs",
+      "description": "The spark plugs are worn or fouled, so the engine misfires on more than one cylinder",
+      "systems": [
+        "ignition"
+      ],
+      "prior": 0.06,
+      "explains": [
+        "random_misfire_code",
+        "rough_idle",
+        "high_fuel_use",
+        "plugs_overdue"
+      ],
+      "causes": [
+        "ignition_coil"
+      ],
+      "fix": [
+        "Remove the coils or the plug leads.",
+        "Remove the spark plugs and examine each one.",
+        "Set the gap of the new plugs to the specification.",
+        "Install the new plugs and tighten them to the torque value.",
+        "Install the coils or the plug leads.",
+        "Clear the codes and do a road test."
+      ]
+    },
+    "crank_sensor": {
+      "label": "Crankshaft position sensor failure",
+      "description": "The engine computer gets no crankshaft signal, so it gives no spark and no fuel",
+      "systems": [
+        "ignition"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "crank_no_start",
+        "no_rpm_signal"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the fault codes with a diagnostic tool.",
+        "Examine the sensor connector and the wires for damage and oil.",
+        "Measure the sensor resistance or the signal with an oscilloscope while the engine cranks.",
+        "Remove the sensor and clean the mounting face.",
+        "Install the new sensor with the correct air gap.",
+        "Clear the fault codes and do a start test."
+      ]
+    },
+    "radiator_fan_motor": {
+      "label": "Radiator fan motor failure",
+      "description": "The radiator fan motor is seized or burnt, so the engine overheats at low speed and in traffic",
+      "systems": [
+        "cooling_fan",
+        "thermostat"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "overheat_gauge",
+        "overheat_in_traffic",
+        "fan_not_running",
+        "coolant_temp_high"
+      ],
+      "causes": [
+        "head_gasket"
+      ],
+      "fix": [
+        "Examine the fan fuse and the fan relay.",
+        "Connect 12 V directly to the fan motor and see if it turns.",
+        "Examine the coolant temperature sensor and its signal.",
+        "Replace the fan motor, the relay or the sensor that is defective.",
+        "Run the engine to operating temperature and make sure that the fan starts."
+      ]
+    },
+    "fan_relay": {
+      "label": "Radiator fan relay failure",
+      "description": "The fan relay does not close when the ECU commands the fan, so the fan motor gets no power",
+      "systems": [
+        "cooling_fan"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "overheat_in_traffic",
+        "fan_not_running",
+        "coolant_temp_high"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the fan command in the live data with the engine hot.",
+        "Listen for a click from the fan relay when the ECU commands the fan.",
+        "Measure the voltage at the relay output terminal.",
+        "Replace the fan relay.",
+        "Run the engine to operating temperature and make sure that the fan starts."
+      ]
+    },
+    "thermostat_stuck_closed": {
+      "label": "Thermostat stuck closed",
+      "description": "The thermostat does not open, so the coolant does not flow through the radiator",
+      "systems": [
+        "thermostat",
+        "cooling_fan"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "overheat_gauge",
+        "overheat_on_road",
+        "coolant_temp_high"
+      ],
+      "causes": [
+        "head_gasket"
+      ],
+      "fix": [
+        "Let the engine cool fully.",
+        "Drain the coolant into a clean container.",
+        "Remove the thermostat housing and the thermostat.",
+        "Install the new thermostat with a new seal and the correct orientation.",
+        "Fill the system with coolant and bleed the air.",
+        "Run the engine to operating temperature and feel the top hose get hot."
+      ]
+    },
+    "thermostat_stuck_open": {
+      "label": "Thermostat stuck open",
+      "description": "The thermostat does not close, so the engine does not reach its operating temperature",
+      "systems": [
+        "thermostat"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "slow_warm_up",
+        "p0128_code",
+        "heater_cold",
+        "high_fuel_use"
+      ],
+      "causes": [],
+      "fix": [
+        "Compare the coolant sensor value with an infrared reading at the engine.",
+        "Let the engine cool fully and drain the coolant.",
+        "Remove the thermostat housing and the thermostat.",
+        "Install the new thermostat with a new seal and the correct orientation.",
+        "Fill the system with coolant and bleed the air.",
+        "Clear code P0128 and do a road test until the gauge reaches the normal position."
+      ]
+    },
+    "water_pump_leak": {
+      "label": "Water pump seal leak",
+      "description": "The water pump leaks at its seal, so coolant comes out at the weep hole",
+      "systems": [
+        "water_pump"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "coolant_loss",
+        "coolant_puddle",
+        "sweet_smell",
+        "overheat_gauge"
+      ],
+      "causes": [],
+      "fix": [
+        "Let the engine cool fully and drain the coolant.",
+        "Remove the drive belt or the timing belt that drives the pump.",
+        "Remove the water pump.",
+        "Clean the mounting face and install the new pump with a new gasket.",
+        "Install the belt and set its tension.",
+        "Fill the system with coolant and bleed the air.",
+        "Run the engine to operating temperature and examine the pump for leaks."
+      ]
+    },
+    "water_pump_impeller": {
+      "label": "Worn water pump impeller",
+      "description": "The impeller is eroded or loose on its shaft, so the coolant does not circulate at speed",
+      "systems": [
+        "water_pump"
+      ],
+      "prior": 0.02,
+      "explains": [
+        "overheat_gauge",
+        "overheat_on_road",
+        "heater_cold",
+        "coolant_temp_high"
+      ],
+      "causes": [],
+      "fix": [
+        "Measure the temperature of the top hose and the bottom hose with an infrared thermometer.",
+        "Let the engine cool fully and drain the coolant.",
+        "Remove the belt that drives the pump.",
+        "Remove the water pump and examine the impeller.",
+        "Install the new pump with a new gasket and set the belt tension.",
+        "Fill the system with coolant and bleed the air.",
+        "Do a road test at motorway speed and read the coolant temperature."
+      ]
+    },
+    "coolant_hose_leak": {
+      "label": "Coolant hose leak",
+      "description": "A coolant hose or a hose clip leaks, so the coolant level falls",
+      "systems": [
+        "water_pump"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "coolant_loss",
+        "coolant_puddle",
+        "sweet_smell"
+      ],
+      "causes": [],
+      "fix": [
+        "Let the engine cool fully.",
+        "Do a pressure test on the cooling system and find the leak.",
+        "Drain the coolant to below the leak.",
+        "Replace the hose and the clips.",
+        "Fill the system with coolant and bleed the air.",
+        "Do a pressure test again for 10 minutes."
+      ]
+    },
+    "head_gasket": {
+      "label": "Head gasket failure",
+      "description": "The head gasket leaks between a cylinder and a coolant passage",
+      "systems": [
+        "water_pump"
+      ],
+      "prior": 0.02,
+      "explains": [
+        "white_smoke",
+        "coolant_loss",
+        "sweet_smell",
+        "overheat_gauge"
+      ],
+      "causes": [],
+      "fix": [
+        "Do a combustion leak test on the coolant.",
+        "Do a compression test and a leak-down test on each cylinder.",
+        "Tell the customer the cost of the repair and get approval before the work.",
+        "Remove the cylinder head.",
+        "Send the head for a flatness check and a pressure test.",
+        "Install the head with a new gasket and new bolts, and tighten to the torque sequence.",
+        "Fill the coolant, bleed the air and change the engine oil.",
+        "Run the engine and do a combustion leak test again."
+      ]
+    },
+    "worn_pads": {
+      "label": "Worn brake pads",
+      "description": "The pad material is at or below the wear limit",
+      "systems": [
+        "brakes"
+      ],
+      "prior": 0.1,
+      "explains": [
+        "brake_squeal",
+        "brake_warning_light",
+        "low_brake_fluid"
+      ],
+      "causes": [],
+      "fix": [
+        "Lift the car and remove the wheels.",
+        "Measure the pad thickness and the disc thickness.",
+        "Push the caliper piston back and remove the old pads.",
+        "Clean the caliper carrier and apply brake grease to the contact points.",
+        "Install the new pads and the wear sensor.",
+        "Install the wheels and tighten the nuts to the torque value.",
+        "Pump the pedal until it is firm, then bed in the pads on a road test."
+      ]
+    },
+    "warped_discs": {
+      "label": "Warped brake discs",
+      "description": "The brake discs have run-out or uneven thickness, so the pedal pulses when braking",
+      "systems": [
+        "brakes"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "brake_vibration",
+        "pull_when_braking"
+      ],
+      "causes": [],
+      "fix": [
+        "Lift the car and remove the wheels.",
+        "Measure the disc run-out and the thickness variation.",
+        "Remove the calipers and the discs.",
+        "Clean the hub face of rust.",
+        "Install the new discs and new pads.",
+        "Install the calipers and the wheels, and tighten to the torque values.",
+        "Bed in the pads on a road test."
+      ]
+    },
+    "sticking_caliper": {
+      "label": "Sticking brake caliper",
+      "description": "A caliper piston or slide pin sticks, so one brake drags and gets hot",
+      "systems": [
+        "brakes"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "pull_when_braking",
+        "hot_wheel",
+        "burning_smell"
+      ],
+      "causes": [
+        "warped_discs"
+      ],
+      "fix": [
+        "Lift the car and find the wheel that drags.",
+        "Remove the wheel and the caliper.",
+        "Examine the slide pins and the piston seal.",
+        "Clean and grease the slide pins, or replace the caliper if the piston sticks.",
+        "Replace the pads and the disc if heat damaged them.",
+        "Bleed the brakes on that circuit.",
+        "Do a road test and measure the wheel temperatures."
+      ]
+    },
+    "air_in_brakes": {
+      "label": "Air in the brake fluid",
+      "description": "Air in the hydraulic system makes the pedal soft and spongy",
+      "systems": [
+        "brakes"
+      ],
+      "prior": 0.02,
+      "explains": [
+        "soft_pedal",
+        "brake_warning_light",
+        "low_brake_fluid"
+      ],
+      "causes": [],
+      "fix": [
+        "Examine the brake pipes, the hoses and the calipers for leaks.",
+        "Fill the reservoir with new brake fluid of the correct specification.",
+        "Bleed each wheel in the sequence of the manufacturer.",
+        "Do the ABS bleed procedure with the diagnostic tool if the manual requires it.",
+        "Fill the reservoir to the maximum mark.",
+        "Make sure that the pedal is firm, then do a road test."
+      ]
+    },
+    "abs_wheel_sensor": {
+      "label": "ABS wheel speed sensor fault",
+      "description": "A wheel speed sensor or its wire gives no signal or a bad signal",
+      "systems": [
+        "abs",
+        "wheel_bearings"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "abs_light",
+        "wheel_speed_code",
+        "traction_light"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the ABS fault codes and find the wheel.",
+        "Compare the wheel speeds in the live data on a road test.",
+        "Examine the sensor wire and the connector for damage.",
+        "Measure the sensor resistance or the signal.",
+        "Clean the sensor mounting and install the new sensor.",
+        "Clear the codes and do a road test above 30 km/h."
+      ]
+    },
+    "abs_pump_module": {
+      "label": "ABS pump and valve module fault",
+      "description": "The ABS pump motor or a valve in the hydraulic module fails",
+      "systems": [
+        "abs",
+        "brakes"
+      ],
+      "prior": 0.02,
+      "explains": [
+        "abs_light",
+        "traction_light",
+        "soft_pedal",
+        "brake_warning_light"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the ABS fault codes.",
+        "Do the pump and valve actuator tests with the diagnostic tool.",
+        "Measure the supply voltage at the pump motor fuse and the module connector.",
+        "Replace the ABS module or send it for repair.",
+        "Code the module to the vehicle with the diagnostic tool.",
+        "Do the ABS bleed procedure with the diagnostic tool.",
+        "Clear the codes and make sure that the pedal is firm, then do a road test."
+      ]
+    },
+    "wheel_bearing_worn": {
+      "label": "Worn wheel bearing",
+      "description": "A wheel bearing has play or rough races, so it hums, and it can disturb the wheel speed signal",
+      "systems": [
+        "wheel_bearings",
+        "abs"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "wheel_hum",
+        "abs_light",
+        "wheel_speed_code",
+        "traction_light"
+      ],
+      "causes": [],
+      "fix": [
+        "Lift the car and examine each wheel for play and a rough feel.",
+        "Remove the wheel, the caliper and the disc.",
+        "Remove the hub or press out the bearing.",
+        "Install the new bearing or hub with the magnetic encoder toward the sensor.",
+        "Install the disc, the caliper and the wheel, and tighten to the torque values.",
+        "Clear the ABS codes and do a road test."
+      ]
+    },
+    "cv_joint_worn": {
+      "label": "Worn CV joint",
+      "description": "The outer constant velocity joint of a drive shaft is worn, most often after the boot split",
+      "systems": [
+        "wheel_bearings"
+      ],
+      "prior": 0.04,
+      "explains": [
+        "click_on_turns",
+        "split_boot"
+      ],
+      "causes": [],
+      "fix": [
+        "Do a road test in a tight circle and find the side that clicks.",
+        "Lift the car and remove the wheel.",
+        "Remove the hub nut and the drive shaft.",
+        "Install a new drive shaft, or a new joint and boot with the correct grease.",
+        "Tighten the hub nut to the torque value.",
+        "Do a road test in tight circles in both directions."
+      ]
+    },
+    "can_wiring_fault": {
+      "label": "CAN wiring fault",
+      "description": "Water, corrosion or chafe damages a CAN wire or connector, so the modules lose communication",
+      "systems": [
+        "can_bus",
+        "ecu"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "lost_comm_code",
+        "many_warning_lights",
+        "no_scan_link",
+        "water_ingress",
+        "crank_no_start"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the lost-communication codes in all modules.",
+        "Measure the resistance between OBD pins 6 and 14 with the battery disconnected, 60 Ω.",
+        "Examine the connectors near water entry points for corrosion.",
+        "Divide the bus into sections and find the damaged section.",
+        "Repair the wire or replace the connector, and seal it.",
+        "Clear the codes in all modules and do a road test."
+      ]
+    },
+    "can_gateway_fault": {
+      "label": "Gateway module fault",
+      "description": "The gateway module does not pass messages between the CAN networks",
+      "systems": [
+        "can_bus"
+      ],
+      "prior": 0.02,
+      "explains": [
+        "lost_comm_code",
+        "many_warning_lights"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the codes in all modules and find the network that lost communication.",
+        "Measure the supply and the ground at the gateway module.",
+        "Replace the gateway module.",
+        "Code the new module to the vehicle with the diagnostic tool.",
+        "Clear the codes in all modules and do a road test."
+      ]
+    },
+    "ecu_power_supply": {
+      "label": "ECU power supply fault",
+      "description": "The ECU main relay, a fuse, or a supply or ground wire fails, so the engine ECU gets no power",
+      "systems": [
+        "ecu",
+        "can_bus"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "no_scan_link",
+        "crank_no_start",
+        "lost_comm_code",
+        "many_warning_lights"
+      ],
+      "causes": [],
+      "fix": [
+        "Measure the supply voltage at the ECU connector with the ignition on.",
+        "Examine the ECU main relay and the ECU fuses.",
+        "Measure the voltage drop on the ECU ground wires, 0.1 V maximum.",
+        "Replace the relay or the fuse, or repair the wire.",
+        "Clear the codes in all modules and do a start test."
+      ]
+    },
+    "immobiliser_fault": {
+      "label": "Immobiliser fault",
+      "description": "The immobiliser does not recognise the key, so the engine computer blocks the start",
+      "systems": [
+        "ecu"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "crank_no_start",
+        "security_light"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the immobiliser fault codes with a diagnostic tool.",
+        "Do a start test with the spare key.",
+        "Replace the key battery if the key has one.",
+        "Examine the antenna ring around the ignition barrel and its connector.",
+        "Program the key to the vehicle with the diagnostic tool.",
+        "Clear the fault codes and do three start tests."
+      ]
+    },
+    "ecu_internal_fault": {
+      "label": "ECU internal fault",
+      "description": "The engine ECU has an internal fault, so it does not respond although it has good power and a good bus",
+      "systems": [
+        "ecu"
+      ],
+      "prior": 0.01,
+      "explains": [
+        "no_scan_link",
+        "lost_comm_code",
+        "water_ingress"
+      ],
+      "causes": [],
+      "fix": [
+        "Measure the supply and the ground at the ECU connector.",
+        "Examine the ECU housing and the connector for water.",
+        "Tell the customer the cost of the repair and get approval before the work.",
+        "Replace the ECU, or send it for repair.",
+        "Program the ECU and the immobiliser data with the diagnostic tool.",
+        "Clear the codes in all modules and do a road test."
+      ]
+    },
+    "clutch_slip": {
+      "label": "Slipping clutch",
+      "description": "The clutch friction plate is worn or oily, so it slips under load",
+      "systems": [
+        "clutch"
+      ],
+      "prior": 0.04,
+      "explains": [
+        "revs_no_speed",
+        "burning_smell",
+        "pull_away_judder"
+      ],
+      "causes": [],
+      "fix": [
+        "Do a clutch stall test in a high gear with the handbrake on.",
+        "Examine the clutch adjustment and the release system.",
+        "Remove the gearbox.",
+        "Replace the clutch plate, the pressure plate and the release bearing.",
+        "Examine the flywheel face and the crankshaft seal for oil.",
+        "Install the gearbox and do a road test."
+      ]
+    },
+    "clutch_hydraulic": {
+      "label": "Clutch hydraulic fault",
+      "description": "The clutch master or slave cylinder leaks, so the clutch does not release fully",
+      "systems": [
+        "clutch"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "clutch_pedal_floor",
+        "hard_gear_change",
+        "low_brake_fluid"
+      ],
+      "causes": [],
+      "fix": [
+        "Examine the fluid level in the shared reservoir.",
+        "Examine the slave cylinder and the footwell for fluid.",
+        "Replace the master cylinder or the slave cylinder that leaks.",
+        "Bleed the clutch hydraulics.",
+        "Make sure that all gears engage at a standstill, then do a road test."
+      ]
+    },
+    "dual_mass_flywheel": {
+      "label": "Worn dual-mass flywheel",
+      "description": "The springs of the dual-mass flywheel are worn, so it rattles at idle and judders when the car pulls away",
+      "systems": [
+        "clutch"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "idle_rattle",
+        "pull_away_judder"
+      ],
+      "causes": [],
+      "fix": [
+        "Measure the free rotation and the rock of the flywheel with the gearbox removed.",
+        "Remove the clutch and the flywheel.",
+        "Install a new flywheel with new bolts, and tighten to the torque sequence.",
+        "Install a new clutch kit.",
+        "Install the gearbox and do a road test."
+      ]
+    },
+    "exhaust_leak": {
+      "label": "Exhaust leak",
+      "description": "A cracked manifold, a failed gasket or a hole lets exhaust gas out before the rear box",
+      "systems": [
+        "exhaust"
+      ],
+      "prior": 0.05,
+      "explains": [
+        "loud_exhaust",
+        "o2_code",
+        "cat_code"
+      ],
+      "causes": [],
+      "fix": [
+        "Do a smoke test on the exhaust and find the leak.",
+        "Let the exhaust cool fully.",
+        "Replace the gasket, the section or the manifold that leaks.",
+        "Tighten the clamps and the flange nuts to the torque values.",
+        "Clear the codes and do a road test."
+      ]
+    },
+    "catalytic_converter_blocked": {
+      "label": "Blocked catalytic converter",
+      "description": "The catalytic converter is melted or blocked, so the exhaust back pressure is too high",
+      "systems": [
+        "exhaust"
+      ],
+      "prior": 0.03,
+      "explains": [
+        "power_loss",
+        "cat_code",
+        "rotten_egg_smell"
+      ],
+      "causes": [],
+      "fix": [
+        "Measure the exhaust back pressure at 2500 rpm.",
+        "Compare the inlet and outlet temperatures of the converter.",
+        "Find and repair the misfire or the fuel fault that damaged the converter.",
+        "Replace the catalytic converter with new gaskets.",
+        "Clear the codes and do a road test at full load."
+      ]
+    },
+    "o2_sensor_fault": {
+      "label": "Oxygen sensor fault",
+      "description": "An oxygen sensor responds slowly or its heater fails, so the fuel control is wrong",
+      "systems": [
+        "exhaust"
+      ],
+      "prior": 0.04,
+      "explains": [
+        "o2_code",
+        "cat_code",
+        "high_fuel_use"
+      ],
+      "causes": [],
+      "fix": [
+        "Read the oxygen sensor codes and the live sensor values.",
+        "Measure the sensor heater resistance.",
+        "Remove the sensor with a sensor socket.",
+        "Apply anti-seize compound to the thread of the new sensor and install it.",
+        "Clear the codes and do a road test."
+      ]
+    }
+  },
+  "nodes": {
+    "q_bat_start": {
+      "question": "What does the battery problem look like?",
+      "options": {
+        "no_start": {
+          "text": "The engine turns slowly, only clicks, or does not turn",
+          "next": "q_bat_terminals"
+        },
+        "flat_after_standing": {
+          "text": "The car starts after a charge or a jump, but it is flat again after it stands",
+          "next": "q_bat_drain"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_bat_terminals"
+        }
+      },
+      "evidence": {
+        "no_start": {
+          "flat_battery": 0.9,
+          "battery_end_of_life": 0.9,
+          "battery_terminals": 0.9,
+          "parasitic_drain": 0.1,
+          "alternator_diode_leak": 0.1
+        },
+        "flat_after_standing": {
+          "flat_battery": 0.1,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.1,
+          "parasitic_drain": 0.9,
+          "alternator_diode_leak": 0.9
+        }
+      }
+    },
+    "q_bat_terminals": {
+      "question": "Are the battery terminals or the earth strap corroded, loose or hot to touch?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is corrosion, a loose clamp or a hot terminal",
+          "next": "q_bat_terminal_drop"
+        },
+        "no": {
+          "text": "No, the terminals are clean and tight",
+          "next": "q_bat_voltage"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_bat_voltage"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.1,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.9,
+          "parasitic_drain": 0.1,
+          "alternator_diode_leak": 0.1
+        },
+        "no": {
+          "flat_battery": 0.9,
+          "battery_end_of_life": 0.9,
+          "battery_terminals": 0.1,
+          "parasitic_drain": 0.9,
+          "alternator_diode_leak": 0.9
+        }
+      }
+    },
+    "q_bat_terminal_drop": {
+      "question": "During a start attempt, is the voltage drop across a terminal or the earth strap more than 0.5 V?",
+      "options": {
+        "yes": {
+          "text": "Yes, more than 0.5 V",
+          "next": "battery_terminals"
+        },
+        "no": {
+          "text": "No, 0.5 V or less",
+          "next": "q_bat_voltage"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "battery_terminals"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.1,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.9,
+          "parasitic_drain": 0.1,
+          "alternator_diode_leak": 0.1
+        },
+        "no": {
+          "flat_battery": 0.9,
+          "battery_end_of_life": 0.9,
+          "battery_terminals": 0.1,
+          "parasitic_drain": 0.9,
+          "alternator_diode_leak": 0.9
+        }
+      }
+    },
+    "q_bat_voltage": {
+      "question": "What is the battery voltage at rest, with the engine off?",
+      "options": {
+        "below_12_2": {
+          "text": "Less than 12.2 V",
+          "next": "q_bat_charge_test"
+        },
+        "mid": {
+          "text": "From 12.2 V to 12.4 V",
+          "next": "q_bat_charge_test"
+        },
+        "above_12_4": {
+          "text": "More than 12.4 V",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_bat_charge_test"
+        }
+      },
+      "evidence": {
+        "below_12_2": {
+          "flat_battery": 0.9,
+          "battery_end_of_life": 0.9,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.9,
+          "alternator_diode_leak": 0.9
+        },
+        "mid": {
+          "flat_battery": 0.05,
+          "battery_end_of_life": 0.05,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.05,
+          "alternator_diode_leak": 0.05
+        },
+        "above_12_4": {
+          "flat_battery": 0.05,
+          "battery_end_of_life": 0.05,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.05,
+          "alternator_diode_leak": 0.05
+        }
+      }
+    },
+    "q_bat_charge_test": {
+      "question": "After a full charge, does the battery pass a load test?",
+      "options": {
+        "yes": {
+          "text": "Yes, it passes the load test",
+          "next": "q_bat_history"
+        },
+        "no": {
+          "text": "No, it fails the load test",
+          "next": "q_bat_age"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_bat_age"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.9,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.9,
+          "alternator_diode_leak": 0.9
+        },
+        "no": {
+          "flat_battery": 0.1,
+          "battery_end_of_life": 0.9,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.1,
+          "alternator_diode_leak": 0.1
+        }
+      }
+    },
+    "q_bat_age": {
+      "question": "Is the battery more than five years old, or does the tester report a low state of health?",
+      "options": {
+        "yes": {
+          "text": "Yes, it is old or its state of health is low",
+          "next": "battery_end_of_life"
+        },
+        "no": {
+          "text": "No, it is newer and the tester does not report a low state of health",
+          "next": "q_bat_cell"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "battery_end_of_life"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.3,
+          "battery_end_of_life": 0.9,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.3,
+          "alternator_diode_leak": 0.3
+        },
+        "no": {
+          "flat_battery": 0.3,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.3,
+          "alternator_diode_leak": 0.3
+        }
+      }
+    },
+    "q_bat_cell": {
+      "question": "Does the voltage fall below 12.4 V within 12 hours after the charge?",
+      "options": {
+        "yes": {
+          "text": "Yes, the voltage falls",
+          "next": "battery_end_of_life"
+        },
+        "no": {
+          "text": "No, the voltage holds",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.3,
+          "battery_end_of_life": 0.9,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.3,
+          "alternator_diode_leak": 0.3
+        },
+        "no": {
+          "flat_battery": 0.3,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.3,
+          "alternator_diode_leak": 0.3
+        }
+      }
+    },
+    "q_bat_history": {
+      "question": "Did the battery go flat while the car stood for more than a day with nothing left on?",
+      "options": {
+        "yes": {
+          "text": "Yes, it went flat with nothing left on",
+          "next": "q_bat_drain"
+        },
+        "no": {
+          "text": "No, lights were left on, or the car makes only short trips",
+          "next": "flat_battery"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "flat_battery"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.1,
+          "battery_end_of_life": 0.9,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.9,
+          "alternator_diode_leak": 0.9
+        },
+        "no": {
+          "flat_battery": 0.9,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.1,
+          "alternator_diode_leak": 0.1
+        }
+      }
+    },
+    "q_bat_drain": {
+      "question": "With the car locked and asleep, what is the current from the battery?",
+      "options": {
+        "high": {
+          "text": "More than 50 mA",
+          "next": "q_bat_alt_unplug"
+        },
+        "normal": {
+          "text": "50 mA or less",
+          "next": "battery_end_of_life"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_bat_alt_unplug"
+        }
+      },
+      "evidence": {
+        "high": {
+          "flat_battery": 0.3,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.9,
+          "alternator_diode_leak": 0.9
+        },
+        "normal": {
+          "flat_battery": 0.3,
+          "battery_end_of_life": 0.9,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.1,
+          "alternator_diode_leak": 0.1
+        }
+      }
+    },
+    "q_bat_alt_unplug": {
+      "question": "Disconnect the alternator B+ lead. Does the drain fall below 50 mA?",
+      "options": {
+        "yes": {
+          "text": "Yes, the drain falls below 50 mA",
+          "next": "alternator_diode_leak"
+        },
+        "no": {
+          "text": "No, the drain stays high",
+          "next": "parasitic_drain"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "parasitic_drain"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.3,
+          "battery_end_of_life": 0.3,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.05,
+          "alternator_diode_leak": 0.95
+        },
+        "no": {
+          "flat_battery": 0.3,
+          "battery_end_of_life": 0.3,
+          "battery_terminals": 0.3,
+          "parasitic_drain": 0.95,
+          "alternator_diode_leak": 0.05
+        }
+      }
+    },
+    "q_alt_symptom": {
+      "question": "What does the charge problem look like?",
+      "options": {
+        "warning_light": {
+          "text": "The battery light comes on, or the lights go dim, while the engine runs",
+          "next": "q_alt_run_voltage"
+        },
+        "squeal": {
+          "text": "A belt squeal from the engine bay, worst at a cold start or with the lights and heater on",
+          "next": "q_alt_belt"
+        },
+        "flat_after_standing": {
+          "text": "The battery goes flat after the car stands, and the lights flicker when it runs",
+          "next": "q_alt_ripple"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_alt_run_voltage"
+        }
+      },
+      "evidence": {
+        "warning_light": {
+          "parasitic_drain": 0.05,
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.05,
+          "alternator_diode_leak": 0.05
+        },
+        "squeal": {
+          "parasitic_drain": 0.05,
+          "alternator_failure": 0.05,
+          "aux_belt_slip": 0.9,
+          "alternator_diode_leak": 0.05
+        },
+        "flat_after_standing": {
+          "parasitic_drain": 0.9,
+          "alternator_failure": 0.05,
+          "aux_belt_slip": 0.05,
+          "alternator_diode_leak": 0.9
+        }
+      }
+    },
+    "q_alt_run_voltage": {
+      "question": "What is the battery voltage with the engine at 2000 rpm and the headlights on?",
+      "options": {
+        "low": {
+          "text": "Less than 13.2 V",
+          "next": "q_alt_belt"
+        },
+        "normal": {
+          "text": "From 13.8 V to 14.7 V",
+          "next": "q_alt_ripple"
+        },
+        "high": {
+          "text": "More than 15 V",
+          "next": "alternator_failure"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_alt_belt"
+        }
+      },
+      "evidence": {
+        "low": {
+          "parasitic_drain": 0.05,
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.9,
+          "alternator_diode_leak": 0.05
+        },
+        "normal": {
+          "parasitic_drain": 0.9,
+          "alternator_failure": 0.05,
+          "aux_belt_slip": 0.05,
+          "alternator_diode_leak": 0.9
+        },
+        "high": {
+          "parasitic_drain": 0.05,
+          "alternator_failure": 0.05,
+          "aux_belt_slip": 0.05,
+          "alternator_diode_leak": 0.05
+        }
+      }
+    },
+    "q_alt_belt": {
+      "question": "Is the auxiliary belt glazed, cracked or loose, or does it squeal under electrical load?",
+      "options": {
+        "yes": {
+          "text": "Yes, the belt is worn or loose, or it squeals",
+          "next": "q_alt_belt_test"
+        },
+        "no": {
+          "text": "No, the belt is in good condition and quiet",
+          "next": "q_alt_field"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_alt_field"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "parasitic_drain": 0.3,
+          "alternator_failure": 0.1,
+          "aux_belt_slip": 0.9,
+          "alternator_diode_leak": 0.3
+        },
+        "no": {
+          "parasitic_drain": 0.3,
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.1,
+          "alternator_diode_leak": 0.3
+        }
+      }
+    },
+    "q_alt_belt_test": {
+      "question": "With the belt tension set correctly, does the charge voltage rise to 13.8 V or more?",
+      "options": {
+        "yes": {
+          "text": "Yes, the charge voltage becomes normal",
+          "next": "aux_belt_slip"
+        },
+        "no": {
+          "text": "No, the charge voltage stays low",
+          "next": "q_alt_field"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "aux_belt_slip"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "parasitic_drain": 0.3,
+          "alternator_failure": 0.1,
+          "aux_belt_slip": 0.9,
+          "alternator_diode_leak": 0.3
+        },
+        "no": {
+          "parasitic_drain": 0.3,
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.1,
+          "alternator_diode_leak": 0.3
+        }
+      }
+    },
+    "q_alt_field": {
+      "question": "With the ignition on, is there voltage at the warning-lamp or field terminal of the alternator?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is voltage",
+          "next": "q_alt_output"
+        },
+        "no": {
+          "text": "No, there is no voltage",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_alt_output"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "parasitic_drain": 0.3,
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.3
+        },
+        "no": {
+          "parasitic_drain": 0.3,
+          "alternator_failure": 0.1,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.3
+        }
+      }
+    },
+    "q_alt_output": {
+      "question": "Does an output test show less than 70 percent of the rated alternator current?",
+      "options": {
+        "yes": {
+          "text": "Yes, the output is low",
+          "next": "alternator_failure"
+        },
+        "no": {
+          "text": "No, the output is at the rating",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "alternator_failure"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "parasitic_drain": 0.3,
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.3
+        },
+        "no": {
+          "parasitic_drain": 0.3,
+          "alternator_failure": 0.1,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.3
+        }
+      }
+    },
+    "q_alt_ripple": {
+      "question": "With the engine running, does an AC ripple test at the battery show more than 0.5 V AC?",
+      "options": {
+        "yes": {
+          "text": "Yes, more than 0.5 V AC",
+          "next": "q_alt_diode_drain"
+        },
+        "no": {
+          "text": "No, 0.5 V AC or less",
+          "next": "q_alt_drain_unplug"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_alt_drain_unplug"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "parasitic_drain": 0.1,
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.1
+        },
+        "no": {
+          "parasitic_drain": 0.9,
+          "alternator_failure": 0.1,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.9
+        }
+      }
+    },
+    "q_alt_diode_drain": {
+      "question": "With the car locked and asleep, is the current from the battery more than 50 mA?",
+      "options": {
+        "yes": {
+          "text": "Yes, more than 50 mA",
+          "next": "q_alt_drain_unplug"
+        },
+        "no": {
+          "text": "No, 50 mA or less",
+          "next": "alternator_failure"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_alt_drain_unplug"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "parasitic_drain": 0.9,
+          "alternator_failure": 0.1,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.9
+        },
+        "no": {
+          "parasitic_drain": 0.1,
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.1
+        }
+      }
+    },
+    "q_alt_drain_unplug": {
+      "question": "Disconnect the alternator B+ lead. Does the drain fall below 50 mA?",
+      "options": {
+        "yes": {
+          "text": "Yes, the drain falls below 50 mA",
+          "next": "alternator_diode_leak"
+        },
+        "no": {
+          "text": "No, the drain stays high",
+          "next": "parasitic_drain"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "parasitic_drain": 0.05,
+          "alternator_failure": 0.3,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.95
+        },
+        "no": {
+          "parasitic_drain": 0.95,
+          "alternator_failure": 0.3,
+          "aux_belt_slip": 0.3,
+          "alternator_diode_leak": 0.05
+        }
+      }
+    },
+    "q_sta_symptom": {
+      "question": "What does the starter do when the driver starts the engine?",
+      "options": {
+        "click": {
+          "text": "A single click, and the engine does not turn",
+          "next": "q_sta_lights"
+        },
+        "slow_grind": {
+          "text": "The engine turns slowly, or the starter grinds or whirs",
+          "next": "q_sta_noise"
+        },
+        "intermittent": {
+          "text": "The starter works on some attempts only",
+          "next": "q_sta_tap"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_sta_lights"
+        }
+      },
+      "evidence": {
+        "click": {
+          "flat_battery": 0.9,
+          "starter_motor_worn": 0.05,
+          "starter_solenoid": 0.9
+        },
+        "slow_grind": {
+          "flat_battery": 0.05,
+          "starter_motor_worn": 0.9,
+          "starter_solenoid": 0.05
+        },
+        "intermittent": {
+          "flat_battery": 0.05,
+          "starter_motor_worn": 0.05,
+          "starter_solenoid": 0.05
+        }
+      }
+    },
+    "q_sta_lights": {
+      "question": "Do the headlights stay bright during the start attempt?",
+      "options": {
+        "yes": {
+          "text": "Yes, the headlights stay bright",
+          "next": "q_sta_solenoid_volt"
+        },
+        "no": {
+          "text": "No, the headlights go dim or out",
+          "next": "q_sta_battery_volt"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_sta_battery_volt"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.1,
+          "starter_motor_worn": 0.9,
+          "starter_solenoid": 0.9
+        },
+        "no": {
+          "flat_battery": 0.9,
+          "starter_motor_worn": 0.1,
+          "starter_solenoid": 0.1
+        }
+      }
+    },
+    "q_sta_battery_volt": {
+      "question": "Is the battery voltage at rest more than 12.4 V?",
+      "options": {
+        "yes": {
+          "text": "Yes, more than 12.4 V",
+          "next": "q_sta_solenoid_volt"
+        },
+        "no": {
+          "text": "No, 12.4 V or less",
+          "next": "flat_battery"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_sta_solenoid_volt"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.1,
+          "starter_motor_worn": 0.9,
+          "starter_solenoid": 0.9
+        },
+        "no": {
+          "flat_battery": 0.9,
+          "starter_motor_worn": 0.1,
+          "starter_solenoid": 0.1
+        }
+      }
+    },
+    "q_sta_solenoid_volt": {
+      "question": "While the key is at start, is there more than 10 V at the solenoid trigger terminal?",
+      "options": {
+        "yes": {
+          "text": "Yes, more than 10 V",
+          "next": "q_sta_output_volt"
+        },
+        "no": {
+          "text": "No, 10 V or less",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_sta_output_volt"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.3,
+          "starter_motor_worn": 0.9,
+          "starter_solenoid": 0.9
+        },
+        "no": {
+          "flat_battery": 0.3,
+          "starter_motor_worn": 0.1,
+          "starter_solenoid": 0.1
+        }
+      }
+    },
+    "q_sta_output_volt": {
+      "question": "During the same attempt, does the motor terminal of the solenoid reach 10 V?",
+      "options": {
+        "yes": {
+          "text": "Yes, it reaches 10 V",
+          "next": "starter_motor_worn"
+        },
+        "no": {
+          "text": "No, it stays below 10 V",
+          "next": "starter_solenoid"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "starter_solenoid"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.3,
+          "starter_motor_worn": 0.9,
+          "starter_solenoid": 0.1
+        },
+        "no": {
+          "flat_battery": 0.3,
+          "starter_motor_worn": 0.1,
+          "starter_solenoid": 0.9
+        }
+      }
+    },
+    "q_sta_noise": {
+      "question": "Does the starter draw more than 250 A, or grind during the start?",
+      "options": {
+        "yes": {
+          "text": "Yes, a high current or a grind",
+          "next": "q_sta_bench"
+        },
+        "no": {
+          "text": "No, the current is normal and there is no grind",
+          "next": "q_sta_battery_volt"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_sta_bench"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.1,
+          "starter_motor_worn": 0.9,
+          "starter_solenoid": 0.1
+        },
+        "no": {
+          "flat_battery": 0.9,
+          "starter_motor_worn": 0.1,
+          "starter_solenoid": 0.9
+        }
+      }
+    },
+    "q_sta_bench": {
+      "question": "On a bench test, does the removed starter turn slowly or grind?",
+      "options": {
+        "yes": {
+          "text": "Yes, it turns slowly or grinds",
+          "next": "starter_motor_worn"
+        },
+        "no": {
+          "text": "No, it turns correctly",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "starter_motor_worn"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.3,
+          "starter_motor_worn": 0.9,
+          "starter_solenoid": 0.3
+        },
+        "no": {
+          "flat_battery": 0.3,
+          "starter_motor_worn": 0.1,
+          "starter_solenoid": 0.3
+        }
+      }
+    },
+    "q_sta_tap": {
+      "question": "Does the starter work after a light tap on its body?",
+      "options": {
+        "yes": {
+          "text": "Yes, it works after the tap",
+          "next": "q_sta_bench"
+        },
+        "no": {
+          "text": "No, a tap has no effect",
+          "next": "q_sta_solenoid_volt"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_sta_solenoid_volt"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.3,
+          "starter_motor_worn": 0.9,
+          "starter_solenoid": 0.1
+        },
+        "no": {
+          "flat_battery": 0.3,
+          "starter_motor_worn": 0.1,
+          "starter_solenoid": 0.9
+        }
+      }
+    },
+    "q_fp_symptom": {
+      "question": "What does the fuel problem look like?",
+      "options": {
+        "no_start": {
+          "text": "The engine cranks at normal speed but does not fire",
+          "next": "q_fp_prime"
+        },
+        "runs_poorly": {
+          "text": "The engine runs, but it hesitates or loses power under load",
+          "next": "q_fp_pressure_idle"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fp_pressure_idle"
+        }
+      },
+      "evidence": {
+        "no_start": {
+          "fuel_pump_failed": 0.9,
+          "fuel_pump_weak": 0.1,
+          "fuel_filter_clogged": 0.1,
+          "injector_clogged": 0.1
+        },
+        "runs_poorly": {
+          "fuel_pump_failed": 0.1,
+          "fuel_pump_weak": 0.9,
+          "fuel_filter_clogged": 0.9,
+          "injector_clogged": 0.9
+        }
+      }
+    },
+    "q_fp_prime": {
+      "question": "When the ignition turns on, is there a two-second hum from the fuel tank?",
+      "options": {
+        "yes": {
+          "text": "Yes, the pump hums",
+          "next": "q_fp_pressure_crank"
+        },
+        "no": {
+          "text": "No, there is no hum",
+          "next": "q_fp_relay"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fp_pressure_crank"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_failed": 0.9,
+          "fuel_pump_weak": 0.9,
+          "fuel_filter_clogged": 0.9,
+          "injector_clogged": 0.3
+        },
+        "no": {
+          "fuel_pump_failed": 0.1,
+          "fuel_pump_weak": 0.1,
+          "fuel_filter_clogged": 0.1,
+          "injector_clogged": 0.3
+        }
+      }
+    },
+    "q_fp_relay": {
+      "question": "With the pump relay bridged, is there 12 V at the pump connector?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is 12 V",
+          "next": "q_fp_pump_current"
+        },
+        "no": {
+          "text": "No, there is no voltage",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fp_pump_current"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_failed": 0.9,
+          "fuel_pump_weak": 0.3,
+          "fuel_filter_clogged": 0.3,
+          "injector_clogged": 0.3
+        },
+        "no": {
+          "fuel_pump_failed": 0.1,
+          "fuel_pump_weak": 0.3,
+          "fuel_filter_clogged": 0.3,
+          "injector_clogged": 0.3
+        }
+      }
+    },
+    "q_fp_pump_current": {
+      "question": "With 12 V at the connector, does the pump stay silent and draw no current?",
+      "options": {
+        "yes": {
+          "text": "Yes, the pump does not run",
+          "next": "fuel_pump_failed"
+        },
+        "no": {
+          "text": "No, the pump runs",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "fuel_pump_failed"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_failed": 0.9,
+          "fuel_pump_weak": 0.3,
+          "fuel_filter_clogged": 0.3,
+          "injector_clogged": 0.3
+        },
+        "no": {
+          "fuel_pump_failed": 0.1,
+          "fuel_pump_weak": 0.3,
+          "fuel_filter_clogged": 0.3,
+          "injector_clogged": 0.3
+        }
+      }
+    },
+    "q_fp_pressure_crank": {
+      "question": "What is the fuel rail pressure while the engine cranks?",
+      "options": {
+        "zero": {
+          "text": "Zero, or almost zero",
+          "next": "fuel_pump_failed"
+        },
+        "low": {
+          "text": "Some pressure, but less than the specification",
+          "next": "q_fp_filter_age"
+        },
+        "normal": {
+          "text": "At the specification",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fp_filter_age"
+        }
+      },
+      "evidence": {
+        "zero": {
+          "fuel_pump_failed": 0.9,
+          "fuel_pump_weak": 0.05,
+          "fuel_filter_clogged": 0.05,
+          "injector_clogged": 0.3
+        },
+        "low": {
+          "fuel_pump_failed": 0.05,
+          "fuel_pump_weak": 0.9,
+          "fuel_filter_clogged": 0.9,
+          "injector_clogged": 0.3
+        },
+        "normal": {
+          "fuel_pump_failed": 0.05,
+          "fuel_pump_weak": 0.05,
+          "fuel_filter_clogged": 0.05,
+          "injector_clogged": 0.3
+        }
+      }
+    },
+    "q_fp_pressure_idle": {
+      "question": "Is the fuel rail pressure at the specification at idle?",
+      "options": {
+        "yes": {
+          "text": "Yes, at the specification",
+          "next": "q_fp_pressure_load"
+        },
+        "no": {
+          "text": "No, it is low",
+          "next": "q_fp_filter_age"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fp_pressure_load"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.1,
+          "fuel_filter_clogged": 0.1,
+          "injector_clogged": 0.9
+        },
+        "no": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.9,
+          "fuel_filter_clogged": 0.9,
+          "injector_clogged": 0.1
+        }
+      }
+    },
+    "q_fp_pressure_load": {
+      "question": "On a road test at full load, what does the fuel rail pressure do?",
+      "options": {
+        "holds": {
+          "text": "It stays at the specification",
+          "next": "injector_clogged"
+        },
+        "drops": {
+          "text": "It drops below the specification",
+          "next": "q_fp_filter_age"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fp_filter_age"
+        }
+      },
+      "evidence": {
+        "holds": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.1,
+          "fuel_filter_clogged": 0.1,
+          "injector_clogged": 0.9
+        },
+        "drops": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.9,
+          "fuel_filter_clogged": 0.9,
+          "injector_clogged": 0.1
+        }
+      }
+    },
+    "q_fp_filter_age": {
+      "question": "Is the fuel filter change overdue, or is the filter older than 60,000 km?",
+      "options": {
+        "yes": {
+          "text": "Yes, the filter change is overdue",
+          "next": "q_fp_filter_swap"
+        },
+        "no": {
+          "text": "No, the filter is new",
+          "next": "q_fp_volume"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fp_filter_swap"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.9,
+          "fuel_filter_clogged": 0.9,
+          "injector_clogged": 0.3
+        },
+        "no": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.1,
+          "fuel_filter_clogged": 0.1,
+          "injector_clogged": 0.3
+        }
+      }
+    },
+    "q_fp_filter_swap": {
+      "question": "After a new filter is installed, does the pressure hold at full load?",
+      "options": {
+        "yes": {
+          "text": "Yes, the pressure holds",
+          "next": "fuel_filter_clogged"
+        },
+        "no": {
+          "text": "No, the pressure still drops",
+          "next": "fuel_pump_weak"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "fuel_filter_clogged"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.05,
+          "fuel_filter_clogged": 0.95,
+          "injector_clogged": 0.3
+        },
+        "no": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.95,
+          "fuel_filter_clogged": 0.05,
+          "injector_clogged": 0.3
+        }
+      }
+    },
+    "q_fp_volume": {
+      "question": "Does the pump deliver less than the specified volume in 30 s?",
+      "options": {
+        "yes": {
+          "text": "Yes, the volume is low",
+          "next": "fuel_pump_weak"
+        },
+        "no": {
+          "text": "No, the volume is correct",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "fuel_pump_weak"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.9,
+          "fuel_filter_clogged": 0.3,
+          "injector_clogged": 0.3
+        },
+        "no": {
+          "fuel_pump_failed": 0.3,
+          "fuel_pump_weak": 0.1,
+          "fuel_filter_clogged": 0.3,
+          "injector_clogged": 0.3
+        }
+      }
+    },
+    "q_inj_symptom": {
+      "question": "Which mixture fault does the scan tool or the customer show?",
+      "options": {
+        "one_cylinder": {
+          "text": "A misfire on one cylinder, code P0301 to P0304",
+          "next": "q_inj_coil_swap"
+        },
+        "lean": {
+          "text": "Lean codes P0171 or P0174, hesitation, or random misfires",
+          "next": "q_inj_pressure_load"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_inj_pressure_load"
+        }
+      },
+      "evidence": {
+        "one_cylinder": {
+          "fuel_pump_weak": 0.1,
+          "injector_clogged": 0.1,
+          "injector_stuck": 0.9,
+          "ignition_coil": 0.9
+        },
+        "lean": {
+          "fuel_pump_weak": 0.9,
+          "injector_clogged": 0.9,
+          "injector_stuck": 0.1,
+          "ignition_coil": 0.1
+        }
+      }
+    },
+    "q_inj_coil_swap": {
+      "question": "Swap the coil of the misfiring cylinder with a neighbour. Does the misfire code move with the coil?",
+      "options": {
+        "yes": {
+          "text": "Yes, the misfire moves with the coil",
+          "next": "ignition_coil"
+        },
+        "no": {
+          "text": "No, the misfire stays on the same cylinder",
+          "next": "q_inj_balance"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_inj_balance"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.3,
+          "injector_stuck": 0.1,
+          "ignition_coil": 0.9
+        },
+        "no": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.3,
+          "injector_stuck": 0.9,
+          "ignition_coil": 0.1
+        }
+      }
+    },
+    "q_inj_balance": {
+      "question": "Does an injector balance test show one injector far outside the others?",
+      "options": {
+        "yes": {
+          "text": "Yes, one injector is far outside",
+          "next": "q_inj_click"
+        },
+        "no": {
+          "text": "No, all injectors are similar",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_inj_click"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.3,
+          "injector_stuck": 0.9,
+          "ignition_coil": 0.3
+        },
+        "no": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.3,
+          "injector_stuck": 0.1,
+          "ignition_coil": 0.3
+        }
+      }
+    },
+    "q_inj_click": {
+      "question": "With a stethoscope, is the click of that injector missing or weak?",
+      "options": {
+        "yes": {
+          "text": "Yes, the click is missing or weak",
+          "next": "injector_stuck"
+        },
+        "no": {
+          "text": "No, the click is normal",
+          "next": "q_inj_leak"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_inj_leak"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.3,
+          "injector_stuck": 0.9,
+          "ignition_coil": 0.3
+        },
+        "no": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.3,
+          "injector_stuck": 0.1,
+          "ignition_coil": 0.3
+        }
+      }
+    },
+    "q_inj_leak": {
+      "question": "In a leak-down test, does that injector drip?",
+      "options": {
+        "yes": {
+          "text": "Yes, the injector drips",
+          "next": "injector_stuck"
+        },
+        "no": {
+          "text": "No, it does not drip",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.3,
+          "injector_stuck": 0.9,
+          "ignition_coil": 0.3
+        },
+        "no": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.3,
+          "injector_stuck": 0.1,
+          "ignition_coil": 0.3
+        }
+      }
+    },
+    "q_inj_pressure_load": {
+      "question": "On a road test at full load, what does the fuel rail pressure do?",
+      "options": {
+        "holds": {
+          "text": "It stays at the specification",
+          "next": "q_inj_trim"
+        },
+        "drops": {
+          "text": "It drops below the specification",
+          "next": "fuel_pump_weak"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_inj_trim"
+        }
+      },
+      "evidence": {
+        "holds": {
+          "fuel_pump_weak": 0.1,
+          "injector_clogged": 0.9,
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3
+        },
+        "drops": {
+          "fuel_pump_weak": 0.9,
+          "injector_clogged": 0.1,
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3
+        }
+      }
+    },
+    "q_inj_trim": {
+      "question": "What is the long-term fuel trim at idle?",
+      "options": {
+        "high": {
+          "text": "More than +10 percent",
+          "next": "q_inj_smoke"
+        },
+        "normal": {
+          "text": "From -10 to +10 percent",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_inj_smoke"
+        }
+      },
+      "evidence": {
+        "high": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.9,
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3
+        },
+        "normal": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.1,
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3
+        }
+      }
+    },
+    "q_inj_smoke": {
+      "question": "Does a smoke test show a leak in the intake?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is an intake leak",
+          "next": "specialist"
+        },
+        "no": {
+          "text": "No, the intake is tight",
+          "next": "q_inj_flow"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_inj_flow"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.1,
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3
+        },
+        "no": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.9,
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3
+        }
+      }
+    },
+    "q_inj_flow": {
+      "question": "Does a flow test show that the injectors deliver less than 90 percent of their rated flow?",
+      "options": {
+        "yes": {
+          "text": "Yes, the flow is low",
+          "next": "injector_clogged"
+        },
+        "no": {
+          "text": "No, the flow is correct",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "injector_clogged"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.9,
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3
+        },
+        "no": {
+          "fuel_pump_weak": 0.3,
+          "injector_clogged": 0.1,
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3
+        }
+      }
+    },
+    "q_ign_symptom": {
+      "question": "What does the ignition problem look like?",
+      "options": {
+        "misfire": {
+          "text": "The engine misfires or shakes, or the engine light flashes",
+          "next": "q_ign_one_cyl"
+        },
+        "no_start": {
+          "text": "The engine cranks at normal speed but does not fire, or it cuts out when warm",
+          "next": "q_ign_rpm"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ign_one_cyl"
+        }
+      },
+      "evidence": {
+        "misfire": {
+          "injector_stuck": 0.9,
+          "ignition_coil": 0.9,
+          "spark_plugs_worn": 0.9,
+          "crank_sensor": 0.1
+        },
+        "no_start": {
+          "injector_stuck": 0.1,
+          "ignition_coil": 0.1,
+          "spark_plugs_worn": 0.1,
+          "crank_sensor": 0.9
+        }
+      }
+    },
+    "q_ign_one_cyl": {
+      "question": "Does the scan tool show a misfire on one cylinder only?",
+      "options": {
+        "yes": {
+          "text": "Yes, one cylinder only",
+          "next": "q_ign_coil_swap"
+        },
+        "no": {
+          "text": "No, more than one cylinder, or code P0300",
+          "next": "q_ign_plugs"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ign_plugs"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "injector_stuck": 0.9,
+          "ignition_coil": 0.9,
+          "spark_plugs_worn": 0.1,
+          "crank_sensor": 0.3
+        },
+        "no": {
+          "injector_stuck": 0.1,
+          "ignition_coil": 0.1,
+          "spark_plugs_worn": 0.9,
+          "crank_sensor": 0.3
+        }
+      }
+    },
+    "q_ign_coil_swap": {
+      "question": "Swap the coil of the misfiring cylinder with a neighbour. Does the misfire code move with the coil?",
+      "options": {
+        "yes": {
+          "text": "Yes, the misfire moves with the coil",
+          "next": "q_ign_coil_check"
+        },
+        "no": {
+          "text": "No, the misfire stays on the same cylinder",
+          "next": "q_ign_plug_one"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ign_coil_check"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "injector_stuck": 0.1,
+          "ignition_coil": 0.9,
+          "spark_plugs_worn": 0.1,
+          "crank_sensor": 0.3
+        },
+        "no": {
+          "injector_stuck": 0.9,
+          "ignition_coil": 0.1,
+          "spark_plugs_worn": 0.9,
+          "crank_sensor": 0.3
+        }
+      }
+    },
+    "q_ign_coil_check": {
+      "question": "Does the coil show a crack or a carbon track, or a secondary resistance out of the specification?",
+      "options": {
+        "yes": {
+          "text": "Yes, the coil is damaged or out of the specification",
+          "next": "ignition_coil"
+        },
+        "no": {
+          "text": "No, the coil looks and measures correct",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "ignition_coil"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.9,
+          "spark_plugs_worn": 0.3,
+          "crank_sensor": 0.3
+        },
+        "no": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.1,
+          "spark_plugs_worn": 0.3,
+          "crank_sensor": 0.3
+        }
+      }
+    },
+    "q_ign_plug_one": {
+      "question": "Is the spark plug of that cylinder worn, cracked or fouled?",
+      "options": {
+        "yes": {
+          "text": "Yes, the plug is worn, cracked or fouled",
+          "next": "spark_plugs_worn"
+        },
+        "no": {
+          "text": "No, the plug is in good condition",
+          "next": "injector_stuck"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "injector_stuck"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "injector_stuck": 0.1,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.9,
+          "crank_sensor": 0.3
+        },
+        "no": {
+          "injector_stuck": 0.9,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.1,
+          "crank_sensor": 0.3
+        }
+      }
+    },
+    "q_ign_plugs": {
+      "question": "What condition are the spark plugs in?",
+      "options": {
+        "worn": {
+          "text": "Worn electrodes, a gap above the specification, or fouled",
+          "next": "q_ign_plug_swap"
+        },
+        "good": {
+          "text": "Good condition",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ign_plug_swap"
+        }
+      },
+      "evidence": {
+        "worn": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.9,
+          "crank_sensor": 0.3
+        },
+        "good": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.1,
+          "crank_sensor": 0.3
+        }
+      }
+    },
+    "q_ign_plug_swap": {
+      "question": "After new plugs are installed, does the misfire stop on a road test?",
+      "options": {
+        "yes": {
+          "text": "Yes, the misfire stops",
+          "next": "spark_plugs_worn"
+        },
+        "no": {
+          "text": "No, the misfire continues",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "spark_plugs_worn"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.95,
+          "crank_sensor": 0.3
+        },
+        "no": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.05,
+          "crank_sensor": 0.3
+        }
+      }
+    },
+    "q_ign_rpm": {
+      "question": "Does the rpm on the scan tool read zero while the engine cranks?",
+      "options": {
+        "yes": {
+          "text": "Yes, the rpm reads zero",
+          "next": "q_ign_code"
+        },
+        "no": {
+          "text": "No, the rpm reads normal",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ign_code"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.3,
+          "crank_sensor": 0.9
+        },
+        "no": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.3,
+          "crank_sensor": 0.1
+        }
+      }
+    },
+    "q_ign_code": {
+      "question": "Is code P0335 or P0336 stored?",
+      "options": {
+        "yes": {
+          "text": "Yes, P0335 or P0336 is stored",
+          "next": "q_ign_crank_signal"
+        },
+        "no": {
+          "text": "No, neither code is stored",
+          "next": "q_ign_crank_signal"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ign_crank_signal"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.3,
+          "crank_sensor": 0.9
+        },
+        "no": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.3,
+          "crank_sensor": 0.1
+        }
+      }
+    },
+    "q_ign_crank_signal": {
+      "question": "Is the crank sensor signal missing on an oscilloscope, or its resistance out of the specification?",
+      "options": {
+        "yes": {
+          "text": "Yes, the signal is missing or the resistance is wrong",
+          "next": "crank_sensor"
+        },
+        "no": {
+          "text": "No, the signal and the resistance are correct",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "crank_sensor"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.3,
+          "crank_sensor": 0.9
+        },
+        "no": {
+          "injector_stuck": 0.3,
+          "ignition_coil": 0.3,
+          "spark_plugs_worn": 0.3,
+          "crank_sensor": 0.1
+        }
+      }
+    },
+    "q_fan_when": {
+      "question": "When does the engine overheat?",
+      "options": {
+        "traffic": {
+          "text": "In traffic or at idle, and it cools down at speed",
+          "next": "q_fan_runs"
+        },
+        "road": {
+          "text": "At a steady speed on the road also",
+          "next": "q_fan_top_hose"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fan_runs"
+        }
+      },
+      "evidence": {
+        "traffic": {
+          "radiator_fan_motor": 0.9,
+          "fan_relay": 0.9,
+          "thermostat_stuck_closed": 0.1
+        },
+        "road": {
+          "radiator_fan_motor": 0.1,
+          "fan_relay": 0.1,
+          "thermostat_stuck_closed": 0.9
+        }
+      }
+    },
+    "q_fan_top_hose": {
+      "question": "With the gauge high, is the top radiator hose cold or only warm?",
+      "options": {
+        "yes": {
+          "text": "Yes, the top hose is cold or only warm",
+          "next": "thermostat_stuck_closed"
+        },
+        "no": {
+          "text": "No, the top hose is hot",
+          "next": "q_fan_runs"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fan_runs"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.1,
+          "fan_relay": 0.1,
+          "thermostat_stuck_closed": 0.9
+        },
+        "no": {
+          "radiator_fan_motor": 0.9,
+          "fan_relay": 0.9,
+          "thermostat_stuck_closed": 0.1
+        }
+      }
+    },
+    "q_fan_runs": {
+      "question": "Does the radiator fan run when the coolant is above 100 °C, or when the AC is on?",
+      "options": {
+        "yes": {
+          "text": "Yes, the fan runs",
+          "next": "specialist"
+        },
+        "no": {
+          "text": "No, the fan does not run",
+          "next": "q_fan_fuse"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fan_fuse"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.1,
+          "fan_relay": 0.1,
+          "thermostat_stuck_closed": 0.3
+        },
+        "no": {
+          "radiator_fan_motor": 0.9,
+          "fan_relay": 0.9,
+          "thermostat_stuck_closed": 0.3
+        }
+      }
+    },
+    "q_fan_fuse": {
+      "question": "Is the fan fuse blown?",
+      "options": {
+        "yes": {
+          "text": "Yes, the fuse is blown",
+          "next": "q_fan_motor_current"
+        },
+        "no": {
+          "text": "No, the fuse is good",
+          "next": "q_fan_direct"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fan_direct"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.9,
+          "fan_relay": 0.1,
+          "thermostat_stuck_closed": 0.3
+        },
+        "no": {
+          "radiator_fan_motor": 0.1,
+          "fan_relay": 0.9,
+          "thermostat_stuck_closed": 0.3
+        }
+      }
+    },
+    "q_fan_direct": {
+      "question": "Does the fan run with 12 V applied directly to the motor?",
+      "options": {
+        "yes": {
+          "text": "Yes, the fan runs",
+          "next": "q_fan_relay_click"
+        },
+        "no": {
+          "text": "No, the fan does not run",
+          "next": "radiator_fan_motor"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_fan_relay_click"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.1,
+          "fan_relay": 0.9,
+          "thermostat_stuck_closed": 0.3
+        },
+        "no": {
+          "radiator_fan_motor": 0.9,
+          "fan_relay": 0.1,
+          "thermostat_stuck_closed": 0.3
+        }
+      }
+    },
+    "q_fan_relay_click": {
+      "question": "When the ECU commands the fan, does the relay click and give 12 V at its output?",
+      "options": {
+        "yes": {
+          "text": "Yes, the relay clicks and gives 12 V",
+          "next": "specialist"
+        },
+        "no": {
+          "text": "No, there is no click or no output",
+          "next": "fan_relay"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "fan_relay"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.3,
+          "fan_relay": 0.1,
+          "thermostat_stuck_closed": 0.3
+        },
+        "no": {
+          "radiator_fan_motor": 0.3,
+          "fan_relay": 0.9,
+          "thermostat_stuck_closed": 0.3
+        }
+      }
+    },
+    "q_fan_motor_current": {
+      "question": "Is the fan motor stiff to turn by hand, or does it draw more than its rated current?",
+      "options": {
+        "yes": {
+          "text": "Yes, the motor is stiff or draws too much current",
+          "next": "radiator_fan_motor"
+        },
+        "no": {
+          "text": "No, the motor turns freely and draws the rated current",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "radiator_fan_motor"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.9,
+          "fan_relay": 0.3,
+          "thermostat_stuck_closed": 0.3
+        },
+        "no": {
+          "radiator_fan_motor": 0.1,
+          "fan_relay": 0.3,
+          "thermostat_stuck_closed": 0.3
+        }
+      }
+    },
+    "q_th_symptom": {
+      "question": "What does the temperature problem look like?",
+      "options": {
+        "overheat": {
+          "text": "The engine overheats",
+          "next": "q_th_top_hose"
+        },
+        "cold": {
+          "text": "The engine stays cold, the heater is weak, or code P0128 is stored",
+          "next": "q_th_warm_time"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_th_top_hose"
+        }
+      },
+      "evidence": {
+        "overheat": {
+          "radiator_fan_motor": 0.9,
+          "thermostat_stuck_closed": 0.9,
+          "thermostat_stuck_open": 0.1
+        },
+        "cold": {
+          "radiator_fan_motor": 0.1,
+          "thermostat_stuck_closed": 0.1,
+          "thermostat_stuck_open": 0.9
+        }
+      }
+    },
+    "q_th_top_hose": {
+      "question": "With the gauge high, is the top radiator hose cold or only warm?",
+      "options": {
+        "yes": {
+          "text": "Yes, the top hose is cold or only warm",
+          "next": "q_th_temp_diff"
+        },
+        "no": {
+          "text": "No, the top hose is hot",
+          "next": "q_th_fan"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_th_temp_diff"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.1,
+          "thermostat_stuck_closed": 0.9,
+          "thermostat_stuck_open": 0.3
+        },
+        "no": {
+          "radiator_fan_motor": 0.9,
+          "thermostat_stuck_closed": 0.1,
+          "thermostat_stuck_open": 0.3
+        }
+      }
+    },
+    "q_th_fan": {
+      "question": "Does the radiator fan run when the coolant is above 100 °C?",
+      "options": {
+        "yes": {
+          "text": "Yes, the fan runs",
+          "next": "specialist"
+        },
+        "no": {
+          "text": "No, the fan does not run",
+          "next": "radiator_fan_motor"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.1,
+          "thermostat_stuck_closed": 0.3,
+          "thermostat_stuck_open": 0.3
+        },
+        "no": {
+          "radiator_fan_motor": 0.9,
+          "thermostat_stuck_closed": 0.3,
+          "thermostat_stuck_open": 0.3
+        }
+      }
+    },
+    "q_th_temp_diff": {
+      "question": "Is the engine side of the thermostat more than 20 °C hotter than the radiator side?",
+      "options": {
+        "yes": {
+          "text": "Yes, more than 20 °C hotter",
+          "next": "q_th_bench"
+        },
+        "no": {
+          "text": "No, the difference is small",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_th_bench"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.9,
+          "thermostat_stuck_open": 0.3
+        },
+        "no": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.1,
+          "thermostat_stuck_open": 0.3
+        }
+      }
+    },
+    "q_th_bench": {
+      "question": "In a pot of hot water, does the removed thermostat stay closed at its rated temperature?",
+      "options": {
+        "yes": {
+          "text": "Yes, it stays closed",
+          "next": "thermostat_stuck_closed"
+        },
+        "no": {
+          "text": "No, it opens",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "thermostat_stuck_closed"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.9,
+          "thermostat_stuck_open": 0.3
+        },
+        "no": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.1,
+          "thermostat_stuck_open": 0.3
+        }
+      }
+    },
+    "q_th_warm_time": {
+      "question": "After 15 minutes of driving, does the coolant temperature stay below 70 °C?",
+      "options": {
+        "yes": {
+          "text": "Yes, it stays below 70 °C",
+          "next": "q_th_radiator_warm"
+        },
+        "no": {
+          "text": "No, it reaches the normal temperature",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_th_radiator_warm"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.3,
+          "thermostat_stuck_open": 0.9
+        },
+        "no": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.3,
+          "thermostat_stuck_open": 0.1
+        }
+      }
+    },
+    "q_th_radiator_warm": {
+      "question": "Does the top radiator hose get warm within a few minutes of a cold start?",
+      "options": {
+        "yes": {
+          "text": "Yes, it gets warm early",
+          "next": "q_th_sensor"
+        },
+        "no": {
+          "text": "No, it stays cold",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_th_sensor"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.3,
+          "thermostat_stuck_open": 0.9
+        },
+        "no": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.3,
+          "thermostat_stuck_open": 0.1
+        }
+      }
+    },
+    "q_th_sensor": {
+      "question": "Does the coolant sensor value agree with an infrared reading at the engine?",
+      "options": {
+        "yes": {
+          "text": "Yes, the values agree",
+          "next": "thermostat_stuck_open"
+        },
+        "no": {
+          "text": "No, the sensor reads wrong",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "thermostat_stuck_open"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.3,
+          "thermostat_stuck_open": 0.9
+        },
+        "no": {
+          "radiator_fan_motor": 0.3,
+          "thermostat_stuck_closed": 0.3,
+          "thermostat_stuck_open": 0.1
+        }
+      }
+    },
+    "q_wp_symptom": {
+      "question": "What does the coolant problem look like?",
+      "options": {
+        "coolant_loss": {
+          "text": "The coolant level drops, or there is a puddle or a sweet smell",
+          "next": "q_wp_visible"
+        },
+        "smoke": {
+          "text": "White smoke from the exhaust, or bubbles in the coolant",
+          "next": "q_wp_combustion"
+        },
+        "overheat": {
+          "text": "The engine overheats at speed and the heater blows cold, with no coolant loss",
+          "next": "q_wp_flow"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_wp_visible"
+        }
+      },
+      "evidence": {
+        "coolant_loss": {
+          "water_pump_leak": 0.9,
+          "water_pump_impeller": 0.05,
+          "coolant_hose_leak": 0.9,
+          "head_gasket": 0.05
+        },
+        "smoke": {
+          "water_pump_leak": 0.05,
+          "water_pump_impeller": 0.05,
+          "coolant_hose_leak": 0.05,
+          "head_gasket": 0.9
+        },
+        "overheat": {
+          "water_pump_leak": 0.05,
+          "water_pump_impeller": 0.9,
+          "coolant_hose_leak": 0.05,
+          "head_gasket": 0.05
+        }
+      }
+    },
+    "q_wp_visible": {
+      "question": "Does a pressure test show an external leak?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is an external leak",
+          "next": "q_wp_leak_place"
+        },
+        "no": {
+          "text": "No, there is no external leak",
+          "next": "q_wp_combustion"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_wp_combustion"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "water_pump_leak": 0.9,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.9,
+          "head_gasket": 0.1
+        },
+        "no": {
+          "water_pump_leak": 0.1,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.1,
+          "head_gasket": 0.9
+        }
+      }
+    },
+    "q_wp_leak_place": {
+      "question": "Where is the leak?",
+      "options": {
+        "pump": {
+          "text": "At the water pump or its weep hole",
+          "next": "q_wp_weep"
+        },
+        "hose": {
+          "text": "At a hose or a hose clamp",
+          "next": "q_wp_hose_check"
+        },
+        "other": {
+          "text": "At the radiator or at a different place",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "pump": {
+          "water_pump_leak": 0.9,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.05,
+          "head_gasket": 0.3
+        },
+        "hose": {
+          "water_pump_leak": 0.05,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.9,
+          "head_gasket": 0.3
+        },
+        "other": {
+          "water_pump_leak": 0.05,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.05,
+          "head_gasket": 0.3
+        }
+      }
+    },
+    "q_wp_weep": {
+      "question": "Is there a coolant trace below the weep hole of the pump?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is a trace",
+          "next": "water_pump_leak"
+        },
+        "no": {
+          "text": "No, there is no trace",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "water_pump_leak"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "water_pump_leak": 0.9,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.3
+        },
+        "no": {
+          "water_pump_leak": 0.1,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.3
+        }
+      }
+    },
+    "q_wp_hose_check": {
+      "question": "Is the hose soft, swollen or cracked at the leak?",
+      "options": {
+        "yes": {
+          "text": "Yes, the hose is damaged",
+          "next": "coolant_hose_leak"
+        },
+        "no": {
+          "text": "No, the hose is in good condition",
+          "next": "q_wp_clamp"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_wp_clamp"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.9,
+          "head_gasket": 0.3
+        },
+        "no": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.1,
+          "head_gasket": 0.3
+        }
+      }
+    },
+    "q_wp_clamp": {
+      "question": "Is the hose clamp at the leak loose or corroded?",
+      "options": {
+        "yes": {
+          "text": "Yes, the clamp is loose or corroded",
+          "next": "coolant_hose_leak"
+        },
+        "no": {
+          "text": "No, the clamp is tight",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "coolant_hose_leak"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.9,
+          "head_gasket": 0.3
+        },
+        "no": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.1,
+          "head_gasket": 0.3
+        }
+      }
+    },
+    "q_wp_combustion": {
+      "question": "Does a combustion leak test on the coolant change color?",
+      "options": {
+        "yes": {
+          "text": "Yes, the test fluid changes color",
+          "next": "q_wp_leakdown"
+        },
+        "no": {
+          "text": "No, the color does not change",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_wp_leakdown"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.9
+        },
+        "no": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.1
+        }
+      }
+    },
+    "q_wp_leakdown": {
+      "question": "Does a leak-down test show air in the coolant from one cylinder?",
+      "options": {
+        "yes": {
+          "text": "Yes, air comes into the coolant",
+          "next": "head_gasket"
+        },
+        "no": {
+          "text": "No, no air comes into the coolant",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "head_gasket"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.9
+        },
+        "no": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.3,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.1
+        }
+      }
+    },
+    "q_wp_flow": {
+      "question": "With the thermostat open, is the top hose hot while the bottom hose stays much cooler?",
+      "options": {
+        "yes": {
+          "text": "Yes, a large temperature difference",
+          "next": "q_wp_impeller"
+        },
+        "no": {
+          "text": "No, the hoses are at a similar temperature",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_wp_impeller"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.9,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.3
+        },
+        "no": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.1,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.3
+        }
+      }
+    },
+    "q_wp_impeller": {
+      "question": "With the pump removed, is the impeller eroded, broken or loose on its shaft?",
+      "options": {
+        "yes": {
+          "text": "Yes, the impeller is damaged",
+          "next": "water_pump_impeller"
+        },
+        "no": {
+          "text": "No, the impeller is in good condition",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "water_pump_impeller"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.9,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.3
+        },
+        "no": {
+          "water_pump_leak": 0.3,
+          "water_pump_impeller": 0.1,
+          "coolant_hose_leak": 0.3,
+          "head_gasket": 0.3
+        }
+      }
+    },
+    "q_brk_symptom": {
+      "question": "What is the main brake complaint?",
+      "options": {
+        "noise": {
+          "text": "A squeal or a grind when the driver brakes",
+          "next": "q_brk_pads"
+        },
+        "vibration": {
+          "text": "A shake in the pedal or the steering wheel when the driver brakes",
+          "next": "q_brk_runout"
+        },
+        "pull": {
+          "text": "The car pulls to one side, or one wheel smells hot",
+          "next": "q_brk_wheel_temp"
+        },
+        "soft_pedal": {
+          "text": "The pedal is soft or spongy, or goes down too far",
+          "next": "q_brk_pump"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_brk_pads"
+        }
+      },
+      "evidence": {
+        "noise": {
+          "worn_pads": 0.9,
+          "warped_discs": 0.033,
+          "sticking_caliper": 0.033,
+          "air_in_brakes": 0.033,
+          "abs_pump_module": 0.033
+        },
+        "vibration": {
+          "worn_pads": 0.033,
+          "warped_discs": 0.9,
+          "sticking_caliper": 0.033,
+          "air_in_brakes": 0.033,
+          "abs_pump_module": 0.033
+        },
+        "pull": {
+          "worn_pads": 0.033,
+          "warped_discs": 0.033,
+          "sticking_caliper": 0.9,
+          "air_in_brakes": 0.033,
+          "abs_pump_module": 0.033
+        },
+        "soft_pedal": {
+          "worn_pads": 0.033,
+          "warped_discs": 0.033,
+          "sticking_caliper": 0.033,
+          "air_in_brakes": 0.9,
+          "abs_pump_module": 0.9
+        }
+      }
+    },
+    "q_brk_pads": {
+      "question": "What is the thickness of the pad material?",
+      "options": {
+        "thin": {
+          "text": "Less than 3 mm, or the wear indicator touches the disc",
+          "next": "worn_pads"
+        },
+        "ok": {
+          "text": "3 mm or more",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "thin": {
+          "worn_pads": 0.9,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        },
+        "ok": {
+          "worn_pads": 0.1,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        }
+      }
+    },
+    "q_brk_runout": {
+      "question": "What is the disc run-out?",
+      "options": {
+        "high": {
+          "text": "More than 0.05 mm",
+          "next": "q_brk_hub_clean"
+        },
+        "normal": {
+          "text": "0.05 mm or less",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_brk_hub_clean"
+        }
+      },
+      "evidence": {
+        "high": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.9,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        },
+        "normal": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.1,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        }
+      }
+    },
+    "q_brk_hub_clean": {
+      "question": "After the hub face is cleaned, is the run-out still more than 0.05 mm?",
+      "options": {
+        "yes": {
+          "text": "Yes, the run-out is still high",
+          "next": "warped_discs"
+        },
+        "no": {
+          "text": "No, the run-out is now normal",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "warped_discs"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.9,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        },
+        "no": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.1,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        }
+      }
+    },
+    "q_brk_wheel_temp": {
+      "question": "After a short drive, is one wheel much hotter than the others?",
+      "options": {
+        "yes": {
+          "text": "Yes, one wheel is much hotter",
+          "next": "q_brk_wheel_spin"
+        },
+        "no": {
+          "text": "No, the temperatures are similar",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_brk_wheel_spin"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.9,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        },
+        "no": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.1,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        }
+      }
+    },
+    "q_brk_wheel_spin": {
+      "question": "With the car raised, does that wheel drag when it is turned by hand?",
+      "options": {
+        "yes": {
+          "text": "Yes, the wheel drags",
+          "next": "sticking_caliper"
+        },
+        "no": {
+          "text": "No, it turns freely",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "sticking_caliper"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.9,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        },
+        "no": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.1,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.3
+        }
+      }
+    },
+    "q_brk_pump": {
+      "question": "Does the pedal get firmer when the driver pumps it?",
+      "options": {
+        "yes": {
+          "text": "Yes, it gets firmer",
+          "next": "q_brk_bleed"
+        },
+        "no": {
+          "text": "No, it stays soft",
+          "next": "q_brk_fluid_leak"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_brk_bleed"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.9,
+          "abs_pump_module": 0.1
+        },
+        "no": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.1,
+          "abs_pump_module": 0.9
+        }
+      }
+    },
+    "q_brk_bleed": {
+      "question": "When a caliper is bled, do air bubbles come out?",
+      "options": {
+        "yes": {
+          "text": "Yes, air bubbles come out",
+          "next": "air_in_brakes"
+        },
+        "no": {
+          "text": "No, only clean fluid comes out",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "air_in_brakes"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.9,
+          "abs_pump_module": 0.3
+        },
+        "no": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.1,
+          "abs_pump_module": 0.3
+        }
+      }
+    },
+    "q_brk_fluid_leak": {
+      "question": "Is the brake fluid level low, with a visible leak at a pipe, a hose or a caliper?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is a visible leak",
+          "next": "specialist"
+        },
+        "no": {
+          "text": "No, there is no visible leak",
+          "next": "q_brk_abs_test"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_brk_abs_test"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.1
+        },
+        "no": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.9
+        }
+      }
+    },
+    "q_brk_abs_test": {
+      "question": "Does the pedal sink during an ABS valve test, or is an ABS pump or valve code stored?",
+      "options": {
+        "yes": {
+          "text": "Yes, the pedal sinks or a code is stored",
+          "next": "abs_pump_module"
+        },
+        "no": {
+          "text": "No, the test is normal",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "abs_pump_module"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.9
+        },
+        "no": {
+          "worn_pads": 0.3,
+          "warped_discs": 0.3,
+          "sticking_caliper": 0.3,
+          "air_in_brakes": 0.3,
+          "abs_pump_module": 0.1
+        }
+      }
+    },
+    "q_abs_codes": {
+      "question": "Which ABS code does the scan tool show?",
+      "options": {
+        "wheel_speed": {
+          "text": "A wheel speed sensor code, C0035 to C0050",
+          "next": "q_abs_live"
+        },
+        "pump": {
+          "text": "A pump motor or valve code, C0110 or C0121",
+          "next": "q_abs_pump_run"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_abs_live"
+        }
+      },
+      "evidence": {
+        "wheel_speed": {
+          "abs_wheel_sensor": 0.9,
+          "abs_pump_module": 0.1,
+          "wheel_bearing_worn": 0.9
+        },
+        "pump": {
+          "abs_wheel_sensor": 0.1,
+          "abs_pump_module": 0.9,
+          "wheel_bearing_worn": 0.1
+        }
+      }
+    },
+    "q_abs_live": {
+      "question": "On a road test, does the live data show a dropout or an erratic speed from one wheel?",
+      "options": {
+        "yes": {
+          "text": "Yes, one wheel drops out or reads erratic",
+          "next": "q_abs_play"
+        },
+        "no": {
+          "text": "No, all wheel speeds agree",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_abs_play"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.9,
+          "abs_pump_module": 0.3,
+          "wheel_bearing_worn": 0.9
+        },
+        "no": {
+          "abs_wheel_sensor": 0.1,
+          "abs_pump_module": 0.3,
+          "wheel_bearing_worn": 0.1
+        }
+      }
+    },
+    "q_abs_play": {
+      "question": "With that wheel off the ground, is there play at 12 and 6 o'clock, or a rough feel when it spins?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is play or a rough feel",
+          "next": "wheel_bearing_worn"
+        },
+        "no": {
+          "text": "No, the wheel is tight and smooth",
+          "next": "q_abs_sensor"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_abs_sensor"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.05,
+          "abs_pump_module": 0.3,
+          "wheel_bearing_worn": 0.95
+        },
+        "no": {
+          "abs_wheel_sensor": 0.95,
+          "abs_pump_module": 0.3,
+          "wheel_bearing_worn": 0.05
+        }
+      }
+    },
+    "q_abs_sensor": {
+      "question": "Is the sensor resistance or its signal out of the specification, or is its wire damaged?",
+      "options": {
+        "yes": {
+          "text": "Yes, the sensor or its wire is defective",
+          "next": "abs_wheel_sensor"
+        },
+        "no": {
+          "text": "No, the sensor and its wire are correct",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "abs_wheel_sensor"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.9,
+          "abs_pump_module": 0.3,
+          "wheel_bearing_worn": 0.3
+        },
+        "no": {
+          "abs_wheel_sensor": 0.1,
+          "abs_pump_module": 0.3,
+          "wheel_bearing_worn": 0.3
+        }
+      }
+    },
+    "q_abs_pump_run": {
+      "question": "Does the ABS pump run during an actuator test?",
+      "options": {
+        "yes": {
+          "text": "Yes, the pump runs",
+          "next": "q_abs_valves"
+        },
+        "no": {
+          "text": "No, the pump does not run",
+          "next": "q_abs_pump_power"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_abs_valves"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.3,
+          "abs_pump_module": 0.9,
+          "wheel_bearing_worn": 0.3
+        },
+        "no": {
+          "abs_wheel_sensor": 0.3,
+          "abs_pump_module": 0.1,
+          "wheel_bearing_worn": 0.3
+        }
+      }
+    },
+    "q_abs_pump_power": {
+      "question": "Is there 12 V at the pump motor fuse and at the module connector?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is 12 V",
+          "next": "abs_pump_module"
+        },
+        "no": {
+          "text": "No, the supply is missing",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "abs_pump_module"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.3,
+          "abs_pump_module": 0.9,
+          "wheel_bearing_worn": 0.3
+        },
+        "no": {
+          "abs_wheel_sensor": 0.3,
+          "abs_pump_module": 0.1,
+          "wheel_bearing_worn": 0.3
+        }
+      }
+    },
+    "q_abs_valves": {
+      "question": "Does a valve test fail on one channel, or does the pedal sink during the test?",
+      "options": {
+        "yes": {
+          "text": "Yes, a channel fails or the pedal sinks",
+          "next": "abs_pump_module"
+        },
+        "no": {
+          "text": "No, all channels pass",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "abs_pump_module"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.3,
+          "abs_pump_module": 0.9,
+          "wheel_bearing_worn": 0.3
+        },
+        "no": {
+          "abs_wheel_sensor": 0.3,
+          "abs_pump_module": 0.1,
+          "wheel_bearing_worn": 0.3
+        }
+      }
+    },
+    "q_whl_noise": {
+      "question": "What does the customer notice at the wheels?",
+      "options": {
+        "hum": {
+          "text": "A hum or drone that rises with the road speed",
+          "next": "q_whl_load"
+        },
+        "click": {
+          "text": "A click or a knock on full lock",
+          "next": "q_whl_cv_test"
+        },
+        "warning": {
+          "text": "No noise, but the ABS or traction light is on",
+          "next": "q_whl_play"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_whl_load"
+        }
+      },
+      "evidence": {
+        "hum": {
+          "abs_wheel_sensor": 0.05,
+          "wheel_bearing_worn": 0.9,
+          "cv_joint_worn": 0.05
+        },
+        "click": {
+          "abs_wheel_sensor": 0.05,
+          "wheel_bearing_worn": 0.05,
+          "cv_joint_worn": 0.9
+        },
+        "warning": {
+          "abs_wheel_sensor": 0.9,
+          "wheel_bearing_worn": 0.05,
+          "cv_joint_worn": 0.05
+        }
+      }
+    },
+    "q_whl_load": {
+      "question": "Does the hum change when the car sways in a bend?",
+      "options": {
+        "yes": {
+          "text": "Yes, the hum changes in a bend",
+          "next": "q_whl_spin"
+        },
+        "no": {
+          "text": "No, the hum stays the same",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_whl_spin"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.9,
+          "cv_joint_worn": 0.3
+        },
+        "no": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.1,
+          "cv_joint_worn": 0.3
+        }
+      }
+    },
+    "q_whl_spin": {
+      "question": "With the car raised, does one wheel feel rough or make noise when it is turned by hand?",
+      "options": {
+        "yes": {
+          "text": "Yes, one wheel is rough or noisy",
+          "next": "wheel_bearing_worn"
+        },
+        "no": {
+          "text": "No, all wheels turn smoothly",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "wheel_bearing_worn"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.9,
+          "cv_joint_worn": 0.3
+        },
+        "no": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.1,
+          "cv_joint_worn": 0.3
+        }
+      }
+    },
+    "q_whl_play": {
+      "question": "With the wheel off the ground, is there play at 12 and 6 o'clock, or a rough feel when it spins?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is play or a rough feel",
+          "next": "wheel_bearing_worn"
+        },
+        "no": {
+          "text": "No, the wheel is tight and smooth",
+          "next": "q_whl_sensor"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_whl_sensor"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.05,
+          "wheel_bearing_worn": 0.95,
+          "cv_joint_worn": 0.3
+        },
+        "no": {
+          "abs_wheel_sensor": 0.95,
+          "wheel_bearing_worn": 0.05,
+          "cv_joint_worn": 0.3
+        }
+      }
+    },
+    "q_whl_sensor": {
+      "question": "Is the wheel speed sensor resistance or its signal out of the specification?",
+      "options": {
+        "yes": {
+          "text": "Yes, the sensor is out of the specification",
+          "next": "abs_wheel_sensor"
+        },
+        "no": {
+          "text": "No, the sensor is correct",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.9,
+          "wheel_bearing_worn": 0.3,
+          "cv_joint_worn": 0.3
+        },
+        "no": {
+          "abs_wheel_sensor": 0.1,
+          "wheel_bearing_worn": 0.3,
+          "cv_joint_worn": 0.3
+        }
+      }
+    },
+    "q_whl_cv_test": {
+      "question": "Does the click repeat when the car drives in a tight circle under power?",
+      "options": {
+        "yes": {
+          "text": "Yes, it clicks in a tight circle",
+          "next": "q_whl_boot"
+        },
+        "no": {
+          "text": "No, there is no click in a tight circle",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_whl_boot"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.3,
+          "cv_joint_worn": 0.9
+        },
+        "no": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.3,
+          "cv_joint_worn": 0.1
+        }
+      }
+    },
+    "q_whl_boot": {
+      "question": "Is a drive shaft boot split, with grease on the wheel arch?",
+      "options": {
+        "yes": {
+          "text": "Yes, a boot is split",
+          "next": "cv_joint_worn"
+        },
+        "no": {
+          "text": "No, the boots are in good condition",
+          "next": "q_whl_cv_play"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_whl_cv_play"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.3,
+          "cv_joint_worn": 0.9
+        },
+        "no": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.3,
+          "cv_joint_worn": 0.1
+        }
+      }
+    },
+    "q_whl_cv_play": {
+      "question": "Is there rotational play at the outer joint of the drive shaft?",
+      "options": {
+        "yes": {
+          "text": "Yes, the joint has play",
+          "next": "cv_joint_worn"
+        },
+        "no": {
+          "text": "No, the joint has no play",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "cv_joint_worn"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.3,
+          "cv_joint_worn": 0.9
+        },
+        "no": {
+          "abs_wheel_sensor": 0.3,
+          "wheel_bearing_worn": 0.3,
+          "cv_joint_worn": 0.1
+        }
+      }
+    },
+    "q_can_symptom": {
+      "question": "What does the network problem look like?",
+      "options": {
+        "many_lights": {
+          "text": "Several warning lights come on at the same time, or the gauges drop to zero",
+          "next": "q_can_codes"
+        },
+        "no_start": {
+          "text": "The engine does not start, and the scan tool cannot reach the engine ECU",
+          "next": "q_can_ecu_supply"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_can_codes"
+        }
+      },
+      "evidence": {
+        "many_lights": {
+          "can_wiring_fault": 0.9,
+          "can_gateway_fault": 0.9,
+          "ecu_power_supply": 0.1
+        },
+        "no_start": {
+          "can_wiring_fault": 0.1,
+          "can_gateway_fault": 0.1,
+          "ecu_power_supply": 0.9
+        }
+      }
+    },
+    "q_can_codes": {
+      "question": "Are lost-communication codes, U0100 to U0155, stored in more than one module?",
+      "options": {
+        "yes": {
+          "text": "Yes, in more than one module",
+          "next": "q_can_resistance"
+        },
+        "no": {
+          "text": "No, in one module or none",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_can_resistance"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.9,
+          "can_gateway_fault": 0.9,
+          "ecu_power_supply": 0.3
+        },
+        "no": {
+          "can_wiring_fault": 0.1,
+          "can_gateway_fault": 0.1,
+          "ecu_power_supply": 0.3
+        }
+      }
+    },
+    "q_can_ecu_supply": {
+      "question": "With the ignition on, is the supply voltage at the engine ECU connector more than 11.5 V?",
+      "options": {
+        "yes": {
+          "text": "Yes, more than 11.5 V",
+          "next": "q_can_resistance"
+        },
+        "no": {
+          "text": "No, 11.5 V or less",
+          "next": "ecu_power_supply"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_can_resistance"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.95,
+          "can_gateway_fault": 0.95,
+          "ecu_power_supply": 0.05
+        },
+        "no": {
+          "can_wiring_fault": 0.05,
+          "can_gateway_fault": 0.05,
+          "ecu_power_supply": 0.95
+        }
+      }
+    },
+    "q_can_resistance": {
+      "question": "With the battery disconnected, what is the resistance between pins 6 and 14 of the OBD socket?",
+      "options": {
+        "r60": {
+          "text": "Approximately 60 Ω",
+          "next": "q_can_gateway"
+        },
+        "r120": {
+          "text": "Approximately 120 Ω",
+          "next": "q_can_wiring"
+        },
+        "low": {
+          "text": "Less than 50 Ω, or a short to ground",
+          "next": "q_can_wiring"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_can_wiring"
+        }
+      },
+      "evidence": {
+        "r60": {
+          "can_wiring_fault": 0.05,
+          "can_gateway_fault": 0.9,
+          "ecu_power_supply": 0.3
+        },
+        "r120": {
+          "can_wiring_fault": 0.9,
+          "can_gateway_fault": 0.05,
+          "ecu_power_supply": 0.3
+        },
+        "low": {
+          "can_wiring_fault": 0.05,
+          "can_gateway_fault": 0.05,
+          "ecu_power_supply": 0.3
+        }
+      }
+    },
+    "q_can_wiring": {
+      "question": "Is there water, corrosion or chafe damage at a CAN connector or in the harness?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is damage",
+          "next": "can_wiring_fault"
+        },
+        "no": {
+          "text": "No, the harness looks good",
+          "next": "q_can_scope"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_can_scope"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.9,
+          "can_gateway_fault": 0.3,
+          "ecu_power_supply": 0.3
+        },
+        "no": {
+          "can_wiring_fault": 0.1,
+          "can_gateway_fault": 0.3,
+          "ecu_power_supply": 0.3
+        }
+      }
+    },
+    "q_can_scope": {
+      "question": "Does an oscilloscope show a flat or distorted CAN signal on one section of the harness?",
+      "options": {
+        "yes": {
+          "text": "Yes, one section has a bad signal",
+          "next": "can_wiring_fault"
+        },
+        "no": {
+          "text": "No, the signal is clean",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "can_wiring_fault"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.9,
+          "can_gateway_fault": 0.3,
+          "ecu_power_supply": 0.3
+        },
+        "no": {
+          "can_wiring_fault": 0.1,
+          "can_gateway_fault": 0.3,
+          "ecu_power_supply": 0.3
+        }
+      }
+    },
+    "q_can_gateway": {
+      "question": "Does the gateway module report an internal fault, or does the bus work with a test gateway?",
+      "options": {
+        "yes": {
+          "text": "Yes, the gateway is at fault",
+          "next": "can_gateway_fault"
+        },
+        "no": {
+          "text": "No, the gateway is not at fault",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "can_gateway_fault"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.3,
+          "can_gateway_fault": 0.9,
+          "ecu_power_supply": 0.3
+        },
+        "no": {
+          "can_wiring_fault": 0.3,
+          "can_gateway_fault": 0.1,
+          "ecu_power_supply": 0.3
+        }
+      }
+    },
+    "q_ecu_symptom": {
+      "question": "What does the engine control problem look like?",
+      "options": {
+        "security": {
+          "text": "The key or security light flashes, and the engine cranks but does not fire",
+          "next": "q_ecu_immo_code"
+        },
+        "no_comm": {
+          "text": "The scan tool cannot reach the engine ECU, or the ECU reports an internal fault",
+          "next": "q_ecu_supply"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ecu_supply"
+        }
+      },
+      "evidence": {
+        "security": {
+          "can_wiring_fault": 0.1,
+          "ecu_power_supply": 0.1,
+          "immobiliser_fault": 0.9,
+          "ecu_internal_fault": 0.1
+        },
+        "no_comm": {
+          "can_wiring_fault": 0.9,
+          "ecu_power_supply": 0.9,
+          "immobiliser_fault": 0.1,
+          "ecu_internal_fault": 0.9
+        }
+      }
+    },
+    "q_ecu_immo_code": {
+      "question": "Is an immobiliser code stored, or does the ECU report that it does not recognise the key?",
+      "options": {
+        "yes": {
+          "text": "Yes, the ECU does not recognise the key",
+          "next": "q_ecu_antenna"
+        },
+        "no": {
+          "text": "No, there is no immobiliser code",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ecu_antenna"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.3,
+          "immobiliser_fault": 0.9,
+          "ecu_internal_fault": 0.3
+        },
+        "no": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.3,
+          "immobiliser_fault": 0.1,
+          "ecu_internal_fault": 0.3
+        }
+      }
+    },
+    "q_ecu_antenna": {
+      "question": "In the live data, does the antenna ring fail to read the key?",
+      "options": {
+        "yes": {
+          "text": "Yes, the antenna ring does not read the key",
+          "next": "immobiliser_fault"
+        },
+        "no": {
+          "text": "No, the antenna ring reads the key",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "immobiliser_fault"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.3,
+          "immobiliser_fault": 0.9,
+          "ecu_internal_fault": 0.3
+        },
+        "no": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.3,
+          "immobiliser_fault": 0.1,
+          "ecu_internal_fault": 0.3
+        }
+      }
+    },
+    "q_ecu_supply": {
+      "question": "With the ignition on, is the ECU supply more than 11.5 V, and the drop on the ECU ground 0.1 V or less?",
+      "options": {
+        "yes": {
+          "text": "Yes, the supply and the ground are good",
+          "next": "q_ecu_can_resistance"
+        },
+        "no": {
+          "text": "No, the supply is low or the ground drop is high",
+          "next": "q_ecu_main_relay"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ecu_can_resistance"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.95,
+          "ecu_power_supply": 0.05,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.95
+        },
+        "no": {
+          "can_wiring_fault": 0.05,
+          "ecu_power_supply": 0.95,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.05
+        }
+      }
+    },
+    "q_ecu_main_relay": {
+      "question": "Is the ECU main relay or an ECU fuse defective?",
+      "options": {
+        "yes": {
+          "text": "Yes, the relay or a fuse is defective",
+          "next": "ecu_power_supply"
+        },
+        "no": {
+          "text": "No, the relay and the fuses are good",
+          "next": "q_ecu_supply_wire"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ecu_supply_wire"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.9,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.3
+        },
+        "no": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.1,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.3
+        }
+      }
+    },
+    "q_ecu_supply_wire": {
+      "question": "Is the voltage drop on the ECU supply wire more than 0.5 V, or on the ground wire more than 0.1 V?",
+      "options": {
+        "yes": {
+          "text": "Yes, the drop is too high",
+          "next": "ecu_power_supply"
+        },
+        "no": {
+          "text": "No, the drops are small",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "ecu_power_supply"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.9,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.3
+        },
+        "no": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.1,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.3
+        }
+      }
+    },
+    "q_ecu_can_resistance": {
+      "question": "With the battery disconnected, is the resistance between OBD pins 6 and 14 approximately 60 Ω?",
+      "options": {
+        "yes": {
+          "text": "Yes, approximately 60 Ω",
+          "next": "q_ecu_internal"
+        },
+        "no": {
+          "text": "No, 120 Ω or a short",
+          "next": "can_wiring_fault"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ecu_internal"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.1,
+          "ecu_power_supply": 0.3,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.9
+        },
+        "no": {
+          "can_wiring_fault": 0.9,
+          "ecu_power_supply": 0.3,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.1
+        }
+      }
+    },
+    "q_ecu_internal": {
+      "question": "With good power and a good bus, does the ECU still not respond, or report code P0601 to P0606?",
+      "options": {
+        "yes": {
+          "text": "Yes, the ECU does not respond or reports an internal code",
+          "next": "ecu_internal_fault"
+        },
+        "no": {
+          "text": "No, the ECU responds normally",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "ecu_internal_fault"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.3,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.9
+        },
+        "no": {
+          "can_wiring_fault": 0.3,
+          "ecu_power_supply": 0.3,
+          "immobiliser_fault": 0.3,
+          "ecu_internal_fault": 0.1
+        }
+      }
+    },
+    "q_clu_symptom": {
+      "question": "What does the clutch problem look like?",
+      "options": {
+        "slip": {
+          "text": "The engine revs rise but the road speed does not, in a high gear",
+          "next": "q_clu_stall_test"
+        },
+        "pedal": {
+          "text": "The pedal is soft or goes to the floor, or the gears grind",
+          "next": "q_clu_fluid"
+        },
+        "noise": {
+          "text": "A rattle at idle, or a judder when the car pulls away",
+          "next": "q_clu_rattle"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_clu_stall_test"
+        }
+      },
+      "evidence": {
+        "slip": {
+          "clutch_slip": 0.9,
+          "clutch_hydraulic": 0.05,
+          "dual_mass_flywheel": 0.05
+        },
+        "pedal": {
+          "clutch_slip": 0.05,
+          "clutch_hydraulic": 0.9,
+          "dual_mass_flywheel": 0.05
+        },
+        "noise": {
+          "clutch_slip": 0.05,
+          "clutch_hydraulic": 0.05,
+          "dual_mass_flywheel": 0.9
+        }
+      }
+    },
+    "q_clu_stall_test": {
+      "question": "In 4th gear at 2000 rpm with the handbrake on, does the engine keep running when the clutch is released?",
+      "options": {
+        "yes": {
+          "text": "Yes, the engine keeps running",
+          "next": "q_clu_adjust"
+        },
+        "no": {
+          "text": "No, the engine stalls",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_clu_adjust"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "clutch_slip": 0.9,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.3
+        },
+        "no": {
+          "clutch_slip": 0.1,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.3
+        }
+      }
+    },
+    "q_clu_adjust": {
+      "question": "Is the clutch free play, or the self-adjuster, in the specification?",
+      "options": {
+        "yes": {
+          "text": "Yes, the adjustment is correct",
+          "next": "clutch_slip"
+        },
+        "no": {
+          "text": "No, the adjustment is wrong",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "clutch_slip"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "clutch_slip": 0.9,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.3
+        },
+        "no": {
+          "clutch_slip": 0.1,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.3
+        }
+      }
+    },
+    "q_clu_fluid": {
+      "question": "Is the fluid in the clutch reservoir low, or is there fluid at the slave cylinder or in the footwell?",
+      "options": {
+        "yes": {
+          "text": "Yes, the fluid is low or leaks",
+          "next": "clutch_hydraulic"
+        },
+        "no": {
+          "text": "No, the fluid level is correct and there is no leak",
+          "next": "q_clu_bleed"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_clu_bleed"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.9,
+          "dual_mass_flywheel": 0.3
+        },
+        "no": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.1,
+          "dual_mass_flywheel": 0.3
+        }
+      }
+    },
+    "q_clu_bleed": {
+      "question": "After the clutch hydraulics are bled, does the pedal stay low?",
+      "options": {
+        "yes": {
+          "text": "Yes, the pedal stays low",
+          "next": "clutch_hydraulic"
+        },
+        "no": {
+          "text": "No, the pedal is now firm",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "clutch_hydraulic"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.9,
+          "dual_mass_flywheel": 0.3
+        },
+        "no": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.1,
+          "dual_mass_flywheel": 0.3
+        }
+      }
+    },
+    "q_clu_rattle": {
+      "question": "Does the rattle at idle stop when the clutch pedal is pressed?",
+      "options": {
+        "yes": {
+          "text": "Yes, the rattle stops",
+          "next": "q_clu_dmf_play"
+        },
+        "no": {
+          "text": "No, the rattle continues",
+          "next": "q_clu_judder"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_clu_judder"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.9
+        },
+        "no": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.1
+        }
+      }
+    },
+    "q_clu_judder": {
+      "question": "Does the car judder when it pulls away in first gear?",
+      "options": {
+        "yes": {
+          "text": "Yes, it judders",
+          "next": "q_clu_dmf_play"
+        },
+        "no": {
+          "text": "No, it pulls away smoothly",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_clu_dmf_play"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.9
+        },
+        "no": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.1
+        }
+      }
+    },
+    "q_clu_dmf_play": {
+      "question": "Is the free rotation or the rock of the flywheel more than the specification?",
+      "options": {
+        "yes": {
+          "text": "Yes, more than the specification",
+          "next": "dual_mass_flywheel"
+        },
+        "no": {
+          "text": "No, within the specification",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "dual_mass_flywheel"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.9
+        },
+        "no": {
+          "clutch_slip": 0.3,
+          "clutch_hydraulic": 0.3,
+          "dual_mass_flywheel": 0.1
+        }
+      }
+    },
+    "q_exh_symptom": {
+      "question": "What does the exhaust problem look like?",
+      "options": {
+        "noise": {
+          "text": "A loud exhaust, a tick at a cold start, or an exhaust smell",
+          "next": "q_exh_smoke_test"
+        },
+        "power": {
+          "text": "A loss of power at high speed, or a smell of rotten eggs",
+          "next": "q_exh_backpressure"
+        },
+        "codes": {
+          "text": "Code P0420 or an oxygen sensor code, with no other complaint",
+          "next": "q_exh_o2_code"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_exh_o2_code"
+        }
+      },
+      "evidence": {
+        "noise": {
+          "exhaust_leak": 0.9,
+          "catalytic_converter_blocked": 0.05,
+          "o2_sensor_fault": 0.05
+        },
+        "power": {
+          "exhaust_leak": 0.05,
+          "catalytic_converter_blocked": 0.9,
+          "o2_sensor_fault": 0.05
+        },
+        "codes": {
+          "exhaust_leak": 0.05,
+          "catalytic_converter_blocked": 0.05,
+          "o2_sensor_fault": 0.9
+        }
+      }
+    },
+    "q_exh_smoke_test": {
+      "question": "Does a smoke test show a leak in the exhaust before the rear box?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is a leak",
+          "next": "exhaust_leak"
+        },
+        "no": {
+          "text": "No, there is no leak",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "exhaust_leak"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "exhaust_leak": 0.9,
+          "catalytic_converter_blocked": 0.3,
+          "o2_sensor_fault": 0.3
+        },
+        "no": {
+          "exhaust_leak": 0.1,
+          "catalytic_converter_blocked": 0.3,
+          "o2_sensor_fault": 0.3
+        }
+      }
+    },
+    "q_exh_backpressure": {
+      "question": "Is the exhaust back pressure more than 3 psi at 2500 rpm?",
+      "options": {
+        "yes": {
+          "text": "Yes, more than 3 psi",
+          "next": "q_exh_cat_temp"
+        },
+        "no": {
+          "text": "No, 3 psi or less",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_exh_cat_temp"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "exhaust_leak": 0.3,
+          "catalytic_converter_blocked": 0.9,
+          "o2_sensor_fault": 0.3
+        },
+        "no": {
+          "exhaust_leak": 0.3,
+          "catalytic_converter_blocked": 0.1,
+          "o2_sensor_fault": 0.3
+        }
+      }
+    },
+    "q_exh_cat_temp": {
+      "question": "With an infrared thermometer, is the converter outlet cooler than its inlet?",
+      "options": {
+        "yes": {
+          "text": "Yes, the outlet is cooler",
+          "next": "catalytic_converter_blocked"
+        },
+        "no": {
+          "text": "No, the outlet is hotter",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "catalytic_converter_blocked"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "exhaust_leak": 0.3,
+          "catalytic_converter_blocked": 0.9,
+          "o2_sensor_fault": 0.3
+        },
+        "no": {
+          "exhaust_leak": 0.3,
+          "catalytic_converter_blocked": 0.1,
+          "o2_sensor_fault": 0.3
+        }
+      }
+    },
+    "q_exh_o2_code": {
+      "question": "Is an oxygen sensor code, P0130 to P0141, stored?",
+      "options": {
+        "yes": {
+          "text": "Yes, an oxygen sensor code is stored",
+          "next": "q_exh_o2_switch"
+        },
+        "no": {
+          "text": "No, only P0420 is stored",
+          "next": "q_exh_cat_compare"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_exh_o2_switch"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "exhaust_leak": 0.9,
+          "catalytic_converter_blocked": 0.1,
+          "o2_sensor_fault": 0.9
+        },
+        "no": {
+          "exhaust_leak": 0.1,
+          "catalytic_converter_blocked": 0.9,
+          "o2_sensor_fault": 0.1
+        }
+      }
+    },
+    "q_exh_o2_switch": {
+      "question": "In the live data, does the upstream oxygen sensor switch slowly or stay flat?",
+      "options": {
+        "yes": {
+          "text": "Yes, it switches slowly or stays flat",
+          "next": "q_exh_leak_before"
+        },
+        "no": {
+          "text": "No, it switches normally",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_exh_leak_before"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "exhaust_leak": 0.9,
+          "catalytic_converter_blocked": 0.3,
+          "o2_sensor_fault": 0.9
+        },
+        "no": {
+          "exhaust_leak": 0.1,
+          "catalytic_converter_blocked": 0.3,
+          "o2_sensor_fault": 0.1
+        }
+      }
+    },
+    "q_exh_leak_before": {
+      "question": "Does a smoke test show a leak before the first oxygen sensor?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is a leak before the sensor",
+          "next": "exhaust_leak"
+        },
+        "no": {
+          "text": "No, there is no leak",
+          "next": "o2_sensor_fault"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "o2_sensor_fault"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "exhaust_leak": 0.9,
+          "catalytic_converter_blocked": 0.3,
+          "o2_sensor_fault": 0.1
+        },
+        "no": {
+          "exhaust_leak": 0.1,
+          "catalytic_converter_blocked": 0.3,
+          "o2_sensor_fault": 0.9
+        }
+      }
+    },
+    "q_exh_cat_compare": {
+      "question": "Does the downstream oxygen sensor switch at the same rate as the upstream sensor?",
+      "options": {
+        "yes": {
+          "text": "Yes, both switch at the same rate",
+          "next": "q_exh_backpressure"
+        },
+        "no": {
+          "text": "No, the downstream sensor stays steady",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_exh_backpressure"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "exhaust_leak": 0.3,
+          "catalytic_converter_blocked": 0.9,
+          "o2_sensor_fault": 0.3
+        },
+        "no": {
+          "exhaust_leak": 0.3,
+          "catalytic_converter_blocked": 0.1,
+          "o2_sensor_fault": 0.3
+        }
+      }
+    }
+  }
+}

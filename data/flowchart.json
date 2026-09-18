@@ -1,0 +1,1958 @@
+{
+  "systems": {
+    "no_start": {
+      "label": "No start or hard start",
+      "description": "The engine does not start, cranks slowly, only clicks, or needs many attempts to start",
+      "entry": "q_ns_key_turn"
+    },
+    "charge": {
+      "label": "Charge and electrical",
+      "description": "Battery warning light, a battery that goes flat, dim or flickering lights, or a belt squeal",
+      "entry": "q_ch_symptom"
+    },
+    "runs_badly": {
+      "label": "Engine runs badly",
+      "description": "The engine starts but misfires, idles rough, stalls, hesitates or lacks power",
+      "entry": "q_rb_symptom"
+    },
+    "cooling": {
+      "label": "Cooling",
+      "description": "The engine overheats, loses coolant, or blows white smoke with a sweet smell",
+      "entry": "q_co_symptom"
+    },
+    "brakes": {
+      "label": "Brakes",
+      "description": "Brake noise, a shake when braking, a pull to one side, or a soft or low pedal",
+      "entry": "q_br_symptom"
+    }
+  },
+  "diagnoses": {
+    "flat_battery": {
+      "label": "Flat battery",
+      "description": "The battery is healthy but has too little charge to turn the starter",
+      "systems": [
+        "no_start"
+      ],
+      "prior": 0.12,
+      "fix": [
+        "Measure the resting voltage across the battery terminals with the engine off.",
+        "Connect a smart charger and charge the battery to 12.6 V or more.",
+        "Do a load test on the charged battery.",
+        "Start the engine and measure the charge voltage at 2000 rpm, 13.8 V to 14.7 V.",
+        "Ask the customer about short trips or lights left on, and record the answer."
+      ]
+    },
+    "battery_terminals": {
+      "label": "Corroded or loose battery terminals",
+      "description": "Corrosion or a loose clamp at the battery terminals or the earth strap blocks the current",
+      "systems": [
+        "no_start",
+        "charge"
+      ],
+      "prior": 0.05,
+      "fix": [
+        "Disconnect the negative terminal first, then the positive terminal.",
+        "Clean the posts and the clamps with a terminal brush and a baking soda solution.",
+        "Examine the cables and the earth strap for corrosion under the insulation.",
+        "Replace a clamp or a cable that has corrosion under the insulation.",
+        "Connect the positive terminal first, then the negative terminal, and tighten to the torque value.",
+        "Apply terminal protection grease.",
+        "Do a start test and measure the voltage drop across each connection, 0.2 V maximum."
+      ]
+    },
+    "starter_motor": {
+      "label": "Starter motor failure",
+      "description": "The starter motor or its solenoid does not turn the engine, though the battery supplies full voltage",
+      "systems": [
+        "no_start"
+      ],
+      "prior": 0.06,
+      "fix": [
+        "Disconnect the battery negative terminal.",
+        "Remove the starter supply cable and the solenoid trigger wire.",
+        "Remove the starter motor mounting bolts and remove the starter motor.",
+        "Examine the flywheel ring gear for damaged teeth.",
+        "Install the new starter motor and tighten the bolts to the torque value.",
+        "Connect the cables and the battery negative terminal.",
+        "Do five start tests and listen for a clean engagement."
+      ]
+    },
+    "immobiliser_fault": {
+      "label": "Immobiliser fault",
+      "description": "The immobiliser does not recognise the key, so the engine computer blocks the start",
+      "systems": [
+        "no_start"
+      ],
+      "prior": 0.03,
+      "fix": [
+        "Read the immobiliser fault codes with a diagnostic tool.",
+        "Do a start test with the spare key.",
+        "Replace the key battery if the key has one.",
+        "Examine the antenna ring around the ignition barrel and its connector.",
+        "Program the key to the vehicle with the diagnostic tool.",
+        "Clear the fault codes and do three start tests."
+      ]
+    },
+    "fuel_pump": {
+      "label": "Fuel pump failure",
+      "description": "The in-tank fuel pump does not supply fuel pressure, so the engine cranks but does not fire",
+      "systems": [
+        "no_start"
+      ],
+      "prior": 0.04,
+      "fix": [
+        "Examine the fuel pump fuse and relay, and replace a defective part.",
+        "Connect a fuel pressure gauge to the fuel rail and measure the pressure at ignition on.",
+        "Release the fuel pressure and disconnect the battery negative terminal.",
+        "Remove the rear seat base or the access cover over the pump.",
+        "Replace the fuel pump module and install a new seal.",
+        "Connect the battery, turn the ignition on and examine the pump for leaks.",
+        "Measure the fuel pressure again and do a start test."
+      ]
+    },
+    "crank_sensor": {
+      "label": "Crankshaft position sensor failure",
+      "description": "The engine computer gets no crankshaft signal, so it gives no spark and no fuel",
+      "systems": [
+        "no_start"
+      ],
+      "prior": 0.03,
+      "fix": [
+        "Read the fault codes with a diagnostic tool.",
+        "Examine the sensor connector and the wires for damage and oil.",
+        "Measure the sensor resistance or the signal with an oscilloscope while the engine cranks.",
+        "Remove the sensor and clean the mounting face.",
+        "Install the new sensor with the correct air gap.",
+        "Clear the fault codes and do a start test."
+      ]
+    },
+    "battery_end_of_life": {
+      "label": "Battery at end of life",
+      "description": "The battery no longer holds a charge, so it fails a load test even after a full charge",
+      "systems": [
+        "no_start",
+        "charge"
+      ],
+      "prior": 0.08,
+      "fix": [
+        "Charge the battery fully and do a load test to confirm the failure.",
+        "Connect a memory saver to the diagnostic socket.",
+        "Disconnect the negative terminal, then the positive terminal, and remove the clamp.",
+        "Install a new battery with the correct capacity and cold-crank rating.",
+        "Connect the positive terminal, then the negative terminal.",
+        "Register the new battery with the diagnostic tool if the car has a battery monitor.",
+        "Measure the charge voltage at 2000 rpm, 13.8 V to 14.7 V."
+      ]
+    },
+    "alternator_failure": {
+      "label": "Alternator failure",
+      "description": "The alternator or its regulator gives too little or too much charge voltage",
+      "systems": [
+        "charge"
+      ],
+      "prior": 0.05,
+      "fix": [
+        "Measure the charge voltage at 2000 rpm with the lights and the fan on.",
+        "Disconnect the battery negative terminal.",
+        "Release the belt tension and remove the auxiliary belt from the alternator pulley.",
+        "Disconnect the alternator cables and remove the alternator.",
+        "Install the new alternator and connect the cables.",
+        "Install the belt, then connect the battery negative terminal.",
+        "Measure the charge voltage again, 13.8 V to 14.7 V."
+      ]
+    },
+    "aux_belt_slip": {
+      "label": "Slipping auxiliary belt",
+      "description": "The auxiliary belt is worn, glazed or loose, so it slips on the alternator pulley",
+      "systems": [
+        "charge"
+      ],
+      "prior": 0.04,
+      "fix": [
+        "Examine the belt for cracks, glazing and missing ribs.",
+        "Examine the tensioner and the idler pulleys for noise and play.",
+        "Release the tensioner and remove the belt.",
+        "Replace the tensioner if it has play or a weak spring.",
+        "Install a new belt on the correct routing.",
+        "Run the engine with full electrical load and listen for a squeal."
+      ]
+    },
+    "parasitic_drain": {
+      "label": "Parasitic drain",
+      "description": "A circuit takes current while the car is parked and makes the battery go flat",
+      "systems": [
+        "charge"
+      ],
+      "prior": 0.03,
+      "fix": [
+        "Charge the battery fully.",
+        "Lock the car and wait until the control units go to sleep, approximately 30 minutes.",
+        "Connect a clamp meter to the battery negative cable and measure the current.",
+        "Remove fuses one at a time and find the circuit that stops the drain.",
+        "Repair or replace the part on that circuit.",
+        "Measure the sleep current again, 50 mA maximum."
+      ]
+    },
+    "ignition_coil": {
+      "label": "Ignition coil failure",
+      "description": "One coil gives a weak or no spark, so one cylinder misfires",
+      "systems": [
+        "runs_badly"
+      ],
+      "prior": 0.05,
+      "fix": [
+        "Read the misfire codes and find the cylinder.",
+        "Disconnect the connector of the coil on that cylinder.",
+        "Remove the coil.",
+        "Examine the spark plug of that cylinder and replace it if it is worn.",
+        "Install the new coil and connect it.",
+        "Clear the codes and do a road test under load."
+      ]
+    },
+    "spark_plugs": {
+      "label": "Worn spark plugs",
+      "description": "The spark plugs are worn or fouled, so the engine misfires on more than one cylinder",
+      "systems": [
+        "runs_badly"
+      ],
+      "prior": 0.06,
+      "fix": [
+        "Remove the coils or the plug leads.",
+        "Remove the spark plugs and examine each one.",
+        "Set the gap of the new plugs to the specification.",
+        "Install the new plugs and tighten them to the torque value.",
+        "Install the coils or the plug leads.",
+        "Clear the codes and do a road test."
+      ]
+    },
+    "vacuum_leak": {
+      "label": "Vacuum leak",
+      "description": "Unmetered air enters the intake through a split hose or a gasket, so the engine runs lean",
+      "systems": [
+        "runs_badly"
+      ],
+      "prior": 0.04,
+      "fix": [
+        "Read the fuel trims at idle with a diagnostic tool.",
+        "Do a smoke test on the intake and find the leak.",
+        "Replace the split hose or the defective gasket.",
+        "Examine the brake servo hose and the PCV valve.",
+        "Clear the codes and let the engine idle for 10 minutes.",
+        "Read the fuel trims again, within 10 percent."
+      ]
+    },
+    "maf_sensor": {
+      "label": "MAF sensor fault",
+      "description": "The mass air flow sensor reads the air flow wrong, so the engine gets the wrong mixture",
+      "systems": [
+        "runs_badly"
+      ],
+      "prior": 0.04,
+      "fix": [
+        "Read the fault codes and the live MAF value at idle.",
+        "Examine the air filter and the air intake for dirt and leaks.",
+        "Remove the MAF sensor and clean it with MAF sensor cleaner.",
+        "Install the sensor and do a road test.",
+        "Replace the sensor if the live value stays out of specification.",
+        "Clear the codes and reset the fuel trims."
+      ]
+    },
+    "fuel_filter": {
+      "label": "Clogged fuel filter",
+      "description": "A blocked fuel filter lets the fuel pressure fall at high load",
+      "systems": [
+        "runs_badly"
+      ],
+      "prior": 0.03,
+      "fix": [
+        "Release the fuel pressure.",
+        "Disconnect the battery negative terminal.",
+        "Remove the fuel filter and catch the fuel in a container.",
+        "Install the new filter with the flow arrow in the correct direction.",
+        "Connect the battery and turn the ignition on to prime the system.",
+        "Examine the filter connections for leaks.",
+        "Measure the fuel pressure at full load during a road test."
+      ]
+    },
+    "egr_valve": {
+      "label": "Stuck EGR valve",
+      "description": "The EGR valve is stuck open with carbon, so exhaust gas enters the intake at idle",
+      "systems": [
+        "runs_badly"
+      ],
+      "prior": 0.03,
+      "fix": [
+        "Read the EGR fault codes and the valve position value.",
+        "Disconnect the EGR valve connector and remove the valve.",
+        "Clean the carbon from the valve and the intake port.",
+        "Replace the valve if it does not close fully.",
+        "Install the valve with a new gasket.",
+        "Clear the codes and do the EGR adaptation with the diagnostic tool."
+      ]
+    },
+    "thermostat_stuck": {
+      "label": "Thermostat stuck closed",
+      "description": "The thermostat does not open, so the coolant does not flow through the radiator",
+      "systems": [
+        "cooling"
+      ],
+      "prior": 0.05,
+      "fix": [
+        "Let the engine cool fully.",
+        "Drain the coolant into a clean container.",
+        "Remove the thermostat housing and the thermostat.",
+        "Install the new thermostat with a new seal and the correct orientation.",
+        "Fill the system with coolant and bleed the air.",
+        "Run the engine to operating temperature and feel the top hose get hot."
+      ]
+    },
+    "coolant_hose_leak": {
+      "label": "Coolant hose leak",
+      "description": "A coolant hose or a hose clip leaks, so the coolant level falls",
+      "systems": [
+        "cooling"
+      ],
+      "prior": 0.05,
+      "fix": [
+        "Let the engine cool fully.",
+        "Do a pressure test on the cooling system and find the leak.",
+        "Drain the coolant to below the leak.",
+        "Replace the hose and the clips.",
+        "Fill the system with coolant and bleed the air.",
+        "Do a pressure test again for 10 minutes."
+      ]
+    },
+    "water_pump": {
+      "label": "Water pump failure",
+      "description": "The water pump leaks at its seal or its bearing is worn, so the coolant does not circulate",
+      "systems": [
+        "cooling"
+      ],
+      "prior": 0.03,
+      "fix": [
+        "Let the engine cool fully and drain the coolant.",
+        "Remove the drive belt or the timing belt that drives the pump.",
+        "Remove the water pump.",
+        "Clean the mounting face and install the new pump with a new gasket.",
+        "Install the belt and set its tension.",
+        "Fill the system with coolant and bleed the air.",
+        "Run the engine to operating temperature and examine the pump for leaks."
+      ]
+    },
+    "radiator_fan": {
+      "label": "Radiator fan failure",
+      "description": "The radiator fan does not run, so the engine overheats at low speed and in traffic",
+      "systems": [
+        "cooling"
+      ],
+      "prior": 0.03,
+      "fix": [
+        "Examine the fan fuse and the fan relay.",
+        "Connect 12 V directly to the fan motor and see if it turns.",
+        "Examine the coolant temperature sensor and its signal.",
+        "Replace the fan motor, the relay or the sensor that is defective.",
+        "Run the engine to operating temperature and make sure that the fan starts."
+      ]
+    },
+    "head_gasket": {
+      "label": "Head gasket failure",
+      "description": "The head gasket leaks between a cylinder and a coolant passage",
+      "systems": [
+        "cooling",
+        "runs_badly"
+      ],
+      "prior": 0.02,
+      "fix": [
+        "Do a combustion leak test on the coolant.",
+        "Do a compression test and a leak-down test on each cylinder.",
+        "Tell the customer the cost of the repair and get approval before the work.",
+        "Remove the cylinder head.",
+        "Send the head for a flatness check and a pressure test.",
+        "Install the head with a new gasket and new bolts, and tighten to the torque sequence.",
+        "Fill the coolant, bleed the air and change the engine oil.",
+        "Run the engine and do a combustion leak test again."
+      ]
+    },
+    "worn_pads": {
+      "label": "Worn brake pads",
+      "description": "The pad material is at or below the wear limit",
+      "systems": [
+        "brakes"
+      ],
+      "prior": 0.1,
+      "fix": [
+        "Lift the car and remove the wheels.",
+        "Measure the pad thickness and the disc thickness.",
+        "Push the caliper piston back and remove the old pads.",
+        "Clean the caliper carrier and apply brake grease to the contact points.",
+        "Install the new pads and the wear sensor.",
+        "Install the wheels and tighten the nuts to the torque value.",
+        "Pump the pedal until it is firm, then bed in the pads on a road test."
+      ]
+    },
+    "warped_discs": {
+      "label": "Warped brake discs",
+      "description": "The brake discs have run-out or uneven thickness, so the pedal pulses when braking",
+      "systems": [
+        "brakes"
+      ],
+      "prior": 0.05,
+      "fix": [
+        "Lift the car and remove the wheels.",
+        "Measure the disc run-out and the thickness variation.",
+        "Remove the calipers and the discs.",
+        "Clean the hub face of rust.",
+        "Install the new discs and new pads.",
+        "Install the calipers and the wheels, and tighten to the torque values.",
+        "Bed in the pads on a road test."
+      ]
+    },
+    "sticking_caliper": {
+      "label": "Sticking brake caliper",
+      "description": "A caliper piston or slide pin sticks, so one brake drags and gets hot",
+      "systems": [
+        "brakes"
+      ],
+      "prior": 0.03,
+      "fix": [
+        "Lift the car and find the wheel that drags.",
+        "Remove the wheel and the caliper.",
+        "Examine the slide pins and the piston seal.",
+        "Clean and grease the slide pins, or replace the caliper if the piston sticks.",
+        "Replace the pads and the disc if heat damaged them.",
+        "Bleed the brakes on that circuit.",
+        "Do a road test and measure the wheel temperatures."
+      ]
+    },
+    "air_in_brakes": {
+      "label": "Air in the brake fluid",
+      "description": "Air in the hydraulic system makes the pedal soft and spongy",
+      "systems": [
+        "brakes"
+      ],
+      "prior": 0.02,
+      "fix": [
+        "Examine the brake pipes, the hoses and the calipers for leaks.",
+        "Fill the reservoir with new brake fluid of the correct specification.",
+        "Bleed each wheel in the sequence of the manufacturer.",
+        "Do the ABS bleed procedure with the diagnostic tool if the manual requires it.",
+        "Fill the reservoir to the maximum mark.",
+        "Make sure that the pedal is firm, then do a road test."
+      ]
+    }
+  },
+  "nodes": {
+    "q_ns_key_turn": {
+      "question": "What happens when the driver turns the key or presses the start button?",
+      "options": {
+        "nothing": {
+          "text": "No sound and no movement at all",
+          "next": "q_ns_dash_lights"
+        },
+        "click_only": {
+          "text": "One click or rapid clicks, and the engine does not turn",
+          "next": "q_ns_lights_dim"
+        },
+        "slow_crank": {
+          "text": "The engine turns slowly, or turns and slows down",
+          "next": "q_ns_voltage"
+        },
+        "normal_crank": {
+          "text": "The engine turns at normal speed but does not fire",
+          "next": "q_ns_immobiliser"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ns_voltage"
+        }
+      },
+      "evidence": {
+        "nothing": {
+          "flat_battery": 0.15,
+          "battery_terminals": 0.45,
+          "starter_motor": 0.4,
+          "immobiliser_fault": 0.15,
+          "fuel_pump": 0.01,
+          "crank_sensor": 0.01,
+          "battery_end_of_life": 0.05
+        },
+        "click_only": {
+          "flat_battery": 0.4,
+          "battery_terminals": 0.35,
+          "starter_motor": 0.5,
+          "immobiliser_fault": 0.01,
+          "fuel_pump": 0.01,
+          "crank_sensor": 0.01,
+          "battery_end_of_life": 0.3
+        },
+        "slow_crank": {
+          "flat_battery": 0.4,
+          "battery_terminals": 0.15,
+          "starter_motor": 0.05,
+          "immobiliser_fault": 0.02,
+          "fuel_pump": 0.02,
+          "crank_sensor": 0.02,
+          "battery_end_of_life": 0.6
+        },
+        "normal_crank": {
+          "flat_battery": 0.02,
+          "battery_terminals": 0.02,
+          "starter_motor": 0.02,
+          "immobiliser_fault": 0.8,
+          "fuel_pump": 0.9,
+          "crank_sensor": 0.9,
+          "battery_end_of_life": 0.02
+        }
+      }
+    },
+    "q_ns_dash_lights": {
+      "question": "Do the dashboard lights come on when the ignition is on?",
+      "options": {
+        "yes": {
+          "text": "Yes, the dashboard lights come on at normal brightness",
+          "next": "q_ns_security_light"
+        },
+        "no": {
+          "text": "No, the dashboard stays dark or very dim",
+          "next": "q_ns_terminals"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ns_terminals"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.15,
+          "battery_terminals": 0.2,
+          "starter_motor": 0.9,
+          "immobiliser_fault": 0.9,
+          "fuel_pump": 0.9,
+          "crank_sensor": 0.9,
+          "battery_end_of_life": 0.2
+        },
+        "no": {
+          "flat_battery": 0.8,
+          "battery_terminals": 0.75,
+          "starter_motor": 0.05,
+          "immobiliser_fault": 0.05,
+          "fuel_pump": 0.05,
+          "crank_sensor": 0.05,
+          "battery_end_of_life": 0.75
+        }
+      }
+    },
+    "q_ns_terminals": {
+      "question": "Are the battery terminals or the earth strap corroded, loose or hot to touch?",
+      "options": {
+        "yes": {
+          "text": "Yes, there is corrosion, a loose clamp or a hot terminal",
+          "next": "battery_terminals"
+        },
+        "no": {
+          "text": "No, the terminals are clean and tight",
+          "next": "q_ns_voltage"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ns_voltage"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.05,
+          "battery_terminals": 0.9,
+          "starter_motor": 0.1,
+          "immobiliser_fault": 0.1,
+          "fuel_pump": 0.1,
+          "crank_sensor": 0.1,
+          "battery_end_of_life": 0.1
+        },
+        "no": {
+          "flat_battery": 0.9,
+          "battery_terminals": 0.08,
+          "starter_motor": 0.85,
+          "immobiliser_fault": 0.85,
+          "fuel_pump": 0.85,
+          "crank_sensor": 0.85,
+          "battery_end_of_life": 0.85
+        }
+      }
+    },
+    "q_ns_security_light": {
+      "question": "Is the immobiliser, key or security light on or flashing on the dashboard?",
+      "options": {
+        "yes": {
+          "text": "Yes, a key or security light stays on or flashes",
+          "next": "immobiliser_fault"
+        },
+        "no": {
+          "text": "No, there is no key or security light",
+          "next": "q_ns_starter_voltage"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.05,
+          "battery_terminals": 0.05,
+          "starter_motor": 0.03,
+          "immobiliser_fault": 0.9,
+          "fuel_pump": 0.05,
+          "crank_sensor": 0.05,
+          "battery_end_of_life": 0.05
+        },
+        "no": {
+          "flat_battery": 0.9,
+          "battery_terminals": 0.9,
+          "starter_motor": 0.92,
+          "immobiliser_fault": 0.08,
+          "fuel_pump": 0.9,
+          "crank_sensor": 0.9,
+          "battery_end_of_life": 0.9
+        }
+      }
+    },
+    "q_ns_lights_dim": {
+      "question": "Do the headlights go dim or out when the key turns to start?",
+      "options": {
+        "yes": {
+          "text": "Yes, the headlights go dim or out",
+          "next": "q_ns_voltage"
+        },
+        "no": {
+          "text": "No, the headlights stay bright",
+          "next": "q_ns_starter_voltage"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ns_voltage"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.9,
+          "battery_terminals": 0.6,
+          "starter_motor": 0.1,
+          "immobiliser_fault": 0.1,
+          "fuel_pump": 0.1,
+          "crank_sensor": 0.1,
+          "battery_end_of_life": 0.9
+        },
+        "no": {
+          "flat_battery": 0.05,
+          "battery_terminals": 0.35,
+          "starter_motor": 0.85,
+          "immobiliser_fault": 0.85,
+          "fuel_pump": 0.85,
+          "crank_sensor": 0.85,
+          "battery_end_of_life": 0.05
+        }
+      }
+    },
+    "q_ns_voltage": {
+      "question": "What is the battery voltage at rest, with the engine off?",
+      "options": {
+        "below_12_2": {
+          "text": "Less than 12.2 V",
+          "next": "q_ns_load_test"
+        },
+        "mid": {
+          "text": "From 12.2 V to 12.4 V",
+          "next": "q_ns_load_test"
+        },
+        "above_12_4": {
+          "text": "More than 12.4 V",
+          "next": "q_ns_starter_voltage"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ns_load_test"
+        }
+      },
+      "evidence": {
+        "below_12_2": {
+          "flat_battery": 0.75,
+          "battery_terminals": 0.15,
+          "starter_motor": 0.1,
+          "immobiliser_fault": 0.1,
+          "fuel_pump": 0.1,
+          "crank_sensor": 0.1,
+          "battery_end_of_life": 0.55
+        },
+        "mid": {
+          "flat_battery": 0.2,
+          "battery_terminals": 0.25,
+          "starter_motor": 0.2,
+          "immobiliser_fault": 0.2,
+          "fuel_pump": 0.2,
+          "crank_sensor": 0.2,
+          "battery_end_of_life": 0.35
+        },
+        "above_12_4": {
+          "flat_battery": 0.04,
+          "battery_terminals": 0.6,
+          "starter_motor": 0.7,
+          "immobiliser_fault": 0.7,
+          "fuel_pump": 0.7,
+          "crank_sensor": 0.7,
+          "battery_end_of_life": 0.08
+        }
+      }
+    },
+    "q_ns_load_test": {
+      "question": "After a full charge, does the battery pass a load or conductance test?",
+      "options": {
+        "yes": {
+          "text": "Yes, the battery passes the test",
+          "next": "flat_battery"
+        },
+        "no": {
+          "text": "No, the battery fails the test",
+          "next": "battery_end_of_life"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.92,
+          "battery_terminals": 0.85,
+          "starter_motor": 0.85,
+          "immobiliser_fault": 0.85,
+          "fuel_pump": 0.85,
+          "crank_sensor": 0.85,
+          "battery_end_of_life": 0.03
+        },
+        "no": {
+          "flat_battery": 0.05,
+          "battery_terminals": 0.1,
+          "starter_motor": 0.1,
+          "immobiliser_fault": 0.1,
+          "fuel_pump": 0.1,
+          "crank_sensor": 0.1,
+          "battery_end_of_life": 0.95
+        }
+      }
+    },
+    "q_ns_starter_voltage": {
+      "question": "Is there more than 10 V at the starter solenoid terminal while the key is at start?",
+      "options": {
+        "yes": {
+          "text": "Yes, the voltage at the starter is more than 10 V",
+          "next": "starter_motor"
+        },
+        "no": {
+          "text": "No, the voltage falls at the starter but not at the battery",
+          "next": "battery_terminals"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.2,
+          "battery_terminals": 0.1,
+          "starter_motor": 0.9,
+          "immobiliser_fault": 0.5,
+          "fuel_pump": 0.9,
+          "crank_sensor": 0.9,
+          "battery_end_of_life": 0.2
+        },
+        "no": {
+          "flat_battery": 0.75,
+          "battery_terminals": 0.85,
+          "starter_motor": 0.08,
+          "immobiliser_fault": 0.4,
+          "fuel_pump": 0.08,
+          "crank_sensor": 0.08,
+          "battery_end_of_life": 0.75
+        }
+      }
+    },
+    "q_ns_immobiliser": {
+      "question": "Is the immobiliser, key or security light on or flashing while the engine cranks?",
+      "options": {
+        "yes": {
+          "text": "Yes, a key or security light stays on or flashes",
+          "next": "immobiliser_fault"
+        },
+        "no": {
+          "text": "No, there is no key or security light",
+          "next": "q_ns_fuel_pump_hum"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ns_fuel_pump_hum"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.05,
+          "battery_terminals": 0.05,
+          "starter_motor": 0.05,
+          "immobiliser_fault": 0.9,
+          "fuel_pump": 0.02,
+          "crank_sensor": 0.02,
+          "battery_end_of_life": 0.05
+        },
+        "no": {
+          "flat_battery": 0.9,
+          "battery_terminals": 0.9,
+          "starter_motor": 0.9,
+          "immobiliser_fault": 0.08,
+          "fuel_pump": 0.95,
+          "crank_sensor": 0.95,
+          "battery_end_of_life": 0.9
+        }
+      }
+    },
+    "q_ns_fuel_pump_hum": {
+      "question": "Does the fuel pump hum for approximately 2 seconds when the ignition turns on?",
+      "options": {
+        "yes": {
+          "text": "Yes, the pump hums at ignition on",
+          "next": "q_ns_rpm_signal"
+        },
+        "no": {
+          "text": "No, the pump makes no sound, or the fuel pressure is zero",
+          "next": "fuel_pump"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ns_rpm_signal"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.85,
+          "battery_terminals": 0.85,
+          "starter_motor": 0.85,
+          "immobiliser_fault": 0.9,
+          "fuel_pump": 0.08,
+          "crank_sensor": 0.9,
+          "battery_end_of_life": 0.85
+        },
+        "no": {
+          "flat_battery": 0.1,
+          "battery_terminals": 0.1,
+          "starter_motor": 0.1,
+          "immobiliser_fault": 0.05,
+          "fuel_pump": 0.9,
+          "crank_sensor": 0.05,
+          "battery_end_of_life": 0.1
+        }
+      }
+    },
+    "q_ns_rpm_signal": {
+      "question": "Does the rev counter needle move while the engine cranks?",
+      "options": {
+        "yes": {
+          "text": "Yes, the rev counter shows a few hundred rpm",
+          "next": "specialist"
+        },
+        "no": {
+          "text": "No, the rev counter stays at zero",
+          "next": "crank_sensor"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "flat_battery": 0.85,
+          "battery_terminals": 0.85,
+          "starter_motor": 0.85,
+          "immobiliser_fault": 0.85,
+          "fuel_pump": 0.85,
+          "crank_sensor": 0.08,
+          "battery_end_of_life": 0.85
+        },
+        "no": {
+          "flat_battery": 0.1,
+          "battery_terminals": 0.1,
+          "starter_motor": 0.1,
+          "immobiliser_fault": 0.1,
+          "fuel_pump": 0.1,
+          "crank_sensor": 0.9,
+          "battery_end_of_life": 0.1
+        }
+      }
+    },
+    "q_ch_symptom": {
+      "question": "What electrical problem does the driver notice first?",
+      "options": {
+        "warning_light": {
+          "text": "The battery or charge warning light comes on while the car drives",
+          "next": "q_ch_running_voltage"
+        },
+        "flat_overnight": {
+          "text": "The battery goes flat after the car stands overnight or for a few days",
+          "next": "q_ch_drain"
+        },
+        "dim_lights": {
+          "text": "The lights go dim or flicker, most at idle",
+          "next": "q_ch_running_voltage"
+        },
+        "squeal": {
+          "text": "A squeal from the engine bay, at start, in the wet or at full steering lock",
+          "next": "q_ch_belt"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ch_running_voltage"
+        }
+      },
+      "evidence": {
+        "warning_light": {
+          "alternator_failure": 0.6,
+          "aux_belt_slip": 0.25,
+          "parasitic_drain": 0.02,
+          "battery_end_of_life": 0.05,
+          "battery_terminals": 0.2
+        },
+        "flat_overnight": {
+          "alternator_failure": 0.1,
+          "aux_belt_slip": 0.05,
+          "parasitic_drain": 0.9,
+          "battery_end_of_life": 0.6,
+          "battery_terminals": 0.1
+        },
+        "dim_lights": {
+          "alternator_failure": 0.25,
+          "aux_belt_slip": 0.1,
+          "parasitic_drain": 0.03,
+          "battery_end_of_life": 0.25,
+          "battery_terminals": 0.6
+        },
+        "squeal": {
+          "alternator_failure": 0.04,
+          "aux_belt_slip": 0.6,
+          "parasitic_drain": 0.02,
+          "battery_end_of_life": 0.02,
+          "battery_terminals": 0.02
+        }
+      }
+    },
+    "q_ch_running_voltage": {
+      "question": "What is the battery voltage with the engine at 2000 rpm and the lights on?",
+      "options": {
+        "low": {
+          "text": "Less than 13.2 V",
+          "next": "q_ch_belt"
+        },
+        "normal": {
+          "text": "From 13.8 V to 14.7 V",
+          "next": "q_ch_battery_test"
+        },
+        "high": {
+          "text": "More than 15 V",
+          "next": "alternator_failure"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ch_belt"
+        }
+      },
+      "evidence": {
+        "low": {
+          "alternator_failure": 0.7,
+          "aux_belt_slip": 0.8,
+          "parasitic_drain": 0.05,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.45
+        },
+        "normal": {
+          "alternator_failure": 0.05,
+          "aux_belt_slip": 0.15,
+          "parasitic_drain": 0.9,
+          "battery_end_of_life": 0.85,
+          "battery_terminals": 0.5
+        },
+        "high": {
+          "alternator_failure": 0.22,
+          "aux_belt_slip": 0.01,
+          "parasitic_drain": 0.01,
+          "battery_end_of_life": 0.01,
+          "battery_terminals": 0.01
+        }
+      }
+    },
+    "q_ch_belt": {
+      "question": "Is the auxiliary belt glazed, cracked or loose, or does it squeal under load?",
+      "options": {
+        "yes": {
+          "text": "Yes, the belt is worn, loose or squeals",
+          "next": "aux_belt_slip"
+        },
+        "no": {
+          "text": "No, the belt and its tension are good",
+          "next": "q_ch_terminals"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ch_terminals"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "alternator_failure": 0.1,
+          "aux_belt_slip": 0.95,
+          "parasitic_drain": 0.1,
+          "battery_end_of_life": 0.1,
+          "battery_terminals": 0.1
+        },
+        "no": {
+          "alternator_failure": 0.85,
+          "aux_belt_slip": 0.03,
+          "parasitic_drain": 0.85,
+          "battery_end_of_life": 0.85,
+          "battery_terminals": 0.85
+        }
+      }
+    },
+    "q_ch_terminals": {
+      "question": "Are the battery terminals, the alternator cable or the earth strap corroded or loose?",
+      "options": {
+        "yes": {
+          "text": "Yes, a terminal or a cable is corroded or loose",
+          "next": "battery_terminals"
+        },
+        "no": {
+          "text": "No, the connections are clean and tight",
+          "next": "alternator_failure"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "alternator_failure": 0.08,
+          "aux_belt_slip": 0.1,
+          "parasitic_drain": 0.1,
+          "battery_end_of_life": 0.15,
+          "battery_terminals": 0.92
+        },
+        "no": {
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.85,
+          "parasitic_drain": 0.85,
+          "battery_end_of_life": 0.8,
+          "battery_terminals": 0.05
+        }
+      }
+    },
+    "q_ch_drain": {
+      "question": "What current does the battery supply when the car is locked and asleep, after 30 minutes?",
+      "options": {
+        "high": {
+          "text": "More than 50 mA",
+          "next": "parasitic_drain"
+        },
+        "normal": {
+          "text": "50 mA or less",
+          "next": "q_ch_battery_test"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ch_battery_test"
+        }
+      },
+      "evidence": {
+        "high": {
+          "alternator_failure": 0.05,
+          "aux_belt_slip": 0.05,
+          "parasitic_drain": 0.92,
+          "battery_end_of_life": 0.03,
+          "battery_terminals": 0.05
+        },
+        "normal": {
+          "alternator_failure": 0.9,
+          "aux_belt_slip": 0.9,
+          "parasitic_drain": 0.05,
+          "battery_end_of_life": 0.92,
+          "battery_terminals": 0.9
+        }
+      }
+    },
+    "q_ch_battery_test": {
+      "question": "After a full charge, does the battery pass a load or conductance test?",
+      "options": {
+        "yes": {
+          "text": "Yes, the battery passes the test",
+          "next": "q_ch_terminals"
+        },
+        "no": {
+          "text": "No, the battery fails the test",
+          "next": "battery_end_of_life"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_ch_terminals"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "alternator_failure": 0.8,
+          "aux_belt_slip": 0.8,
+          "parasitic_drain": 0.75,
+          "battery_end_of_life": 0.05,
+          "battery_terminals": 0.85
+        },
+        "no": {
+          "alternator_failure": 0.15,
+          "aux_belt_slip": 0.15,
+          "parasitic_drain": 0.2,
+          "battery_end_of_life": 0.92,
+          "battery_terminals": 0.1
+        }
+      }
+    },
+    "q_rb_symptom": {
+      "question": "How does the engine run badly?",
+      "options": {
+        "misfire": {
+          "text": "It shakes or stumbles, worse under load, and the engine light can flash",
+          "next": "q_rb_one_cylinder"
+        },
+        "rough_idle": {
+          "text": "The idle is rough or hunts, and the engine can stall at idle",
+          "next": "q_rb_idle_hiss"
+        },
+        "no_power": {
+          "text": "A flat spot or a loss of power when it accelerates, but a smooth idle",
+          "next": "q_rb_fuel_pressure"
+        },
+        "white_smoke": {
+          "text": "White smoke with a sweet smell from the exhaust, and a rough run",
+          "next": "q_rb_coolant_loss"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_rb_fuel_pressure"
+        }
+      },
+      "evidence": {
+        "misfire": {
+          "ignition_coil": 0.8,
+          "spark_plugs": 0.65,
+          "vacuum_leak": 0.1,
+          "maf_sensor": 0.05,
+          "fuel_filter": 0.05,
+          "egr_valve": 0.05,
+          "head_gasket": 0.2
+        },
+        "rough_idle": {
+          "ignition_coil": 0.12,
+          "spark_plugs": 0.2,
+          "vacuum_leak": 0.75,
+          "maf_sensor": 0.25,
+          "fuel_filter": 0.05,
+          "egr_valve": 0.7,
+          "head_gasket": 0.05
+        },
+        "no_power": {
+          "ignition_coil": 0.05,
+          "spark_plugs": 0.12,
+          "vacuum_leak": 0.1,
+          "maf_sensor": 0.65,
+          "fuel_filter": 0.85,
+          "egr_valve": 0.2,
+          "head_gasket": 0.03
+        },
+        "white_smoke": {
+          "ignition_coil": 0.01,
+          "spark_plugs": 0.01,
+          "vacuum_leak": 0.01,
+          "maf_sensor": 0.01,
+          "fuel_filter": 0.01,
+          "egr_valve": 0.02,
+          "head_gasket": 0.7
+        }
+      }
+    },
+    "q_rb_one_cylinder": {
+      "question": "Is the misfire on one cylinder only, for example one code from P0301 to P0308?",
+      "options": {
+        "yes": {
+          "text": "Yes, one cylinder only",
+          "next": "q_rb_coil_swap"
+        },
+        "no": {
+          "text": "No, more than one cylinder, or a random misfire code P0300",
+          "next": "q_rb_plugs"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_rb_plugs"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "ignition_coil": 0.9,
+          "spark_plugs": 0.25,
+          "vacuum_leak": 0.1,
+          "maf_sensor": 0.05,
+          "fuel_filter": 0.05,
+          "egr_valve": 0.1,
+          "head_gasket": 0.6
+        },
+        "no": {
+          "ignition_coil": 0.08,
+          "spark_plugs": 0.7,
+          "vacuum_leak": 0.85,
+          "maf_sensor": 0.9,
+          "fuel_filter": 0.9,
+          "egr_valve": 0.85,
+          "head_gasket": 0.35
+        }
+      }
+    },
+    "q_rb_coil_swap": {
+      "question": "When the coil of the bad cylinder goes on a different cylinder, does the misfire move with it?",
+      "options": {
+        "yes": {
+          "text": "Yes, the misfire moves with the coil",
+          "next": "ignition_coil"
+        },
+        "no": {
+          "text": "No, the misfire stays on the same cylinder",
+          "next": "q_rb_plugs"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_rb_plugs"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "ignition_coil": 0.9,
+          "spark_plugs": 0.05,
+          "vacuum_leak": 0.05,
+          "maf_sensor": 0.05,
+          "fuel_filter": 0.05,
+          "egr_valve": 0.05,
+          "head_gasket": 0.05
+        },
+        "no": {
+          "ignition_coil": 0.08,
+          "spark_plugs": 0.9,
+          "vacuum_leak": 0.9,
+          "maf_sensor": 0.9,
+          "fuel_filter": 0.9,
+          "egr_valve": 0.9,
+          "head_gasket": 0.9
+        }
+      }
+    },
+    "q_rb_plugs": {
+      "question": "What condition are the spark plugs in?",
+      "options": {
+        "worn": {
+          "text": "Worn or fouled, a large gap, or past the service interval",
+          "next": "spark_plugs"
+        },
+        "good": {
+          "text": "Good, clean and with the gap in specification",
+          "next": "q_rb_coolant_loss"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "worn": {
+          "ignition_coil": 0.15,
+          "spark_plugs": 0.92,
+          "vacuum_leak": 0.15,
+          "maf_sensor": 0.15,
+          "fuel_filter": 0.15,
+          "egr_valve": 0.15,
+          "head_gasket": 0.2
+        },
+        "good": {
+          "ignition_coil": 0.8,
+          "spark_plugs": 0.05,
+          "vacuum_leak": 0.8,
+          "maf_sensor": 0.8,
+          "fuel_filter": 0.8,
+          "egr_valve": 0.8,
+          "head_gasket": 0.75
+        }
+      }
+    },
+    "q_rb_coolant_loss": {
+      "question": "Does the coolant level fall with no external leak, or is the spark plug of one cylinder steam-clean?",
+      "options": {
+        "yes": {
+          "text": "Yes, coolant goes missing with no leak, or one plug is steam-clean",
+          "next": "head_gasket"
+        },
+        "no": {
+          "text": "No, the coolant level stays constant",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "ignition_coil": 0.05,
+          "spark_plugs": 0.05,
+          "vacuum_leak": 0.05,
+          "maf_sensor": 0.05,
+          "fuel_filter": 0.05,
+          "egr_valve": 0.05,
+          "head_gasket": 0.9
+        },
+        "no": {
+          "ignition_coil": 0.9,
+          "spark_plugs": 0.9,
+          "vacuum_leak": 0.9,
+          "maf_sensor": 0.9,
+          "fuel_filter": 0.9,
+          "egr_valve": 0.9,
+          "head_gasket": 0.08
+        }
+      }
+    },
+    "q_rb_idle_hiss": {
+      "question": "Is there a hiss at idle, or does the idle change when carb cleaner is sprayed near the intake?",
+      "options": {
+        "yes": {
+          "text": "Yes, a hiss, or the idle changes with the spray, or a smoke test shows a leak",
+          "next": "vacuum_leak"
+        },
+        "no": {
+          "text": "No hiss and no change",
+          "next": "q_rb_egr"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_rb_egr"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "ignition_coil": 0.03,
+          "spark_plugs": 0.03,
+          "vacuum_leak": 0.9,
+          "maf_sensor": 0.05,
+          "fuel_filter": 0.05,
+          "egr_valve": 0.05,
+          "head_gasket": 0.05
+        },
+        "no": {
+          "ignition_coil": 0.92,
+          "spark_plugs": 0.92,
+          "vacuum_leak": 0.08,
+          "maf_sensor": 0.9,
+          "fuel_filter": 0.9,
+          "egr_valve": 0.9,
+          "head_gasket": 0.9
+        }
+      }
+    },
+    "q_rb_egr": {
+      "question": "Is the EGR valve stuck open or heavy with carbon, or is an EGR code from P0400 to P0409 stored?",
+      "options": {
+        "yes": {
+          "text": "Yes, the EGR valve sticks, has heavy carbon, or has a code",
+          "next": "egr_valve"
+        },
+        "no": {
+          "text": "No, the EGR valve is clean, moves freely and has no code",
+          "next": "q_rb_maf"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_rb_maf"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "ignition_coil": 0.03,
+          "spark_plugs": 0.03,
+          "vacuum_leak": 0.08,
+          "maf_sensor": 0.05,
+          "fuel_filter": 0.05,
+          "egr_valve": 0.9,
+          "head_gasket": 0.05
+        },
+        "no": {
+          "ignition_coil": 0.92,
+          "spark_plugs": 0.92,
+          "vacuum_leak": 0.9,
+          "maf_sensor": 0.9,
+          "fuel_filter": 0.9,
+          "egr_valve": 0.08,
+          "head_gasket": 0.9
+        }
+      }
+    },
+    "q_rb_fuel_pressure": {
+      "question": "What does the fuel pressure do at full load?",
+      "options": {
+        "drops": {
+          "text": "It falls below the specification",
+          "next": "q_rb_filter_age"
+        },
+        "holds": {
+          "text": "It stays in the specification",
+          "next": "q_rb_maf"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_rb_maf"
+        }
+      },
+      "evidence": {
+        "drops": {
+          "ignition_coil": 0.05,
+          "spark_plugs": 0.05,
+          "vacuum_leak": 0.05,
+          "maf_sensor": 0.05,
+          "fuel_filter": 0.9,
+          "egr_valve": 0.05,
+          "head_gasket": 0.05
+        },
+        "holds": {
+          "ignition_coil": 0.9,
+          "spark_plugs": 0.9,
+          "vacuum_leak": 0.9,
+          "maf_sensor": 0.9,
+          "fuel_filter": 0.08,
+          "egr_valve": 0.9,
+          "head_gasket": 0.9
+        }
+      }
+    },
+    "q_rb_filter_age": {
+      "question": "When did the fuel filter last get replaced?",
+      "options": {
+        "overdue": {
+          "text": "Never, not in the records, or more than 60,000 km ago",
+          "next": "fuel_filter"
+        },
+        "recent": {
+          "text": "Less than 60,000 km ago",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "overdue": {
+          "ignition_coil": 0.4,
+          "spark_plugs": 0.4,
+          "vacuum_leak": 0.4,
+          "maf_sensor": 0.4,
+          "fuel_filter": 0.85,
+          "egr_valve": 0.4,
+          "head_gasket": 0.4
+        },
+        "recent": {
+          "ignition_coil": 0.5,
+          "spark_plugs": 0.5,
+          "vacuum_leak": 0.5,
+          "maf_sensor": 0.5,
+          "fuel_filter": 0.1,
+          "egr_valve": 0.5,
+          "head_gasket": 0.5
+        }
+      }
+    },
+    "q_rb_maf": {
+      "question": "Does the engine run better with the MAF sensor unplugged, or is a code from P0100 to P0104 stored?",
+      "options": {
+        "yes": {
+          "text": "Yes, it runs better unplugged, or there is a MAF code",
+          "next": "maf_sensor"
+        },
+        "no": {
+          "text": "No change and no MAF code",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "ignition_coil": 0.05,
+          "spark_plugs": 0.05,
+          "vacuum_leak": 0.15,
+          "maf_sensor": 0.9,
+          "fuel_filter": 0.05,
+          "egr_valve": 0.1,
+          "head_gasket": 0.05
+        },
+        "no": {
+          "ignition_coil": 0.9,
+          "spark_plugs": 0.9,
+          "vacuum_leak": 0.8,
+          "maf_sensor": 0.08,
+          "fuel_filter": 0.9,
+          "egr_valve": 0.85,
+          "head_gasket": 0.9
+        }
+      }
+    },
+    "q_co_symptom": {
+      "question": "What cooling problem does the driver notice first?",
+      "options": {
+        "overheat_road": {
+          "text": "The temperature gauge climbs on the open road or soon after start",
+          "next": "q_co_top_hose"
+        },
+        "overheat_idle": {
+          "text": "The temperature climbs in traffic or at idle, and falls at speed",
+          "next": "q_co_fan"
+        },
+        "coolant_loss": {
+          "text": "The coolant level falls, a warning shows, or there is a puddle or a sweet smell",
+          "next": "q_co_visible_leak"
+        },
+        "white_smoke": {
+          "text": "White sweet smoke from the exhaust, or bubbles in the expansion tank",
+          "next": "q_co_combustion_test"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_co_visible_leak"
+        }
+      },
+      "evidence": {
+        "overheat_road": {
+          "thermostat_stuck": 0.85,
+          "coolant_hose_leak": 0.15,
+          "water_pump": 0.35,
+          "radiator_fan": 0.05,
+          "head_gasket": 0.2
+        },
+        "overheat_idle": {
+          "thermostat_stuck": 0.08,
+          "coolant_hose_leak": 0.05,
+          "water_pump": 0.1,
+          "radiator_fan": 0.9,
+          "head_gasket": 0.05
+        },
+        "coolant_loss": {
+          "thermostat_stuck": 0.03,
+          "coolant_hose_leak": 0.75,
+          "water_pump": 0.5,
+          "radiator_fan": 0.02,
+          "head_gasket": 0.25
+        },
+        "white_smoke": {
+          "thermostat_stuck": 0.02,
+          "coolant_hose_leak": 0.02,
+          "water_pump": 0.02,
+          "radiator_fan": 0.01,
+          "head_gasket": 0.5
+        }
+      }
+    },
+    "q_co_top_hose": {
+      "question": "With the engine hot, is the top radiator hose hot too?",
+      "options": {
+        "yes": {
+          "text": "Yes, the top hose is too hot to hold",
+          "next": "q_co_pump"
+        },
+        "no": {
+          "text": "No, the top hose stays cool or only warm",
+          "next": "thermostat_stuck"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_co_pump"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "thermostat_stuck": 0.05,
+          "coolant_hose_leak": 0.85,
+          "water_pump": 0.75,
+          "radiator_fan": 0.9,
+          "head_gasket": 0.85
+        },
+        "no": {
+          "thermostat_stuck": 0.92,
+          "coolant_hose_leak": 0.1,
+          "water_pump": 0.2,
+          "radiator_fan": 0.05,
+          "head_gasket": 0.1
+        }
+      }
+    },
+    "q_co_pump": {
+      "question": "Is there a whine or a grind from the water pump, play in its pulley, or coolant at its weep hole?",
+      "options": {
+        "yes": {
+          "text": "Yes, noise, play or a wet weep hole",
+          "next": "water_pump"
+        },
+        "no": {
+          "text": "No, the pump is quiet and dry",
+          "next": "q_co_combustion_test"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_co_combustion_test"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "thermostat_stuck": 0.05,
+          "coolant_hose_leak": 0.05,
+          "water_pump": 0.9,
+          "radiator_fan": 0.05,
+          "head_gasket": 0.05
+        },
+        "no": {
+          "thermostat_stuck": 0.9,
+          "coolant_hose_leak": 0.9,
+          "water_pump": 0.08,
+          "radiator_fan": 0.9,
+          "head_gasket": 0.9
+        }
+      }
+    },
+    "q_co_fan": {
+      "question": "Does the radiator fan run when the engine is hot, or when the air conditioning is on?",
+      "options": {
+        "yes": {
+          "text": "Yes, the fan runs",
+          "next": "q_co_pump"
+        },
+        "no": {
+          "text": "No, the fan does not run",
+          "next": "radiator_fan"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_co_pump"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "thermostat_stuck": 0.9,
+          "coolant_hose_leak": 0.9,
+          "water_pump": 0.9,
+          "radiator_fan": 0.05,
+          "head_gasket": 0.9
+        },
+        "no": {
+          "thermostat_stuck": 0.05,
+          "coolant_hose_leak": 0.05,
+          "water_pump": 0.05,
+          "radiator_fan": 0.92,
+          "head_gasket": 0.05
+        }
+      }
+    },
+    "q_co_visible_leak": {
+      "question": "Does a pressure test show a visible coolant leak, such as a wet hose, a crust at a clip, or a drip?",
+      "options": {
+        "yes": {
+          "text": "Yes, a visible leak",
+          "next": "q_co_leak_place"
+        },
+        "no": {
+          "text": "No visible leak, the system holds pressure outside",
+          "next": "q_co_combustion_test"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_co_combustion_test"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "thermostat_stuck": 0.1,
+          "coolant_hose_leak": 0.92,
+          "water_pump": 0.7,
+          "radiator_fan": 0.05,
+          "head_gasket": 0.05
+        },
+        "no": {
+          "thermostat_stuck": 0.85,
+          "coolant_hose_leak": 0.05,
+          "water_pump": 0.25,
+          "radiator_fan": 0.9,
+          "head_gasket": 0.9
+        }
+      }
+    },
+    "q_co_leak_place": {
+      "question": "Where is the coolant leak?",
+      "options": {
+        "hose": {
+          "text": "At a hose or a hose clip",
+          "next": "coolant_hose_leak"
+        },
+        "pump": {
+          "text": "At the water pump or its weep hole",
+          "next": "water_pump"
+        },
+        "other": {
+          "text": "At the radiator, the heater matrix or a different place",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "hose": {
+          "thermostat_stuck": 0.3,
+          "coolant_hose_leak": 0.92,
+          "water_pump": 0.05,
+          "radiator_fan": 0.3,
+          "head_gasket": 0.2
+        },
+        "pump": {
+          "thermostat_stuck": 0.2,
+          "coolant_hose_leak": 0.02,
+          "water_pump": 0.9,
+          "radiator_fan": 0.2,
+          "head_gasket": 0.1
+        },
+        "other": {
+          "thermostat_stuck": 0.4,
+          "coolant_hose_leak": 0.04,
+          "water_pump": 0.03,
+          "radiator_fan": 0.4,
+          "head_gasket": 0.6
+        }
+      }
+    },
+    "q_co_combustion_test": {
+      "question": "Does a combustion leak test (block tester) show exhaust gas in the coolant?",
+      "options": {
+        "yes": {
+          "text": "Yes, the test fluid changes color",
+          "next": "head_gasket"
+        },
+        "no": {
+          "text": "No, the test fluid does not change",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "thermostat_stuck": 0.05,
+          "coolant_hose_leak": 0.05,
+          "water_pump": 0.05,
+          "radiator_fan": 0.05,
+          "head_gasket": 0.92
+        },
+        "no": {
+          "thermostat_stuck": 0.9,
+          "coolant_hose_leak": 0.9,
+          "water_pump": 0.9,
+          "radiator_fan": 0.9,
+          "head_gasket": 0.05
+        }
+      }
+    },
+    "q_br_symptom": {
+      "question": "What is the main brake complaint?",
+      "options": {
+        "noise": {
+          "text": "A squeal, a squeak or a grind when the car brakes",
+          "next": "q_br_pads"
+        },
+        "vibration": {
+          "text": "The pedal or the steering wheel shakes when the car brakes",
+          "next": "q_br_runout"
+        },
+        "pull": {
+          "text": "The car pulls to one side, or one wheel smells hot",
+          "next": "q_br_wheel_temp"
+        },
+        "soft_pedal": {
+          "text": "The pedal feels soft or spongy, or goes low",
+          "next": "q_br_pedal_pump"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_br_pads"
+        }
+      },
+      "evidence": {
+        "noise": {
+          "worn_pads": 0.8,
+          "warped_discs": 0.1,
+          "sticking_caliper": 0.15,
+          "air_in_brakes": 0.02
+        },
+        "vibration": {
+          "worn_pads": 0.08,
+          "warped_discs": 0.8,
+          "sticking_caliper": 0.1,
+          "air_in_brakes": 0.02
+        },
+        "pull": {
+          "worn_pads": 0.05,
+          "warped_discs": 0.05,
+          "sticking_caliper": 0.7,
+          "air_in_brakes": 0.05
+        },
+        "soft_pedal": {
+          "worn_pads": 0.03,
+          "warped_discs": 0.02,
+          "sticking_caliper": 0.03,
+          "air_in_brakes": 0.9
+        }
+      }
+    },
+    "q_br_pads": {
+      "question": "How thick is the pad material on the worst pad?",
+      "options": {
+        "thin": {
+          "text": "3 mm or less, or the wear indicator touches the disc",
+          "next": "worn_pads"
+        },
+        "ok": {
+          "text": "More than 3 mm",
+          "next": "q_br_runout"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_br_runout"
+        }
+      },
+      "evidence": {
+        "thin": {
+          "worn_pads": 0.92,
+          "warped_discs": 0.25,
+          "sticking_caliper": 0.4,
+          "air_in_brakes": 0.15
+        },
+        "ok": {
+          "worn_pads": 0.05,
+          "warped_discs": 0.7,
+          "sticking_caliper": 0.55,
+          "air_in_brakes": 0.8
+        }
+      }
+    },
+    "q_br_runout": {
+      "question": "What is the disc run-out, measured with a dial gauge at the hub?",
+      "options": {
+        "high": {
+          "text": "More than 0.05 mm, or the disc thickness varies",
+          "next": "warped_discs"
+        },
+        "ok": {
+          "text": "0.05 mm or less, and the thickness is even",
+          "next": "q_br_wheel_temp"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_br_wheel_temp"
+        }
+      },
+      "evidence": {
+        "high": {
+          "worn_pads": 0.1,
+          "warped_discs": 0.92,
+          "sticking_caliper": 0.25,
+          "air_in_brakes": 0.05
+        },
+        "ok": {
+          "worn_pads": 0.85,
+          "warped_discs": 0.05,
+          "sticking_caliper": 0.7,
+          "air_in_brakes": 0.9
+        }
+      }
+    },
+    "q_br_wheel_temp": {
+      "question": "After a drive, is one wheel much hotter than the others, or does one wheel drag when turned by hand?",
+      "options": {
+        "yes": {
+          "text": "Yes, one wheel is hot or drags",
+          "next": "sticking_caliper"
+        },
+        "no": {
+          "text": "No, the wheels are at a similar temperature and turn freely",
+          "next": "q_br_pedal_pump"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "q_br_pedal_pump"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "worn_pads": 0.08,
+          "warped_discs": 0.1,
+          "sticking_caliper": 0.92,
+          "air_in_brakes": 0.05
+        },
+        "no": {
+          "worn_pads": 0.9,
+          "warped_discs": 0.85,
+          "sticking_caliper": 0.05,
+          "air_in_brakes": 0.9
+        }
+      }
+    },
+    "q_br_pedal_pump": {
+      "question": "Does the pedal get firmer when it is pumped several times?",
+      "options": {
+        "yes": {
+          "text": "Yes, the pedal gets firmer with each pump",
+          "next": "air_in_brakes"
+        },
+        "no": {
+          "text": "No, the pedal stays the same, or sinks slowly to the floor",
+          "next": "specialist"
+        },
+        "not_sure": {
+          "text": "Not known, or the answer does not say",
+          "next": "specialist"
+        }
+      },
+      "evidence": {
+        "yes": {
+          "worn_pads": 0.1,
+          "warped_discs": 0.1,
+          "sticking_caliper": 0.1,
+          "air_in_brakes": 0.9
+        },
+        "no": {
+          "worn_pads": 0.85,
+          "warped_discs": 0.85,
+          "sticking_caliper": 0.85,
+          "air_in_brakes": 0.08
+        }
+      }
+    }
+  }
+}

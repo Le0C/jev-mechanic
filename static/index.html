@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jev Mechanic</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span class="brand-name">Jev Mechanic</span>
+      <span class="brand-sub">workshop triage on TypeSafe Jev</span>
+    </div>
+    <div id="compare" class="compare" hidden></div>
+    <div class="topbar-right">
+      <span id="mock-badge" class="badge badge-mock" hidden>mock view</span>
+      <label id="mock-status-wrap" class="mock-status" hidden>
+        Status
+        <select id="mock-status"></select>
+      </label>
+      <span id="session-id" class="session-id"></span>
+      <span id="status-badge" class="badge" hidden></span>
+      <button id="new-session" class="btn btn-ghost" type="button" hidden>New session</button>
+    </div>
+  </header>
+
+  <div id="error" class="error-banner" role="alert" hidden>
+    <span id="error-text"></span>
+    <button id="error-close" class="btn btn-ghost btn-small" type="button" aria-label="Close the error message">Close</button>
+  </div>
+
+  <main id="start" class="start" hidden>
+    <section class="start-card">
+      <h1>Triage a car fault</h1>
+      <div class="segmented" role="radiogroup" aria-label="Version">
+        <label><input type="radio" name="version" value="1" id="version-1" checked><span>Single fault (v1)</span></label>
+        <label><input type="radio" name="version" value="2" id="version-2"><span>Multi-fault (v2)</span></label>
+      </div>
+      <p id="start-intro" class="muted"></p>
+      <div id="evidence-toggle" class="segmented segmented-small" role="radiogroup" aria-label="Evidence" hidden>
+        <label><input type="radio" name="evidence" value="report" id="evidence-report" checked><span>Typed report</span></label>
+        <label><input type="radio" name="evidence" value="case_file" id="evidence-case-file"><span>Case file</span></label>
+      </div>
+      <form id="start-form">
+        <div id="report-field" class="field">
+          <label class="field-label" for="report-input">Customer report</label>
+          <textarea id="report-input" rows="6" placeholder="My car will not start. When I turn the key..."></textarea>
+        </div>
+        <div id="case-picked" class="case-picked" hidden></div>
+        <div class="start-options">
+          <label class="check"><input type="checkbox" id="opt-extra" checked> Extra questions (Jev reads more facts from each answer)</label>
+          <label class="check"><input type="checkbox" id="opt-independent" checked> <span id="opt-independent-text">Independent lane (Jev gives a diagnosis from the whole case)</span></label>
+        </div>
+        <button id="start-button" class="btn btn-primary" type="submit">Start triage</button>
+      </form>
+      <h2 id="examples-title" class="examples-title">Examples</h2>
+      <ul id="examples" class="examples"></ul>
+      <ul id="cases" class="examples" hidden></ul>
+    </section>
+  </main>
+
+  <main id="app" class="layout" hidden>
+    <section class="col col-left">
+      <div class="panel" id="report-panel">
+        <h2 class="panel-title">Customer report</h2>
+        <p id="report" class="report"></p>
+      </div>
+      <div class="panel panel-evidence" id="evidence-panel" hidden>
+        <h2 class="panel-title">Evidence</h2>
+        <div id="evidence"></div>
+      </div>
+      <div class="panel panel-log">
+        <h2 class="panel-title">Questions and answers</h2>
+        <ol id="log" class="log"></ol>
+      </div>
+      <div class="panel panel-answer" id="answer-panel">
+        <div id="answer-area"></div>
+      </div>
+    </section>
+
+    <section class="col col-center">
+      <div class="panel panel-chart">
+        <div id="component-strip" class="component-strip" hidden></div>
+        <div class="panel-head">
+          <h2 class="panel-title" id="chart-title">Flowchart</h2>
+          <div class="chart-tools">
+            <button class="btn btn-ghost btn-small" type="button" id="zoom-out" aria-label="Zoom out">&minus;</button>
+            <button class="btn btn-ghost btn-small" type="button" id="zoom-in" aria-label="Zoom in">+</button>
+            <button class="btn btn-ghost btn-small" type="button" id="zoom-fit">Fit</button>
+            <button class="btn btn-ghost btn-small" type="button" id="zoom-current">Current node</button>
+          </div>
+        </div>
+        <div id="chart-viewport" class="chart-viewport">
+          <div id="chart-canvas" class="chart-canvas"></div>
+        </div>
+        <div class="chart-legend">
+          <span><i class="swatch swatch-current"></i>current node</span>
+          <span><i class="swatch swatch-path"></i>path</span>
+          <span><i class="swatch swatch-leaf"></i>diagnosis</span>
+          <span class="muted">Drag to pan. Use the wheel to zoom.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="col col-right">
+      <details class="panel panel-fold" id="independent-lane" open>
+        <summary class="panel-title">Independent lane</summary>
+        <p class="muted small" id="independent-note">Jev reads the whole case in one question. This lane does not change the flowchart.</p>
+        <div id="independent" class="bars"></div>
+        <div id="independent-flag"></div>
+      </details>
+      <details class="panel panel-fold v2-only" id="symptoms-panel" open hidden>
+        <summary class="panel-title">Symptoms</summary>
+        <div id="symptoms"></div>
+      </details>
+      <details class="panel panel-fold v2-only" id="faults-panel" open hidden>
+        <summary class="panel-title">Faults found</summary>
+        <div id="faults"></div>
+      </details>
+      <details class="panel panel-fold v2-only" id="fix-panel" hidden>
+        <summary class="panel-title">Fix plan</summary>
+        <div id="fix-plan"></div>
+      </details>
+      <details class="panel panel-fold" id="flowchart-lane">
+        <summary class="panel-title"><span id="flowchart-lane-title">Flowchart lane</span></summary>
+        <div id="diagnosis"></div>
+        <div id="triage-wrap">
+          <h3 class="sub-title">Triage</h3>
+          <div id="triage" class="bars"></div>
+        </div>
+        <div id="scores-wrap">
+          <h3 class="sub-title">Diagnosis scores <span class="muted">(flag at 0.9)</span></h3>
+          <div id="scores" class="bars"></div>
+        </div>
+        <div id="flag"></div>
+      </details>
+      <details class="panel panel-fold" id="ledger-panel" open>
+        <summary class="panel-title">Ledger</summary>
+        <div id="ledger"></div>
+        <div id="totals"></div>
+      </details>
+    </section>
+  </main>
+
+  <div id="busy" class="busy" hidden>
+    <div class="busy-card"><span class="spinner" aria-hidden="true"></span><span id="busy-text">Jev reads the case</span></div>
+  </div>
+</body>
+</html>

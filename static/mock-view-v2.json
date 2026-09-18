@@ -1,0 +1,697 @@
+{
+  "id": "s_mock02",
+  "version": 2,
+  "mode": "case_file",
+  "status": "asking",
+  "evidence": {
+    "report": "My Golf was slow to start this morning and needed three tries. On the motorway yesterday the battery light came on and the dash lights looked dim. I also smell something sweet near the front of the car after a drive.",
+    "case_file": {
+      "vehicle": {
+        "make": "VW",
+        "model": "Golf 1.4 TSI",
+        "year": 2014,
+        "mileage_km": 128400,
+        "vin": "WVWZZZAUZEW123456"
+      },
+      "obd_codes": [
+        {
+          "code": "P0562",
+          "description": "System voltage low",
+          "status": "active",
+          "mileage_km": 128350
+        },
+        {
+          "code": "P0620",
+          "description": "Generator control circuit",
+          "status": "pending",
+          "mileage_km": 128380
+        },
+        {
+          "code": "U0100",
+          "description": "Lost communication with ECM",
+          "status": "history",
+          "mileage_km": 127900
+        }
+      ],
+      "freeze_frame": {
+        "battery_voltage_v": 11.6,
+        "engine_rpm": 2150,
+        "coolant_temp_c": 94,
+        "vehicle_speed_kmh": 112,
+        "intake_air_temp_c": 21
+      },
+      "service_history": [
+        {
+          "date": "2025-11-02",
+          "mileage_km": 119800,
+          "work": "Oil and filter change"
+        },
+        {
+          "date": "2025-03-14",
+          "mileage_km": 111200,
+          "work": "Wiper blades replaced"
+        },
+        {
+          "date": "2024-10-20",
+          "mileage_km": 105600,
+          "work": "Coolant level topped up, no leak found"
+        }
+      ],
+      "technician_notes": [
+        "Battery light flickered on the road test at idle.",
+        "Resting voltage 12.1 V after one night.",
+        "Customer asked for a quote for winter tyres."
+      ]
+    },
+    "removed": [
+      {
+        "source": "obd_codes",
+        "entry": {
+          "code": "P0300",
+          "description": "Random misfire detected",
+          "status": "cleared",
+          "mileage_km": 116200
+        },
+        "reason": "cleared 12,200 km ago"
+      },
+      {
+        "source": "obd_codes",
+        "entry": {
+          "code": "P0171",
+          "description": "System too lean, bank 1",
+          "status": "cleared",
+          "mileage_km": 98100
+        },
+        "reason": "cleared 30,300 km ago"
+      },
+      {
+        "source": "service_history",
+        "entry": {
+          "date": "2023-06-10",
+          "mileage_km": 88400,
+          "work": "Timing belt and water pump replaced"
+        },
+        "reason": "39 months before the case date"
+      },
+      {
+        "source": "service_history",
+        "entry": {
+          "date": "2022-09-01",
+          "mileage_km": 71000,
+          "work": "Front brake pads replaced"
+        },
+        "reason": "48 months before the case date"
+      }
+    ]
+  },
+  "symptoms": [
+    {
+      "id": "slow_crank",
+      "label": "Slow crank",
+      "probability": 0.93,
+      "present": true,
+      "explained_by": "flat_battery"
+    },
+    {
+      "id": "battery_light",
+      "label": "Battery light while driving",
+      "probability": 0.91,
+      "present": true,
+      "explained_by": "alternator_failure"
+    },
+    {
+      "id": "dim_lights",
+      "label": "Dim lights",
+      "probability": 0.78,
+      "present": true,
+      "explained_by": "flat_battery"
+    },
+    {
+      "id": "coolant_smell",
+      "label": "Sweet smell",
+      "probability": 0.74,
+      "present": true,
+      "explained_by": null
+    },
+    {
+      "id": "belt_squeal",
+      "label": "Belt squeal",
+      "probability": 0.18,
+      "present": false,
+      "explained_by": null
+    },
+    {
+      "id": "overheat_traffic",
+      "label": "Overheats in traffic",
+      "probability": 0.12,
+      "present": false,
+      "explained_by": null
+    },
+    {
+      "id": "no_crank_click",
+      "label": "Clicks with no crank",
+      "probability": 0.09,
+      "present": false,
+      "explained_by": null
+    },
+    {
+      "id": "rough_idle",
+      "label": "Rough idle",
+      "probability": 0.06,
+      "present": false,
+      "explained_by": null
+    },
+    {
+      "id": "abs_light",
+      "label": "ABS light",
+      "probability": 0.03,
+      "present": false,
+      "explained_by": null
+    },
+    {
+      "id": "brake_squeal",
+      "label": "Brake squeal",
+      "probability": 0.02,
+      "present": false,
+      "explained_by": null
+    }
+  ],
+  "components": [
+    {
+      "id": "battery",
+      "label": "Battery",
+      "probability": 0.86,
+      "state": "fault",
+      "score": null
+    },
+    {
+      "id": "charge",
+      "label": "Charge system",
+      "probability": 0.81,
+      "state": "fault",
+      "score": null
+    },
+    {
+      "id": "cooling",
+      "label": "Cooling",
+      "probability": 0.62,
+      "state": "active",
+      "score": 0.62
+    },
+    {
+      "id": "starter",
+      "label": "Starter",
+      "probability": 0.14,
+      "state": "open",
+      "score": null
+    },
+    {
+      "id": "fuel_pump",
+      "label": "Fuel pump",
+      "probability": 0.06,
+      "state": "open",
+      "score": null
+    },
+    {
+      "id": "ignition",
+      "label": "Ignition coils",
+      "probability": 0.04,
+      "state": "open",
+      "score": null
+    }
+  ],
+  "loop": {
+    "index": 3,
+    "component": "cooling"
+  },
+  "current": {
+    "node_id": "q_cool_pressure",
+    "question": "Does a pressure test show a leak?",
+    "options": [
+      {
+        "id": "external",
+        "text": "Yes, coolant comes out of the system"
+      },
+      {
+        "id": "no_leak",
+        "text": "No, the pressure holds"
+      },
+      {
+        "id": "not_sure",
+        "text": "Not tested"
+      }
+    ],
+    "yes_no": false
+  },
+  "confirm_options": [],
+  "steps": [
+    {
+      "step": 1,
+      "node_id": "q_bat_voltage",
+      "question": "What is the battery voltage at rest?",
+      "answer_text": "Resting voltage 12.1 V after one night.",
+      "source": "report",
+      "option": "low",
+      "probabilities": {
+        "low": 0.94,
+        "ok": 0.03,
+        "not_stated": 0.03
+      },
+      "confidence": 0.9,
+      "outcome": "accepted",
+      "loop": 1,
+      "component": "battery"
+    },
+    {
+      "step": 2,
+      "node_id": "q_bat_load",
+      "question": "Does the battery pass a load test?",
+      "answer_text": "it dropped to 8.9 volts on the tester",
+      "source": "user",
+      "option": "fail",
+      "probabilities": {
+        "fail": 0.88,
+        "pass": 0.05,
+        "unclear": 0.07
+      },
+      "confidence": 0.84,
+      "outcome": "accepted",
+      "loop": 1,
+      "component": "battery"
+    },
+    {
+      "step": 4,
+      "node_id": "q_chg_running_voltage",
+      "question": "What is the battery voltage with the engine at 2000 rpm?",
+      "answer_text": "13.0, it barely moves when I rev it",
+      "source": "user",
+      "option": "low",
+      "probabilities": {
+        "low": 0.81,
+        "ok": 0.09,
+        "not_sure": 0.04,
+        "unclear": 0.06
+      },
+      "confidence": 0.77,
+      "outcome": "accepted",
+      "loop": 2,
+      "component": "charge"
+    },
+    {
+      "step": 5,
+      "node_id": "q_chg_belt",
+      "question": "Does the belt squeal, or is it glazed or loose?",
+      "answer_text": "belt looks fine i guess",
+      "source": "user",
+      "option": "no",
+      "probabilities": {
+        "no": 0.58,
+        "yes": 0.12,
+        "not_sure": 0.2,
+        "unclear": 0.1
+      },
+      "confidence": 0.55,
+      "outcome": "confirm",
+      "loop": 2,
+      "component": "charge"
+    },
+    {
+      "step": 5,
+      "node_id": "q_chg_belt",
+      "question": "Does the belt squeal, or is it glazed or loose?",
+      "answer_text": "belt looks fine i guess",
+      "source": "user",
+      "option": "no",
+      "probabilities": {
+        "no": 1.0
+      },
+      "confidence": 1.0,
+      "outcome": "chosen",
+      "loop": 2,
+      "component": "charge"
+    },
+    {
+      "step": 7,
+      "node_id": "q_cool_level",
+      "question": "Is the coolant level below the minimum mark?",
+      "answer_text": "It is a bit under the min line",
+      "source": "user",
+      "option": "low",
+      "probabilities": {
+        "low": 0.86,
+        "ok": 0.06,
+        "unclear": 0.08
+      },
+      "confidence": 0.83,
+      "outcome": "accepted",
+      "loop": 3,
+      "component": "cooling"
+    }
+  ],
+  "branch_scores": [
+    {
+      "id": "hose_leak",
+      "label": "Coolant hose leak",
+      "score": 0.38
+    },
+    {
+      "id": "water_pump_leak",
+      "label": "Water pump leak",
+      "score": 0.24
+    },
+    {
+      "id": "head_gasket",
+      "label": "Head gasket failure",
+      "score": 0.17
+    },
+    {
+      "id": "radiator_leak",
+      "label": "Radiator leak",
+      "score": 0.13
+    },
+    {
+      "id": "stuck_thermostat",
+      "label": "Thermostat stuck closed",
+      "score": 0.05
+    },
+    {
+      "id": "fan_failure",
+      "label": "Radiator fan failure",
+      "score": 0.03
+    }
+  ],
+  "flag": null,
+  "faults": [
+    {
+      "id": "flat_battery",
+      "label": "Flat battery",
+      "score": 0.93,
+      "component": "battery",
+      "loop": 1,
+      "explains": [
+        "slow_crank",
+        "dim_lights"
+      ],
+      "caused_by_found": [
+        "alternator_failure"
+      ]
+    },
+    {
+      "id": "alternator_failure",
+      "label": "Alternator failure",
+      "score": 0.91,
+      "component": "charge",
+      "loop": 2,
+      "explains": [
+        "battery_light",
+        "dim_lights"
+      ],
+      "caused_by_found": []
+    }
+  ],
+  "fix": [
+    {
+      "diagnosis": "alternator_failure",
+      "label": "Alternator failure",
+      "steps": [
+        "Measure the charge voltage at 2000 rpm.",
+        "Replace the alternator.",
+        "Measure the charge voltage again."
+      ]
+    },
+    {
+      "diagnosis": "flat_battery",
+      "label": "Flat battery",
+      "steps": [
+        "Charge the battery.",
+        "Do a load test.",
+        "Replace the battery if it fails the load test."
+      ]
+    }
+  ],
+  "unexplained": [
+    {
+      "id": "coolant_smell",
+      "label": "Sweet smell"
+    }
+  ],
+  "independent": {
+    "enabled": true,
+    "faults": [
+      {
+        "id": "alternator_failure",
+        "label": "Alternator failure",
+        "score": 0.84
+      },
+      {
+        "id": "flat_battery",
+        "label": "Flat battery",
+        "score": 0.71
+      }
+    ],
+    "top": [
+      {
+        "id": "alternator_failure",
+        "label": "Alternator failure",
+        "score": 0.84
+      },
+      {
+        "id": "flat_battery",
+        "label": "Flat battery",
+        "score": 0.71
+      },
+      {
+        "id": "hose_leak",
+        "label": "Coolant hose leak",
+        "score": 0.33
+      },
+      {
+        "id": "slipping_belt",
+        "label": "Slipping belt",
+        "score": 0.21
+      },
+      {
+        "id": "water_pump_leak",
+        "label": "Water pump leak",
+        "score": 0.18
+      },
+      {
+        "id": "head_gasket",
+        "label": "Head gasket failure",
+        "score": 0.09
+      },
+      {
+        "id": "starter_motor",
+        "label": "Starter motor failure",
+        "score": 0.06
+      },
+      {
+        "id": "fan_failure",
+        "label": "Radiator fan failure",
+        "score": 0.03
+      }
+    ]
+  },
+  "path": [
+    "q_cool_level",
+    "q_cool_pressure"
+  ],
+  "mermaid": "flowchart TD\n  sys_cooling([\"Cooling\"]) --> q_cool_level\n  q_cool_level{\"Is the coolant level below the minimum mark?\"}\n  q_cool_level -->|\"low\"| q_cool_pressure\n  q_cool_level -->|\"ok\"| q_cool_fan\n  q_cool_level -->|\"not sure\"| q_cool_fan\n  q_cool_pressure{\"Does a pressure test show a leak?\"}\n  q_cool_pressure -->|\"external\"| q_cool_where\n  q_cool_pressure -->|\"no leak\"| q_cool_exhaust\n  q_cool_pressure -->|\"not sure\"| specialist\n  q_cool_where{\"Where does the coolant come out?\"}\n  q_cool_where -->|\"hose\"| hose_leak\n  q_cool_where -->|\"pump\"| water_pump_leak\n  q_cool_where -->|\"radiator\"| radiator_leak\n  q_cool_exhaust{\"Is there white smoke from the exhaust?\"}\n  q_cool_exhaust -->|\"yes\"| head_gasket\n  q_cool_exhaust -->|\"no\"| specialist\n  q_cool_fan{\"Does the radiator fan run when the engine is hot?\"}\n  q_cool_fan -->|\"yes\"| q_cool_thermostat\n  q_cool_fan -->|\"no\"| fan_failure\n  q_cool_thermostat{\"Does the top hose stay cold at full temperature?\"}\n  q_cool_thermostat -->|\"yes\"| stuck_thermostat\n  q_cool_thermostat -->|\"no\"| specialist\n  hose_leak[\"Coolant hose leak\"]\n  water_pump_leak[\"Water pump leak\"]\n  radiator_leak[\"Radiator leak\"]\n  head_gasket[\"Head gasket failure\"]\n  fan_failure[\"Radiator fan failure\"]\n  stuck_thermostat[\"Thermostat stuck closed\"]\n  specialist[\"Refer to a specialist\"]\n  classDef leaf fill:#eef6ee,stroke:#5a8f5a\n  classDef onpath fill:#fff3c4,stroke:#b58900,stroke-width:2px\n  classDef current fill:#ffd166,stroke:#9c6500,stroke-width:3px\n  class hose_leak,water_pump_leak,radiator_leak,head_gasket,fan_failure,stuck_thermostat,specialist leaf\n  class q_cool_level onpath\n  class q_cool_pressure current",
+  "ledger": {
+    "rows": [
+      {
+        "step": 0,
+        "lane": "flowchart",
+        "kind": "E",
+        "input_tokens": 5920,
+        "output_tokens": 1480,
+        "model": "jev-1.13.0",
+        "seconds": 1.21,
+        "jev_cost": 0.00024864,
+        "opus5_cost": 0.0296,
+        "request": {
+          "state": {
+            "customer_report": "My Golf was slow to start this morning and needed three tries. On the motorway yesterday the battery light came on and the dash lights looked dim. I also smell something sweet near the front of the car after a drive.",
+            "obd_codes": [
+              {
+                "code": "P0562",
+                "description": "System voltage low",
+                "status": "active",
+                "mileage_km": 128350
+              },
+              {
+                "code": "P0620",
+                "description": "Generator control circuit",
+                "status": "pending",
+                "mileage_km": 128380
+              },
+              {
+                "code": "U0100",
+                "description": "Lost communication with ECM",
+                "status": "history",
+                "mileage_km": 127900
+              }
+            ]
+          },
+          "questions": {
+            "sym_slow_crank": {
+              "type": "noul",
+              "instructions": "Does the evidence show that the engine turns slowly when the driver starts it?"
+            }
+          }
+        },
+        "raw": {
+          "sym_slow_crank": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "comp_battery": {
+            "type": "noul",
+            "noul": 0.86
+          }
+        }
+      },
+      {
+        "step": 0,
+        "lane": "independent",
+        "kind": "C",
+        "input_tokens": 5310,
+        "output_tokens": 420,
+        "model": "jev-1.13.0",
+        "seconds": 0.98,
+        "jev_cost": 0.00022302,
+        "opus5_cost": 0.02655
+      },
+      {
+        "step": 1,
+        "lane": "flowchart",
+        "kind": "A",
+        "input_tokens": 2240,
+        "output_tokens": 380,
+        "model": "jev-1.13.0",
+        "seconds": 0.61,
+        "jev_cost": 9.408e-05,
+        "opus5_cost": 0.011200000000000002
+      },
+      {
+        "step": 2,
+        "lane": "flowchart",
+        "kind": "B",
+        "input_tokens": 1180,
+        "output_tokens": 240,
+        "model": "jev-1.13.0",
+        "seconds": 0.37,
+        "jev_cost": 4.956e-05,
+        "opus5_cost": 0.005900000000000001
+      },
+      {
+        "step": 2,
+        "lane": "independent",
+        "kind": "C",
+        "input_tokens": 5520,
+        "output_tokens": 420,
+        "model": "jev-1.13.0",
+        "seconds": 0.95,
+        "jev_cost": 0.00023184,
+        "opus5_cost": 0.027600000000000003
+      },
+      {
+        "step": 3,
+        "lane": "flowchart",
+        "kind": "A",
+        "input_tokens": 2610,
+        "output_tokens": 460,
+        "model": "jev-1.13.0",
+        "seconds": 0.66,
+        "jev_cost": 0.00010962,
+        "opus5_cost": 0.01305
+      },
+      {
+        "step": 4,
+        "lane": "flowchart",
+        "kind": "B",
+        "input_tokens": 1210,
+        "output_tokens": 250,
+        "model": "jev-1.13.0",
+        "seconds": 0.36,
+        "jev_cost": 5.082e-05,
+        "opus5_cost": 0.006050000000000001
+      },
+      {
+        "step": 4,
+        "lane": "independent",
+        "kind": "C",
+        "input_tokens": 5740,
+        "output_tokens": 420,
+        "model": "jev-1.13.0",
+        "seconds": 1.02,
+        "jev_cost": 0.00024108,
+        "opus5_cost": 0.028700000000000003
+      },
+      {
+        "step": 5,
+        "lane": "flowchart",
+        "kind": "B",
+        "input_tokens": 1190,
+        "output_tokens": 250,
+        "model": "jev-1.13.0",
+        "seconds": 0.34,
+        "jev_cost": 4.998e-05,
+        "opus5_cost": 0.00595
+      },
+      {
+        "step": 5,
+        "lane": "independent",
+        "kind": "C",
+        "input_tokens": 5960,
+        "output_tokens": 420,
+        "model": "jev-1.13.0",
+        "seconds": 1.04,
+        "jev_cost": 0.00025032,
+        "opus5_cost": 0.029800000000000004
+      },
+      {
+        "step": 6,
+        "lane": "flowchart",
+        "kind": "A",
+        "input_tokens": 3020,
+        "output_tokens": 610,
+        "model": "jev-1.13.0",
+        "seconds": 0.74,
+        "jev_cost": 0.00012684,
+        "opus5_cost": 0.0151
+      },
+      {
+        "step": 7,
+        "lane": "flowchart",
+        "kind": "B",
+        "input_tokens": 1230,
+        "output_tokens": 260,
+        "model": "jev-1.13.0",
+        "seconds": 0.38,
+        "jev_cost": 5.166e-05,
+        "opus5_cost": 0.00615
+      },
+      {
+        "step": 7,
+        "lane": "independent",
+        "kind": "C",
+        "input_tokens": 6180,
+        "output_tokens": 420,
+        "model": "jev-1.13.0",
+        "seconds": 1.07,
+        "jev_cost": 0.00025956,
+        "opus5_cost": 0.030900000000000004
+      }
+    ],
+    "totals": {
+      "requests": 13,
+      "input_tokens": 47310,
+      "output_tokens": 6030,
+      "jev_cost": 0.0019870200000000004,
+      "opus5_cost": 0.23655,
+      "compute_seconds": 9.73,
+      "wait_seconds": 7.3
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "id": "s_mock01",
+  "report": "My Golf will not start this morning. When I turn the key I hear a few rapid clicks from the engine bay and nothing else. It was fine last night. The car is eight years old and I think the battery is the original one.",
+  "status": "flagged",
+  "triage": {
+    "system": "no_start",
+    "probabilities": {
+      "no_start": 0.94,
+      "brakes": 0.02,
+      "none": 0.04
+    },
+    "confidence": 0.91
+  },
+  "current": {
+    "node_id": "q_headlights_dim",
+    "question": "Do the headlights go dim when the key turns to start?",
+    "options": [
+      {
+        "id": "yes",
+        "text": "Yes, the headlights go dim"
+      },
+      {
+        "id": "no",
+        "text": "No, the headlights stay bright"
+      },
+      {
+        "id": "not_sure",
+        "text": "Not known"
+      }
+    ],
+    "yes_no": true
+  },
+  "confirm_options": [],
+  "steps": [
+    {
+      "step": 0,
+      "node_id": "q_key_turn",
+      "question": "What happens when the driver turns the key to start?",
+      "answer_text": "When I turn the key I hear a few rapid clicks from the engine bay and nothing else.",
+      "source": "report",
+      "option": "click_only",
+      "probabilities": {
+        "click_only": 0.93,
+        "slow_crank": 0.02,
+        "not_sure": 0.01,
+        "not_stated": 0.04
+      },
+      "confidence": 0.88,
+      "outcome": "accepted"
+    },
+    {
+      "step": 1,
+      "node_id": "q_headlights_dim",
+      "question": "Do the headlights go dim when the key turns to start?",
+      "answer_text": "they get a bit darker i think",
+      "source": "user",
+      "option": "yes",
+      "probabilities": {
+        "yes": 0.64,
+        "no": 0.21,
+        "not_sure": 0.1,
+        "unclear": 0.05
+      },
+      "confidence": 0.62,
+      "outcome": "confirm"
+    }
+  ],
+  "scores": [
+    {
+      "id": "flat_battery",
+      "label": "Flat battery",
+      "score": 0.93
+    },
+    {
+      "id": "starter_motor",
+      "label": "Starter motor failure",
+      "score": 0.07
+    },
+    {
+      "id": "worn_pads",
+      "label": "Worn brake pads",
+      "score": 0.0
+    },
+    {
+      "id": "warped_discs",
+      "label": "Warped discs",
+      "score": 0.0
+    }
+  ],
+  "flag": {
+    "id": "flat_battery",
+    "label": "Flat battery",
+    "score": 0.93
+  },
+  "independent": {
+    "enabled": true,
+    "top": [
+      {
+        "id": "flat_battery",
+        "label": "Flat battery",
+        "score": 0.71
+      },
+      {
+        "id": "starter_motor",
+        "label": "Starter motor failure",
+        "score": 0.22
+      },
+      {
+        "id": "none",
+        "label": "None of these",
+        "score": 0.05
+      },
+      {
+        "id": "worn_pads",
+        "label": "Worn brake pads",
+        "score": 0.01
+      },
+      {
+        "id": "warped_discs",
+        "label": "Warped discs",
+        "score": 0.01
+      }
+    ],
+    "flag": null
+  },
+  "diagnosis": null,
+  "path": [
+    "q_key_turn",
+    "q_headlights_dim"
+  ],
+  "mermaid": "flowchart TD\n  sys_no_start([\"No start\"]) --> q_key_turn\n  sys_brakes([\"Brakes\"]) --> q_brake_noise\n  q_key_turn{\"What happens when the driver turns the key to start?\"}\n  q_key_turn -->|\"click only\"| q_headlights_dim\n  q_key_turn -->|\"slow crank\"| flat_battery\n  q_key_turn -->|\"not sure\"| q_headlights_dim\n  q_headlights_dim{\"Do the headlights go dim when the key turns to start?\"}\n  q_headlights_dim -->|\"yes\"| flat_battery\n  q_headlights_dim -->|\"no\"| starter_motor\n  q_headlights_dim -->|\"not sure\"| specialist\n  q_brake_noise{\"What noise do the brakes make?\"}\n  q_brake_noise -->|\"squeal\"| worn_pads\n  q_brake_noise -->|\"none\"| warped_discs\n  flat_battery[\"Flat battery\"]\n  starter_motor[\"Starter motor failure\"]\n  worn_pads[\"Worn brake pads\"]\n  warped_discs[\"Warped discs\"]\n  specialist[\"Refer to a specialist\"]\n  classDef leaf fill:#eef6ee,stroke:#5a8f5a\n  classDef onpath fill:#fff3c4,stroke:#b58900,stroke-width:2px\n  classDef current fill:#ffd166,stroke:#9c6500,stroke-width:3px\n  class flat_battery,starter_motor,worn_pads,warped_discs,specialist leaf\n  class q_key_turn onpath\n  class q_headlights_dim current",
+  "ledger": {
+    "rows": [
+      {
+        "step": 0,
+        "lane": "flowchart",
+        "kind": "A",
+        "input_tokens": 2104,
+        "output_tokens": 912,
+        "model": "jev-1.13.0",
+        "seconds": 0.84,
+        "jev_cost": 8.8368e-05,
+        "opus5_cost": 0.01052,
+        "request": {
+          "state": {
+            "customer_report": "My Golf will not start this morning. When I turn the key I hear a few rapid clicks from the engine bay and nothing else. It was fine last night. The car is eight years old and I think the battery is the original one."
+          },
+          "questions": {
+            "system": {
+              "type": "choice",
+              "instructions": "Which vehicle system does the customer report describe?",
+              "criteria": {
+                "no_start": "The engine does not start, or starts only with difficulty",
+                "brakes": "Brake noise, a soft pedal, or the car pulls when it brakes",
+                "none": "The report describes no fault that fits these systems"
+              }
+            }
+          }
+        },
+        "raw": {
+          "system": {
+            "type": "choice",
+            "choice": "no_start",
+            "probabilities": {
+              "no_start": 0.94,
+              "brakes": 0.02,
+              "none": 0.04
+            },
+            "confidence": 0.91
+          },
+          "pre_q_key_turn": {
+            "type": "choice",
+            "choice": "click_only",
+            "probabilities": {
+              "click_only": 0.93,
+              "slow_crank": 0.02,
+              "not_sure": 0.01,
+              "not_stated": 0.04
+            },
+            "confidence": 0.88
+          }
+        }
+      },
+      {
+        "step": 0,
+        "lane": "independent",
+        "kind": "C",
+        "input_tokens": 1012,
+        "output_tokens": 64,
+        "model": "jev-1.13.0",
+        "seconds": 0.61,
+        "jev_cost": 4.2504e-05,
+        "opus5_cost": 0.00506
+      },
+      {
+        "step": 1,
+        "lane": "flowchart",
+        "kind": "B",
+        "input_tokens": 806,
+        "output_tokens": 210,
+        "model": "jev-1.13.0",
+        "seconds": 0.52,
+        "jev_cost": 3.3852e-05,
+        "opus5_cost": 0.00403
+      },
+      {
+        "step": 1,
+        "lane": "independent",
+        "kind": "C",
+        "input_tokens": 1188,
+        "output_tokens": 64,
+        "model": "jev-1.13.0",
+        "seconds": 0.66,
+        "jev_cost": 4.9896e-05,
+        "opus5_cost": 0.00594
+      }
+    ],
+    "totals": {
+      "requests": 4,
+      "input_tokens": 5110,
+      "output_tokens": 1250,
+      "jev_cost": 0.00021462,
+      "opus5_cost": 0.02555,
+      "compute_seconds": 2.63,
+      "wait_seconds": 1.5
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "systems": {
+    "no_start": {"label": "No start", "description": "The engine does not start, or starts only with difficulty", "entry": "q_key_turn"},
+    "brakes": {"label": "Brakes", "description": "Brake noise, a soft pedal, or the car pulls when it brakes", "entry": "q_brake_noise"}
+  },
+  "diagnoses": {
+    "flat_battery": {"label": "Flat battery", "description": "The battery has too little charge to turn the starter", "systems": ["no_start"], "prior": 0.3,
+      "fix": ["Measure the resting voltage.", "Charge the battery.", "Do a load test."]},
+    "starter_motor": {"label": "Starter motor failure", "description": "The starter motor or its solenoid does not turn the engine", "systems": ["no_start"], "prior": 0.2,
+      "fix": ["Examine the starter supply cable.", "Replace the starter motor.", "Do a start test."]},
+    "worn_pads": {"label": "Worn brake pads", "description": "The pad material is at or below the wear limit", "systems": ["brakes"], "prior": 0.3,
+      "fix": ["Remove the wheels.", "Replace the pads.", "Bed in the new pads."]},
+    "warped_discs": {"label": "Warped discs", "description": "The brake discs have run-out and cause a pulse in the pedal", "systems": ["brakes"], "prior": 0.2,
+      "fix": ["Measure the disc run-out.", "Replace the discs and pads.", "Do a road test."]}
+  },
+  "nodes": {
+    "q_key_turn": {
+      "question": "What happens when the driver turns the key to start?",
+      "options": {
+        "click_only": {"text": "One click or rapid clicks, the engine does not turn", "next": "q_headlights_dim"},
+        "slow_crank": {"text": "The engine turns slowly", "next": "flat_battery"},
+        "not_sure": {"text": "The answer does not say", "next": "q_headlights_dim"}
+      },
+      "evidence": {
+        "click_only": {"flat_battery": 0.5, "starter_motor": 0.8},
+        "slow_crank": {"flat_battery": 0.9, "starter_motor": 0.1}
+      }
+    },
+    "q_headlights_dim": {
+      "question": "Do the headlights go dim when the key turns to start?",
+      "options": {
+        "yes": {"text": "Yes, the headlights go dim", "next": "flat_battery"},
+        "no": {"text": "No, the headlights stay bright", "next": "starter_motor"},
+        "not_sure": {"text": "Not known", "next": "specialist"}
+      },
+      "evidence": {
+        "yes": {"flat_battery": 0.9, "starter_motor": 0.2},
+        "no": {"flat_battery": 0.1, "starter_motor": 0.8}
+      }
+    },
+    "q_brake_noise": {
+      "question": "What noise do the brakes make?",
+      "options": {
+        "squeal": {"text": "A high squeal or a metal grind", "next": "worn_pads"},
+        "none": {"text": "No noise, but the pedal pulses", "next": "warped_discs"}
+      },
+      "evidence": {
+        "squeal": {"worn_pads": 0.9, "warped_discs": 0.2},
+        "none": {"worn_pads": 0.1, "warped_discs": 0.8}
+      }
+    }
+  }
+}

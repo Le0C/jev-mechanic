@@ -1,0 +1,49 @@
+{
+  "systems": {
+    "battery": {"label": "Battery", "description": "The 12 V battery and its terminals", "entry": "q_bat_voltage"},
+    "charge": {"label": "Charge system", "description": "The alternator and the drive belt", "entry": "q_chg_running_voltage"},
+    "cooling": {"label": "Cooling", "description": "Coolant, thermostat, fan and pump", "entry": "q_cool_fan"}
+  },
+  "symptoms": {
+    "slow_crank": {"label": "Slow crank", "description": "The engine turns slowly when the driver starts it"},
+    "battery_light": {"label": "Battery light while driving", "description": "The battery warning light comes on while the engine runs"},
+    "dim_lights": {"label": "Dim lights", "description": "The headlights or the dash lights are dimmer than normal"},
+    "overheat_traffic": {"label": "Overheats in traffic", "description": "The temperature gauge rises when the car is stationary or slow"},
+    "belt_squeal": {"label": "Belt squeal", "description": "A squeal from the engine bay, worst at start or under electrical load"},
+    "coolant_smell": {"label": "Sweet smell", "description": "A sweet smell of coolant near the car"}
+  },
+  "diagnoses": {
+    "flat_battery": {"label": "Flat battery", "description": "The battery has too little charge", "systems": ["battery"], "prior": 0.2,
+      "explains": ["slow_crank", "dim_lights"], "causes": [],
+      "fix": ["Measure the resting voltage.", "Charge the battery.", "Do a load test."]},
+    "alternator_failure": {"label": "Alternator failure", "description": "The alternator gives too little output", "systems": ["charge"], "prior": 0.1,
+      "explains": ["battery_light", "dim_lights"], "causes": ["flat_battery"],
+      "fix": ["Measure the charge voltage.", "Replace the alternator.", "Measure the charge voltage again."]},
+    "slipping_belt": {"label": "Slipping belt", "description": "The auxiliary belt slips on its pulleys", "systems": ["charge"], "prior": 0.1,
+      "explains": ["belt_squeal", "battery_light"], "causes": ["flat_battery"],
+      "fix": ["Examine the belt.", "Replace the belt and the tensioner.", "Do a start test."]},
+    "fan_failure": {"label": "Radiator fan failure", "description": "The radiator fan does not run", "systems": ["cooling"], "prior": 0.1,
+      "explains": ["overheat_traffic"], "causes": [],
+      "fix": ["Examine the fan fuse and relay.", "Replace the fan motor.", "Run the engine until the fan starts."]},
+    "hose_leak": {"label": "Coolant hose leak", "description": "A coolant hose leaks", "systems": ["cooling"], "prior": 0.1,
+      "explains": ["coolant_smell", "overheat_traffic"], "causes": [],
+      "fix": ["Do a pressure test.", "Replace the hose.", "Fill and bleed the system."]}
+  },
+  "nodes": {
+    "q_bat_voltage": {"question": "What is the battery voltage at rest?",
+      "options": {"low": {"text": "Less than 12.2 V", "next": "flat_battery"}, "ok": {"text": "12.4 V or more", "next": "specialist"}, "not_sure": {"text": "Not measured", "next": "specialist"}},
+      "evidence": {"low": {"flat_battery": 0.9}, "ok": {"flat_battery": 0.1}}},
+    "q_chg_running_voltage": {"question": "What is the battery voltage with the engine at 2000 rpm?",
+      "options": {"low": {"text": "Less than 13.2 V", "next": "q_chg_belt"}, "ok": {"text": "13.8 to 14.7 V", "next": "specialist"}, "not_sure": {"text": "Not measured", "next": "q_chg_belt"}},
+      "evidence": {"low": {"alternator_failure": 0.9, "slipping_belt": 0.8}, "ok": {"alternator_failure": 0.05, "slipping_belt": 0.2}}},
+    "q_chg_belt": {"question": "Does the belt squeal, or is it glazed or loose?",
+      "options": {"yes": {"text": "Yes, the belt squeals or is glazed or loose", "next": "slipping_belt"}, "no": {"text": "No, the belt is tight and quiet", "next": "alternator_failure"}, "not_sure": {"text": "Not known", "next": "alternator_failure"}},
+      "evidence": {"yes": {"slipping_belt": 0.9, "alternator_failure": 0.1}, "no": {"slipping_belt": 0.1, "alternator_failure": 0.9}}},
+    "q_cool_fan": {"question": "Does the radiator fan run when the engine is hot?",
+      "options": {"yes": {"text": "Yes, the fan runs", "next": "q_cool_leak"}, "no": {"text": "No, the fan does not run", "next": "fan_failure"}, "not_sure": {"text": "Not known", "next": "q_cool_leak"}},
+      "evidence": {"yes": {"fan_failure": 0.05, "hose_leak": 0.9}, "no": {"fan_failure": 0.95, "hose_leak": 0.1}}},
+    "q_cool_leak": {"question": "Does a pressure test show a leak?",
+      "options": {"yes": {"text": "Yes, a leak", "next": "hose_leak"}, "no": {"text": "No leak", "next": "specialist"}, "not_sure": {"text": "Not tested", "next": "specialist"}},
+      "evidence": {"yes": {"hose_leak": 0.95}, "no": {"hose_leak": 0.05}}}
+  }
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "golf_slow_crank",
+    "title": "Slow crank after short trips",
+    "report": "Morning. My Golf has been really slow to start the last few days, it sort of groans before it catches. This morning it didn't catch at all. I've mostly been doing the school run, 5 minutes each way. The passenger window rattles too but that's another story.",
+    "expected": "flat_battery",
+    "answers": {
+      "q_ns_key_turn": "cranks over slow like it's struggling, then gives up",
+      "q_ns_dash_lights": "dash comes on, goes a bit dim when cranking",
+      "q_ns_terminals": "terminals clean and tight",
+      "q_ns_security_light": "no key light",
+      "q_ns_lights_dim": "yeah headlights go right down when you crank",
+      "q_ns_voltage": "11.9V at rest",
+      "q_ns_load_test": "charged it overnight, passes the load test fine. battery's 3 yrs old",
+      "q_ns_starter_voltage": "about 9.5 at the solenoid while cranking",
+      "q_ns_immobiliser": "no immobiliser light",
+      "q_ns_fuel_pump_hum": "pump primes ok",
+      "q_ns_rpm_signal": "rev counter flickers while it cranks"
+    },
+    "tags": []
+  },
+  {
+    "id": "clio_single_click",
+    "title": "One click and nothing",
+    "report": "Hi, my Clio just clicks when I turn the key. One loud click, then nothing. Lights and radio all work fine and I had a new battery fitted in March. It's parked at my mum's if that matters.",
+    "expected": "starter_motor",
+    "answers": {
+      "q_ns_key_turn": "single clunk from the starter, engine doesn't move",
+      "q_ns_dash_lights": "dash fully bright",
+      "q_ns_terminals": "terminals clean and tight",
+      "q_ns_security_light": "no key light on",
+      "q_ns_lights_dim": "headlights stay bright when you turn it, no dip at all",
+      "q_ns_voltage": "12.6 V",
+      "q_ns_load_test": "battery tests good, 640 CCA",
+      "q_ns_starter_voltage": "12.1 V at the solenoid terminal with the key held",
+      "q_ns_immobiliser": "no, key light goes out normally",
+      "q_ns_fuel_pump_hum": "pump hums",
+      "q_ns_rpm_signal": "n/a, engine doesn't turn so the needle stays at 0"
+    },
+    "tags": []
+  },
+  {
+    "id": "fiesta_cranks_no_fire",
+    "title": "Cranks fine, never catches",
+    "report": "Fiesta won't start. It turns over fine, sounds normal, just never catches. It ran perfectly yesterday, I drove it back from the coast. Half a tank of fuel, I checked the gauge.",
+    "expected": "fuel_pump",
+    "answers": {
+      "q_ns_key_turn": "spins over at normal speed, won't fire",
+      "q_ns_dash_lights": "all dash lights normal",
+      "q_ns_terminals": "terminals fine",
+      "q_ns_security_light": "no security light",
+      "q_ns_lights_dim": "lights dip a little, normal",
+      "q_ns_voltage": "12.5 V",
+      "q_ns_load_test": "battery passes",
+      "q_ns_starter_voltage": "11 V at the starter while cranking",
+      "q_ns_immobiliser": "no immobiliser light, key symbol goes out",
+      "q_ns_fuel_pump_hum": "no prime noise from the tank at all, 0 bar on the rail gauge",
+      "q_ns_rpm_signal": "rev counter shows about 200 rpm cranking"
+    },
+    "tags": []
+  },
+  {
+    "id": "corolla_dead_silent",
+    "title": "Completely dead, no dash",
+    "report": "Car's completely dead. Turned the key and absolutely nothing, not even the interior light. Yesterday it started but the dash flickered going over a speed bump. It's a 2009 Corolla with 180k on it.",
+    "expected": "battery_terminals",
+    "answers": {
+      "q_ns_key_turn": "nothing at all, totally dead",
+      "q_ns_dash_lights": "no dash lights, nothing",
+      "q_ns_terminals": "positive clamp is loose and there's green fur all over it",
+      "q_ns_security_light": "can't see any, the dash is dead",
+      "q_ns_lights_dim": "headlights don't come on at all",
+      "q_ns_voltage": "12.5 V across the posts",
+      "q_ns_load_test": "battery tests fine",
+      "q_ns_starter_voltage": "0 V at the starter, posts read 12.5",
+      "q_ns_immobiliser": "can't tell, no dash",
+      "q_ns_fuel_pump_hum": "no hum, nothing gets power",
+      "q_ns_rpm_signal": "doesn't crank so no"
+    },
+    "tags": []
+  },
+  {
+    "id": "passat_funny_mornings",
+    "title": "Funny some mornings (vague)",
+    "report": "My Passat has been a bit funny lately. Some mornings it's fine and some mornings it's hard work, and last week the dash did something weird. I'm not a car person. It's the diesel if that helps, and the battery might be original, I bought it used.",
+    "expected": "battery_end_of_life",
+    "tags": [
+      "vague_report"
+    ],
+    "answers": {
+      "q_ns_key_turn": "turns over slowly, got there on the third go",
+      "q_ns_dash_lights": "dash comes on",
+      "q_ns_terminals": "terminals look ok",
+      "q_ns_security_light": "no key light",
+      "q_ns_lights_dim": "headlights dip a lot when cranking",
+      "q_ns_voltage": "12.3",
+      "q_ns_load_test": "charged it, still fails the load test. battery date stamp 2016",
+      "q_ns_starter_voltage": "about 9 at the starter when cranking",
+      "q_ns_immobiliser": "no",
+      "q_ns_fuel_pump_hum": "pump primes",
+      "q_ns_rpm_signal": "yes rev counter moves",
+      "q_ch_symptom": "battery dies if it sits a couple of days, no warning light while driving",
+      "q_ch_running_voltage": "14.2 V at 2000",
+      "q_ch_belt": "belt looks good",
+      "q_ch_terminals": "connections tight and clean",
+      "q_ch_drain": "35 mA once it's asleep",
+      "q_ch_battery_test": "fails the conductance test even after a full charge"
+    }
+  },
+  {
+    "id": "transit_battery_light",
+    "title": "Battery light on the motorway",
+    "report": "The battery light on our Transit van comes on after about 10 minutes of driving and stays on. The radio cut out yesterday on the motorway. We use it for deliveries so we need it back quick. Tyres were done last month.",
+    "expected": "alternator_failure",
+    "answers": {
+      "q_ch_symptom": "red battery light on while driving",
+      "q_ch_running_voltage": "12.4 at 2000 rpm with the lights on",
+      "q_ch_belt": "belt is fine, good tension, no noise",
+      "q_ch_terminals": "all connections clean, alternator B+ nut tight",
+      "q_ch_drain": "25 mA asleep",
+      "q_ch_battery_test": "battery tests ok after a charge"
+    },
+    "tags": []
+  },
+  {
+    "id": "mini_flat_mondays",
+    "title": "Flat every Monday",
+    "report": "Every Monday my Mini's battery is flat. I only drive it at weekends. I already had the battery replaced, it's brand new, and it still happens. It starts fine with a jump and then runs fine all week if I use it.",
+    "expected": "parasitic_drain",
+    "answers": {
+      "q_ch_symptom": "goes flat after sitting a few days, no lights on while driving",
+      "q_ch_running_voltage": "14.4",
+      "q_ch_belt": "belt ok",
+      "q_ch_terminals": "terminals new and tight",
+      "q_ch_drain": "320 mA after an hour, never goes to sleep",
+      "q_ch_battery_test": "new battery, tests perfect"
+    },
+    "tags": []
+  },
+  {
+    "id": "octavia_shudder_uphill",
+    "title": "Flashing engine light uphill",
+    "report": "Engine light is flashing on my Octavia and it shudders when I go up hills. Idle's a bit lumpy too. It had a service 8,000 miles ago. The kids spilled juice in the back but that's unrelated.",
+    "expected": "ignition_coil",
+    "answers": {
+      "q_rb_symptom": "misfiring under load, EML flashing",
+      "q_rb_one_cylinder": "P0302 only, cyl 2",
+      "q_rb_coil_swap": "swapped coil 2 with 3, now it throws P0303",
+      "q_rb_plugs": "plugs look ok, done at the last service",
+      "q_rb_coolant_loss": "coolant level fine",
+      "q_rb_idle_hiss": "no hiss, smoke test clean",
+      "q_rb_egr": "EGR fine, no codes",
+      "q_rb_fuel_pressure": "holds spec at WOT",
+      "q_rb_filter_age": "filter done 20k km ago",
+      "q_rb_maf": "no MAF codes, no change unplugged"
+    },
+    "tags": []
+  },
+  {
+    "id": "yaris_hunting_idle",
+    "title": "Revs hunt at the lights (unclear answer)",
+    "report": "The revs on my Yaris go up and down on their own when I'm stopped at lights, and twice it nearly stalled. Drives ok once it's moving. There's a whistle sometimes too? Might be the wind.",
+    "expected": "vacuum_leak",
+    "tags": [
+      "unclear_answer"
+    ],
+    "answers": {
+      "q_rb_symptom": "idle hunting 600 to 1100, nearly stalls",
+      "q_rb_one_cylinder": "no misfire codes",
+      "q_rb_coil_swap": "no misfire so didn't swap anything",
+      "q_rb_plugs": "plugs fine",
+      "q_rb_coolant_loss": "no coolant loss",
+      "q_rb_idle_hiss": "hmm, might be something, might not. aircon was on, hard to tell",
+      "q_rb_egr": "EGR clean",
+      "q_rb_fuel_pressure": "fuel pressure's fine",
+      "q_rb_filter_age": "filter changed last year",
+      "q_rb_maf": "no MAF code, unplugging it makes it worse"
+    }
+  },
+  {
+    "id": "berlingo_sluggish",
+    "title": "Sluggish and slow to start (vague)",
+    "report": "It's just not right. Feels sluggish, no pick-up on the dual carriageway, and on Tuesday it took a couple of goes to start. My husband thinks it's the weather. It's done a lot of miles.",
+    "expected": "fuel_filter",
+    "tags": [
+      "vague_report"
+    ],
+    "answers": {
+      "q_rb_symptom": "loses power under load, idles fine",
+      "q_rb_one_cylinder": "no misfire codes stored",
+      "q_rb_coil_swap": "no misfire to chase",
+      "q_rb_plugs": "plugs ok",
+      "q_rb_coolant_loss": "coolant fine",
+      "q_rb_idle_hiss": "no leaks on the smoke test",
+      "q_rb_egr": "EGR moves freely",
+      "q_rb_fuel_pressure": "drops to 2.1 bar at full throttle, spec is 3.5",
+      "q_rb_filter_age": "no record of the filter ever being done, 190k on it",
+      "q_rb_maf": "MAF reading fine, no codes",
+      "q_ns_key_turn": "cranks normal, takes a few seconds to catch",
+      "q_ns_dash_lights": "dash normal",
+      "q_ns_terminals": "terminals fine",
+      "q_ns_security_light": "no key light",
+      "q_ns_lights_dim": "slight dip, normal",
+      "q_ns_voltage": "12.6",
+      "q_ns_load_test": "battery passes",
+      "q_ns_starter_voltage": "11.2 at the solenoid",
+      "q_ns_immobiliser": "no immobiliser warning",
+      "q_ns_fuel_pump_hum": "pump hums at key on",
+      "q_ns_rpm_signal": "rev counter moves while cranking"
+    }
+  },
+  {
+    "id": "c3_hot_in_traffic",
+    "title": "Hot in town traffic",
+    "report": "My C3's temperature needle goes nearly into the red when I'm stuck in town traffic, then goes back to normal on the ring road. I don't hear the fan any more, I used to. The aircon hasn't been cold this summer either.",
+    "expected": "radiator_fan",
+    "answers": {
+      "q_co_symptom": "overheats at idle, fine at speed",
+      "q_co_top_hose": "top hose is hot",
+      "q_co_pump": "pump quiet, no weep",
+      "q_co_fan": "fan doesn't cut in at 105 degrees, not with the aircon on either",
+      "q_co_visible_leak": "no leaks, holds pressure",
+      "q_co_leak_place": "didn't find a leak",
+      "q_co_combustion_test": "block test stays blue"
+    },
+    "tags": []
+  },
+  {
+    "id": "megane_motorway_hot",
+    "title": "Hot on the motorway (unclear answer)",
+    "report": "The temperature gauge on my Megane shoots up on the motorway after about 15 minutes. I pulled over and it went back down after a while. Heater blows lukewarm. No leaks on the drive that I can see.",
+    "expected": "thermostat_stuck",
+    "tags": [
+      "unclear_answer"
+    ],
+    "answers": {
+      "q_co_symptom": "gauge climbs on the open road",
+      "q_co_top_hose": "sort of warm? had gloves on, hard to say",
+      "q_co_pump": "pump quiet and dry",
+      "q_co_fan": "fan runs",
+      "q_co_visible_leak": "no leaks under pressure",
+      "q_co_leak_place": "no leak",
+      "q_co_combustion_test": "block tester negative"
+    }
+  },
+  {
+    "id": "astra_sweet_smell",
+    "title": "Sweet smell and topping up (vague)",
+    "report": "Something's off with my Astra. There's a sweet smell after I've been driving and I keep having to top up the water thing. It's been a bit lumpy when I first pull away too. My neighbour says it's nothing.",
+    "expected": "head_gasket",
+    "tags": [
+      "vague_report"
+    ],
+    "answers": {
+      "q_co_symptom": "losing coolant, white smoke on start-up, smells sweet",
+      "q_co_top_hose": "top hose hot",
+      "q_co_pump": "pump fine",
+      "q_co_fan": "fan works",
+      "q_co_visible_leak": "no external leak, holds pressure",
+      "q_co_leak_place": "nothing visible",
+      "q_co_combustion_test": "block tester went yellow in 30 seconds",
+      "q_rb_symptom": "misfire when cold, white smoke out the back",
+      "q_rb_one_cylinder": "P0303, just cylinder 3",
+      "q_rb_coil_swap": "moved the coil, misfire stayed on 3",
+      "q_rb_plugs": "plug 3 is spotless, others normal, gaps fine",
+      "q_rb_coolant_loss": "yes, lost about 500 ml this week and no leaks",
+      "q_rb_idle_hiss": "no vacuum leak",
+      "q_rb_egr": "EGR fine",
+      "q_rb_fuel_pressure": "fuel pressure ok",
+      "q_rb_filter_age": "filter done 2 yrs ago",
+      "q_rb_maf": "MAF fine"
+    }
+  },
+  {
+    "id": "bmw_brake_shudder",
+    "title": "Steering shakes when braking",
+    "report": "When I brake coming off the motorway the steering wheel shakes like mad. The pads were done about a year ago at a quick-fit place. It's fine at low speed. I tow a caravan in summer if that matters.",
+    "expected": "warped_discs",
+    "answers": {
+      "q_br_symptom": "steering shakes under braking from speed",
+      "q_br_pads": "pads 7 mm, fine",
+      "q_br_runout": "0.11 mm runout front left, 0.09 front right",
+      "q_br_wheel_temp": "all wheels similar temp, turn freely",
+      "q_br_pedal_pump": "pedal firm, no change"
+    },
+    "tags": []
+  },
+  {
+    "id": "zafira_pulls_left",
+    "title": "Pulls left, hot wheel",
+    "report": "My car pulls to the left when I brake, and after the school run there's a hot burning smell from the front. I parked it and the wheel was really hot. Also the MOT is due next month.",
+    "expected": "sticking_caliper",
+    "answers": {
+      "q_br_symptom": "pulls left under braking, hot smell",
+      "q_br_pads": "LH inner pad down to 4 mm, RH 8 mm",
+      "q_br_runout": "runout 0.03, fine",
+      "q_br_wheel_temp": "front left 180C after a short drive, the others 50C, drags by hand",
+      "q_br_pedal_pump": "pedal firm"
+    },
+    "tags": []
+  }
+]
