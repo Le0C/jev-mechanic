@@ -1,0 +1,4604 @@
+{
+  "meta": {
+    "started": "2026-09-18T12:40:57",
+    "duration": 54.9301673330001,
+    "model": "jev-1.13.0",
+    "fake": false,
+    "workers": 1
+  },
+  "summaries": {
+    "fan-out on": {
+      "cases": 15,
+      "correct": 13,
+      "independent_correct": 15,
+      "lanes_agree": 13,
+      "flagged": 0,
+      "passed_09": 13,
+      "user_answers": 29,
+      "report_answers": 14,
+      "errors": 0,
+      "totals": {
+        "requests": 88,
+        "input_tokens": 282423,
+        "jev_cost": 0.011861766000000001,
+        "opus5_cost": 1.4121149999999998,
+        "compute_seconds": 46.791151082003125,
+        "wait_seconds": 26.47427508400051
+      },
+      "per_session": {
+        "requests": 5.866666666666666,
+        "input_tokens": 18828.2,
+        "jev_cost": 0.0007907844,
+        "opus5_cost": 0.09414099999999999,
+        "compute_seconds": 3.1194100721335416,
+        "wait_seconds": 1.7649516722667007
+      },
+      "request_times": {
+        "A": {
+          "count": 15,
+          "min": 0.9575606660000631,
+          "median": 1.0325865000004342,
+          "p95": 1.103191749999496,
+          "max": 1.2146987090000039,
+          "mean_input_tokens": 10399.866666666667
+        },
+        "B": {
+          "count": 29,
+          "min": 0.2644105829995169,
+          "median": 0.33653016700009175,
+          "p95": 0.49993391600037285,
+          "max": 1.2854021660004946,
+          "mean_input_tokens": 1158.3793103448277
+        },
+        "C": {
+          "count": 44,
+          "min": 0.2753917079999155,
+          "median": 0.33597620849968735,
+          "p95": 0.7916129160003038,
+          "max": 0.8723508339999171,
+          "mean_input_tokens": 2109.818181818182
+        }
+      }
+    },
+    "fan-out off": {
+      "cases": 15,
+      "correct": 13,
+      "independent_correct": 15,
+      "lanes_agree": 13,
+      "flagged": 0,
+      "passed_09": 13,
+      "user_answers": 30,
+      "report_answers": 14,
+      "errors": 0,
+      "totals": {
+        "requests": 90,
+        "input_tokens": 270985,
+        "jev_cost": 0.011381370000000002,
+        "opus5_cost": 1.354925,
+        "compute_seconds": 49.19195937200402,
+        "wait_seconds": 28.170829039004275
+      },
+      "per_session": {
+        "requests": 6.0,
+        "input_tokens": 18065.666666666668,
+        "jev_cost": 0.0007587580000000001,
+        "opus5_cost": 0.09032833333333333,
+        "compute_seconds": 3.2794639581336016,
+        "wait_seconds": 1.8780552692669517
+      },
+      "request_times": {
+        "A": {
+          "count": 15,
+          "min": 0.966280665999875,
+          "median": 1.0225836660001733,
+          "p95": 1.120720375000019,
+          "max": 1.129627999999684,
+          "mean_input_tokens": 10399.866666666667
+        },
+        "B": {
+          "count": 30,
+          "min": 0.269722666999769,
+          "median": 0.3131838125000286,
+          "p95": 0.41905450000012934,
+          "max": 0.8908888340001795,
+          "mean_input_tokens": 655.1666666666666
+        },
+        "C": {
+          "count": 45,
+          "min": 0.26692800000000716,
+          "median": 0.37512545800018415,
+          "p95": 0.8632571660000394,
+          "max": 1.4018780420001349,
+          "mean_input_tokens": 2118.488888888889
+        }
+      }
+    }
+  },
+  "results": {
+    "fan-out on": [
+      {
+        "id": "golf_slow_crank",
+        "variant": "fan-out on",
+        "expected": "flat_battery",
+        "final": "flat_battery",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 3,
+        "final_score": 0.9384230695671267,
+        "user_answers": 3,
+        "report_answers": 0,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "flat_battery",
+        "independent_score": 0.33,
+        "independent_flag_step": null,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 8,
+          "input_tokens": 23515,
+          "output_tokens": 3645,
+          "jev_cost": 0.00098763,
+          "opus5_cost": 0.117575,
+          "compute_seconds": 3.9145612059992345,
+          "wait_seconds": 2.2017488730007244
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10410,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 1.0543445410003187,
+            "jev_cost": 0.00043722000000000005,
+            "opus5_cost": 0.05205
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2029,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.7984856249995573,
+            "jev_cost": 8.521800000000001e-05,
+            "opus5_cost": 0.010145
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 2634,
+            "output_tokens": 434,
+            "model": "jev-1.13.0",
+            "seconds": 0.34847591600009764,
+            "jev_cost": 0.000110628,
+            "opus5_cost": 0.01317
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2128,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.3114800829998785,
+            "jev_cost": 8.9376e-05,
+            "opus5_cost": 0.01064
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1163,
+            "output_tokens": 157,
+            "model": "jev-1.13.0",
+            "seconds": 0.49993391600037285,
+            "jev_cost": 4.8846000000000006e-05,
+            "opus5_cost": 0.005815
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2210,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.30615895799928694,
+            "jev_cost": 9.282000000000001e-05,
+            "opus5_cost": 0.01105
+          },
+          {
+            "step": 3,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 655,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.2966876669997873,
+            "jev_cost": 2.7510000000000003e-05,
+            "opus5_cost": 0.003275
+          },
+          {
+            "step": 3,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2286,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.2989944999999352,
+            "jev_cost": 9.6012e-05,
+            "opus5_cost": 0.01143
+          }
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "cranks over slow like it's struggling, then gives up",
+            "source": "user",
+            "option": "slow_crank",
+            "probabilities": {
+              "normal_crank": 0.0,
+              "not_sure": 0.0,
+              "slow_crank": 1.0,
+              "click_only": 0.0,
+              "unclear": 0.0,
+              "nothing": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_voltage",
+            "question": "What is the battery voltage at rest, with the engine off?",
+            "answer_text": "11.9V at rest",
+            "source": "user",
+            "option": "below_12_2",
+            "probabilities": {
+              "mid": 0.0,
+              "not_sure": 0.0,
+              "above_12_4": 0.0,
+              "unclear": 0.0,
+              "below_12_2": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 3,
+            "node_id": "q_ns_load_test",
+            "question": "After a full charge, does the battery pass a load or conductance test?",
+            "answer_text": "charged it overnight, passes the load test fine. battery's 3 yrs old",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "not_sure": 0.0,
+              "no": 0.0,
+              "unclear": 0.0,
+              "yes": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "clio_single_click",
+        "variant": "fan-out on",
+        "expected": "starter_motor",
+        "final": "starter_motor",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9200056122346717,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "starter_motor",
+        "independent_score": 0.99,
+        "independent_flag_step": 1,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 18721,
+          "output_tokens": 2967,
+          "jev_cost": 0.0007862820000000001,
+          "opus5_cost": 0.09360500000000001,
+          "compute_seconds": 3.132555498998954,
+          "wait_seconds": 1.7370649989998128
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10397,
+            "output_tokens": 1903,
+            "model": "jev-1.13.0",
+            "seconds": 1.0527212500001042,
+            "jev_cost": 0.000436674,
+            "opus5_cost": 0.051985
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2016,
+            "output_tokens": 274,
+            "model": "jev-1.13.0",
+            "seconds": 0.7685839169998872,
+            "jev_cost": 8.4672e-05,
+            "opus5_cost": 0.01008
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1386,
+            "output_tokens": 194,
+            "model": "jev-1.13.0",
+            "seconds": 0.3701874159996805,
+            "jev_cost": 5.8212000000000004e-05,
+            "opus5_cost": 0.00693
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2085,
+            "output_tokens": 274,
+            "model": "jev-1.13.0",
+            "seconds": 0.36249599999973725,
+            "jev_cost": 8.757e-05,
+            "opus5_cost": 0.010425
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 659,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.2644105829995169,
+            "jev_cost": 2.7678e-05,
+            "opus5_cost": 0.003295
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2178,
+            "output_tokens": 274,
+            "model": "jev-1.13.0",
+            "seconds": 0.3141563330000281,
+            "jev_cost": 9.1476e-05,
+            "opus5_cost": 0.01089
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "One click or rapid clicks, and the engine does not turn",
+            "source": "report",
+            "option": "click_only",
+            "probabilities": {
+              "slow_crank": 0.0,
+              "nothing": 0.0,
+              "click_only": 1.0,
+              "normal_crank": 0.0,
+              "not_stated": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ns_lights_dim",
+            "question": "Do the headlights go dim or out when the key turns to start?",
+            "answer_text": "headlights stay bright when you turn it, no dip at all",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 1.0,
+              "not_sure": 0.0,
+              "yes": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_starter_voltage",
+            "question": "Is there more than 10 V at the starter solenoid terminal while the key is at start?",
+            "answer_text": "12.1 V at the solenoid terminal with the key held",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "no": 0.0,
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "yes": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "fiesta_cranks_no_fire",
+        "variant": "fan-out on",
+        "expected": "fuel_pump",
+        "final": "fuel_pump",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9404911471048327,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "fuel_pump",
+        "independent_score": 1.0,
+        "independent_flag_step": 2,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 18652,
+          "output_tokens": 2958,
+          "jev_cost": 0.0007833840000000001,
+          "opus5_cost": 0.09326,
+          "compute_seconds": 4.153147708000688,
+          "wait_seconds": 2.7110609580004166
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10392,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 1.035920750000514,
+            "jev_cost": 0.00043646400000000007,
+            "opus5_cost": 0.05196
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2011,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.779108124999766,
+            "jev_cost": 8.4462e-05,
+            "opus5_cost": 0.010055
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1112,
+            "output_tokens": 139,
+            "model": "jev-1.13.0",
+            "seconds": 0.38973804199940787,
+            "jev_cost": 4.6704e-05,
+            "opus5_cost": 0.00556
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2088,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.32863895800073806,
+            "jev_cost": 8.769600000000001e-05,
+            "opus5_cost": 0.01044
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 877,
+            "output_tokens": 92,
+            "model": "jev-1.13.0",
+            "seconds": 1.2854021660004946,
+            "jev_cost": 3.6834e-05,
+            "opus5_cost": 0.004385
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2172,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.33433966699976736,
+            "jev_cost": 9.1224e-05,
+            "opus5_cost": 0.01086
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "The engine turns at normal speed but does not fire",
+            "source": "report",
+            "option": "normal_crank",
+            "probabilities": {
+              "slow_crank": 0.0,
+              "not_stated": 0.0,
+              "normal_crank": 1.0,
+              "click_only": 0.0,
+              "nothing": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ns_immobiliser",
+            "question": "Is the immobiliser, key or security light on or flashing while the engine cranks?",
+            "answer_text": "no immobiliser light, key symbol goes out",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "unclear": 0.0,
+              "no": 0.99,
+              "yes": 0.01,
+              "not_sure": 0.0
+            },
+            "confidence": 0.99,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_fuel_pump_hum",
+            "question": "Does the fuel pump hum for approximately 2 seconds when the ignition turns on?",
+            "answer_text": "no prime noise from the tank at all, 0 bar on the rail gauge",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "yes": 0.0,
+              "no": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "corolla_dead_silent",
+        "variant": "fan-out on",
+        "expected": "battery_terminals",
+        "final": "battery_terminals",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9459610964740178,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "battery_terminals",
+        "independent_score": 1.0,
+        "independent_flag_step": 2,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 19946,
+          "output_tokens": 3199,
+          "jev_cost": 0.0008377320000000001,
+          "opus5_cost": 0.09972999999999999,
+          "compute_seconds": 3.139264125000409,
+          "wait_seconds": 1.7373920419995557
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10403,
+            "output_tokens": 1900,
+            "model": "jev-1.13.0",
+            "seconds": 1.0325865000004342,
+            "jev_cost": 0.000436926,
+            "opus5_cost": 0.052015
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2022,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.7916129160003038,
+            "jev_cost": 8.4924e-05,
+            "opus5_cost": 0.01011
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1867,
+            "output_tokens": 280,
+            "model": "jev-1.13.0",
+            "seconds": 0.3496019999993223,
+            "jev_cost": 7.8414e-05,
+            "opus5_cost": 0.009335
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2086,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.3103849999997692,
+            "jev_cost": 8.761200000000001e-05,
+            "opus5_cost": 0.01043
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1402,
+            "output_tokens": 194,
+            "model": "jev-1.13.0",
+            "seconds": 0.3552035419997992,
+            "jev_cost": 5.8884e-05,
+            "opus5_cost": 0.00701
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2166,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.2998741670007803,
+            "jev_cost": 9.097200000000001e-05,
+            "opus5_cost": 0.01083
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "No sound and no movement at all",
+            "source": "report",
+            "option": "nothing",
+            "probabilities": {
+              "nothing": 1.0,
+              "not_stated": 0.0,
+              "slow_crank": 0.0,
+              "click_only": 0.0,
+              "normal_crank": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ns_dash_lights",
+            "question": "Do the dashboard lights come on when the ignition is on?",
+            "answer_text": "no dash lights, nothing",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "unclear": 0.0,
+              "no": 1.0,
+              "not_sure": 0.0,
+              "yes": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_terminals",
+            "question": "Are the battery terminals or the earth strap corroded, loose or hot to touch?",
+            "answer_text": "positive clamp is loose and there's green fur all over it",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "not_sure": 0.0,
+              "no": 0.0,
+              "yes": 1.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "passat_funny_mornings",
+        "variant": "fan-out on",
+        "expected": "battery_end_of_life",
+        "final": "battery_end_of_life",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 3,
+        "final_score": 0.9586524336499855,
+        "user_answers": 3,
+        "report_answers": 0,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "battery_end_of_life",
+        "independent_score": 1.0,
+        "independent_flag_step": 3,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 8,
+          "input_tokens": 23496,
+          "output_tokens": 3642,
+          "jev_cost": 0.0009868320000000002,
+          "opus5_cost": 0.11748,
+          "compute_seconds": 3.8270892090004054,
+          "wait_seconds": 2.1060776669992265
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10409,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 1.103191749999496,
+            "jev_cost": 0.00043717800000000003,
+            "opus5_cost": 0.052045
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2028,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.7694232080002621,
+            "jev_cost": 8.5176e-05,
+            "opus5_cost": 0.01014
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 2632,
+            "output_tokens": 434,
+            "model": "jev-1.13.0",
+            "seconds": 0.35370133299966255,
+            "jev_cost": 0.00011054400000000002,
+            "opus5_cost": 0.01316
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2126,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.3395467500004088,
+            "jev_cost": 8.9292e-05,
+            "opus5_cost": 0.01063
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1159,
+            "output_tokens": 152,
+            "model": "jev-1.13.0",
+            "seconds": 0.3115718340004605,
+            "jev_cost": 4.8678000000000004e-05,
+            "opus5_cost": 0.005795
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2205,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.31061829200007196,
+            "jev_cost": 9.261e-05,
+            "opus5_cost": 0.011025
+          },
+          {
+            "step": 3,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 655,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.30142329200043605,
+            "jev_cost": 2.7510000000000003e-05,
+            "opus5_cost": 0.003275
+          },
+          {
+            "step": 3,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2282,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.33761274999960733,
+            "jev_cost": 9.584400000000001e-05,
+            "opus5_cost": 0.01141
+          }
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "turns over slowly, got there on the third go",
+            "source": "user",
+            "option": "slow_crank",
+            "probabilities": {
+              "normal_crank": 0.0,
+              "not_sure": 0.0,
+              "click_only": 0.0,
+              "slow_crank": 1.0,
+              "nothing": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_voltage",
+            "question": "What is the battery voltage at rest, with the engine off?",
+            "answer_text": "12.3",
+            "source": "user",
+            "option": "mid",
+            "probabilities": {
+              "above_12_4": 0.0,
+              "unclear": 0.0,
+              "not_sure": 0.0,
+              "mid": 1.0,
+              "below_12_2": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 3,
+            "node_id": "q_ns_load_test",
+            "question": "After a full charge, does the battery pass a load or conductance test?",
+            "answer_text": "charged it, still fails the load test. battery date stamp 2016",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "not_sure": 0.0,
+              "yes": 0.0,
+              "no": 1.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "transit_battery_light",
+        "variant": "fan-out on",
+        "expected": "alternator_failure",
+        "final": "alternator_failure",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 3,
+        "final_score": 0.9588797848862283,
+        "user_answers": 3,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "alternator_failure",
+        "independent_score": 1.0,
+        "independent_flag_step": 0,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 8,
+          "input_tokens": 21917,
+          "output_tokens": 3330,
+          "jev_cost": 0.0009205139999999999,
+          "opus5_cost": 0.109585,
+          "compute_seconds": 3.629175292000582,
+          "wait_seconds": 1.9952449180009353
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10400,
+            "output_tokens": 1902,
+            "model": "jev-1.13.0",
+            "seconds": 0.9689784580004925,
+            "jev_cost": 0.0004368,
+            "opus5_cost": 0.052
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2019,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.7285984159998407,
+            "jev_cost": 8.4798e-05,
+            "opus5_cost": 0.010095
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1388,
+            "output_tokens": 185,
+            "model": "jev-1.13.0",
+            "seconds": 0.38711670900011086,
+            "jev_cost": 5.8296000000000006e-05,
+            "opus5_cost": 0.00694
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2113,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.3480431250000038,
+            "jev_cost": 8.874600000000001e-05,
+            "opus5_cost": 0.010565
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 888,
+            "output_tokens": 91,
+            "model": "jev-1.13.0",
+            "seconds": 0.33653016700009175,
+            "jev_cost": 3.7296e-05,
+            "opus5_cost": 0.00444
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2189,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.28189712499988673,
+            "jev_cost": 9.1938e-05,
+            "opus5_cost": 0.010945
+          },
+          {
+            "step": 3,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 650,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.30261958400024014,
+            "jev_cost": 2.73e-05,
+            "opus5_cost": 0.00325
+          },
+          {
+            "step": 3,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2270,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.2753917079999155,
+            "jev_cost": 9.534e-05,
+            "opus5_cost": 0.01135
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ch_symptom",
+            "question": "What electrical problem does the driver notice first?",
+            "answer_text": "The battery or charge warning light comes on while the car drives",
+            "source": "report",
+            "option": "warning_light",
+            "probabilities": {
+              "dim_lights": 0.0,
+              "warning_light": 1.0,
+              "squeal": 0.0,
+              "not_stated": 0.0,
+              "flat_overnight": 0.0
+            },
+            "confidence": 0.99,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ch_running_voltage",
+            "question": "What is the battery voltage with the engine at 2000 rpm and the lights on?",
+            "answer_text": "12.4 at 2000 rpm with the lights on",
+            "source": "user",
+            "option": "low",
+            "probabilities": {
+              "normal": 0.0,
+              "low": 1.0,
+              "high": 0.0,
+              "not_sure": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ch_belt",
+            "question": "Is the auxiliary belt glazed, cracked or loose, or does it squeal under load?",
+            "answer_text": "belt is fine, good tension, no noise",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 1.0,
+              "yes": 0.0,
+              "not_sure": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 3,
+            "node_id": "q_ch_terminals",
+            "question": "Are the battery terminals, the alternator cable or the earth strap corroded or loose?",
+            "answer_text": "all connections clean, alternator B+ nut tight",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "unclear": 0.0,
+              "not_sure": 0.0,
+              "no": 1.0,
+              "yes": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "mini_flat_mondays",
+        "variant": "fan-out on",
+        "expected": "parasitic_drain",
+        "final": "parasitic_drain",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 1,
+        "final_score": 0.9093856057792284,
+        "user_answers": 1,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "parasitic_drain",
+        "independent_score": 1.0,
+        "independent_flag_step": 1,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 4,
+          "input_tokens": 15632,
+          "output_tokens": 2593,
+          "jev_cost": 0.000656544,
+          "opus5_cost": 0.07816,
+          "compute_seconds": 2.2965259170005083,
+          "wait_seconds": 1.2807100010004433
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10400,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 0.9868794590001926,
+            "jev_cost": 0.0004368,
+            "opus5_cost": 0.052
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2019,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.7353488329999891,
+            "jev_cost": 8.4798e-05,
+            "opus5_cost": 0.010095
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1120,
+            "output_tokens": 135,
+            "model": "jev-1.13.0",
+            "seconds": 0.2938305420002507,
+            "jev_cost": 4.7040000000000004e-05,
+            "opus5_cost": 0.0056
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2093,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.28046708300007595,
+            "jev_cost": 8.790600000000001e-05,
+            "opus5_cost": 0.010465
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ch_symptom",
+            "question": "What electrical problem does the driver notice first?",
+            "answer_text": "The battery goes flat after the car stands overnight or for a few days",
+            "source": "report",
+            "option": "flat_overnight",
+            "probabilities": {
+              "dim_lights": 0.0,
+              "warning_light": 0.0,
+              "not_stated": 0.03,
+              "squeal": 0.0,
+              "flat_overnight": 0.97
+            },
+            "confidence": 0.96,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ch_drain",
+            "question": "What current does the battery supply when the car is locked and asleep, after 30 minutes?",
+            "answer_text": "320 mA after an hour, never goes to sleep",
+            "source": "user",
+            "option": "high",
+            "probabilities": {
+              "high": 1.0,
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "normal": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "octavia_shudder_uphill",
+        "variant": "fan-out on",
+        "expected": "ignition_coil",
+        "final": "ignition_coil",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9750997871131566,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "ignition_coil",
+        "independent_score": 1.0,
+        "independent_flag_step": 1,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 19243,
+          "output_tokens": 3050,
+          "jev_cost": 0.000808206,
+          "opus5_cost": 0.096215,
+          "compute_seconds": 2.9729216260011526,
+          "wait_seconds": 1.6513160010008505
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10402,
+            "output_tokens": 1905,
+            "model": "jev-1.13.0",
+            "seconds": 1.0474254589998964,
+            "jev_cost": 0.000436884,
+            "opus5_cost": 0.05201
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2021,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.7297566249999363,
+            "jev_cost": 8.4882e-05,
+            "opus5_cost": 0.010105
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1381,
+            "output_tokens": 181,
+            "model": "jev-1.13.0",
+            "seconds": 0.30892600000061066,
+            "jev_cost": 5.8002000000000005e-05,
+            "opus5_cost": 0.006905
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2108,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.30476295800053776,
+            "jev_cost": 8.853600000000001e-05,
+            "opus5_cost": 0.01054
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1137,
+            "output_tokens": 137,
+            "model": "jev-1.13.0",
+            "seconds": 0.2949645420003435,
+            "jev_cost": 4.7754000000000004e-05,
+            "opus5_cost": 0.005685
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2194,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.287086041999828,
+            "jev_cost": 9.214800000000001e-05,
+            "opus5_cost": 0.01097
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_rb_symptom",
+            "question": "How does the engine run badly?",
+            "answer_text": "It shakes or stumbles, worse under load, and the engine light can flash",
+            "source": "report",
+            "option": "misfire",
+            "probabilities": {
+              "rough_idle": 0.01,
+              "no_power": 0.0,
+              "misfire": 0.94,
+              "not_stated": 0.05,
+              "white_smoke": 0.0
+            },
+            "confidence": 0.93,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_rb_one_cylinder",
+            "question": "Is the misfire on one cylinder only, for example one code from P0301 to P0308?",
+            "answer_text": "P0302 only, cyl 2",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "yes": 1.0,
+              "no": 0.0,
+              "not_sure": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_rb_coil_swap",
+            "question": "When the coil of the bad cylinder goes on a different cylinder, does the misfire move with it?",
+            "answer_text": "swapped coil 2 with 3, now it throws P0303",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "yes": 0.99,
+              "no": 0.01
+            },
+            "confidence": 0.98,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "yaris_hunting_idle",
+        "variant": "fan-out on",
+        "expected": "vacuum_leak",
+        "final": "specialist",
+        "final_status": "specialist",
+        "correct": false,
+        "flag_step": null,
+        "score_step": null,
+        "final_score": null,
+        "user_answers": 3,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "vacuum_leak",
+        "independent_score": 0.6,
+        "independent_flag_step": null,
+        "independent_correct": true,
+        "lanes_agree": false,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 8,
+          "input_tokens": 21794,
+          "output_tokens": 3281,
+          "jev_cost": 0.000915348,
+          "opus5_cost": 0.10896999999999998,
+          "compute_seconds": 3.591503292998823,
+          "wait_seconds": 2.025459083998612
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10397,
+            "output_tokens": 1905,
+            "model": "jev-1.13.0",
+            "seconds": 1.0299154169997564,
+            "jev_cost": 0.000436674,
+            "opus5_cost": 0.051985
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2016,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.6990906250002809,
+            "jev_cost": 8.4672e-05,
+            "opus5_cost": 0.01008
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1183,
+            "output_tokens": 136,
+            "model": "jev-1.13.0",
+            "seconds": 0.34814662499957194,
+            "jev_cost": 4.9686e-05,
+            "opus5_cost": 0.005915
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2108,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.2887445000005755,
+            "jev_cost": 8.853600000000001e-05,
+            "opus5_cost": 0.01054
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 920,
+            "output_tokens": 91,
+            "model": "jev-1.13.0",
+            "seconds": 0.3562689999998838,
+            "jev_cost": 3.864e-05,
+            "opus5_cost": 0.0046
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2203,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.2915456669998093,
+            "jev_cost": 9.252600000000002e-05,
+            "opus5_cost": 0.011015
+          },
+          {
+            "step": 3,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 665,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.286663416999545,
+            "jev_cost": 2.7930000000000002e-05,
+            "opus5_cost": 0.003325
+          },
+          {
+            "step": 3,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2302,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.2911280419994,
+            "jev_cost": 9.668400000000001e-05,
+            "opus5_cost": 0.01151
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_rb_symptom",
+            "question": "How does the engine run badly?",
+            "answer_text": "The idle is rough or hunts, and the engine can stall at idle",
+            "source": "report",
+            "option": "rough_idle",
+            "probabilities": {
+              "rough_idle": 1.0,
+              "no_power": 0.0,
+              "not_stated": 0.0,
+              "white_smoke": 0.0,
+              "misfire": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_rb_idle_hiss",
+            "question": "Is there a hiss at idle, or does the idle change when carb cleaner is sprayed near the intake?",
+            "answer_text": "hmm, might be something, might not. aircon was on, hard to tell",
+            "source": "user",
+            "option": "not_sure",
+            "probabilities": {
+              "unclear": 0.0,
+              "yes": 0.0,
+              "not_sure": 1.0,
+              "no": 0.0
+            },
+            "confidence": 0.99,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_rb_egr",
+            "question": "Is the EGR valve stuck open or heavy with carbon, or is an EGR code from P0400 to P0409 stored?",
+            "answer_text": "EGR clean",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "not_sure": 0.0,
+              "yes": 0.06,
+              "unclear": 0.04,
+              "no": 0.9
+            },
+            "confidence": 0.86,
+            "outcome": "accepted"
+          },
+          {
+            "step": 3,
+            "node_id": "q_rb_maf",
+            "question": "Does the engine run better with the MAF sensor unplugged, or is a code from P0100 to P0104 stored?",
+            "answer_text": "no MAF code, unplugging it makes it worse",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 0.92,
+              "not_sure": 0.0,
+              "unclear": 0.06,
+              "yes": 0.02
+            },
+            "confidence": 0.89,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "berlingo_sluggish",
+        "variant": "fan-out on",
+        "expected": "fuel_filter",
+        "final": "fuel_filter",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9271687882248268,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "fuel_filter",
+        "independent_score": 0.83,
+        "independent_flag_step": null,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 18455,
+          "output_tokens": 2912,
+          "jev_cost": 0.0007751100000000001,
+          "opus5_cost": 0.092275,
+          "compute_seconds": 3.074657292001575,
+          "wait_seconds": 1.6911746660007339
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10399,
+            "output_tokens": 1905,
+            "model": "jev-1.13.0",
+            "seconds": 1.0295297910006411,
+            "jev_cost": 0.00043675800000000004,
+            "opus5_cost": 0.051995
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2018,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.7303714590007075,
+            "jev_cost": 8.4756e-05,
+            "opus5_cost": 0.01009
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1135,
+            "output_tokens": 135,
+            "model": "jev-1.13.0",
+            "seconds": 0.29852512500019657,
+            "jev_cost": 4.767e-05,
+            "opus5_cost": 0.005675
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2083,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.29803050000009534,
+            "jev_cost": 8.748600000000001e-05,
+            "opus5_cost": 0.010415
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 653,
+            "output_tokens": 50,
+            "model": "jev-1.13.0",
+            "seconds": 0.36311974999989616,
+            "jev_cost": 2.7426e-05,
+            "opus5_cost": 0.003265
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2167,
+            "output_tokens": 274,
+            "model": "jev-1.13.0",
+            "seconds": 0.3550806670000384,
+            "jev_cost": 9.1014e-05,
+            "opus5_cost": 0.010835
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_rb_symptom",
+            "question": "How does the engine run badly?",
+            "answer_text": "A flat spot or a loss of power when it accelerates, but a smooth idle",
+            "source": "report",
+            "option": "no_power",
+            "probabilities": {
+              "no_power": 0.9,
+              "not_stated": 0.1,
+              "white_smoke": 0.0,
+              "rough_idle": 0.0,
+              "misfire": 0.0
+            },
+            "confidence": 0.87,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_rb_fuel_pressure",
+            "question": "What does the fuel pressure do at full load?",
+            "answer_text": "drops to 2.1 bar at full throttle, spec is 3.5",
+            "source": "user",
+            "option": "drops",
+            "probabilities": {
+              "drops": 1.0,
+              "holds": 0.0,
+              "not_sure": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_rb_filter_age",
+            "question": "When did the fuel filter last get replaced?",
+            "answer_text": "no record of the filter ever being done, 190k on it",
+            "source": "user",
+            "option": "overdue",
+            "probabilities": {
+              "overdue": 1.0,
+              "recent": 0.0,
+              "not_sure": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "c3_hot_in_traffic",
+        "variant": "fan-out on",
+        "expected": "radiator_fan",
+        "final": "radiator_fan",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 1,
+        "final_score": 0.9756437021572721,
+        "user_answers": 1,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "radiator_fan",
+        "independent_score": 1.0,
+        "independent_flag_step": 0,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 4,
+          "input_tokens": 15657,
+          "output_tokens": 2591,
+          "jev_cost": 0.000657594,
+          "opus5_cost": 0.078285,
+          "compute_seconds": 2.5539526659995317,
+          "wait_seconds": 1.436412415999257
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10403,
+            "output_tokens": 1903,
+            "model": "jev-1.13.0",
+            "seconds": 0.9933715829993162,
+            "jev_cost": 0.000436926,
+            "opus5_cost": 0.052015
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2022,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.7737024580001162,
+            "jev_cost": 8.4924e-05,
+            "opus5_cost": 0.01011
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1132,
+            "output_tokens": 136,
+            "model": "jev-1.13.0",
+            "seconds": 0.3438377920001585,
+            "jev_cost": 4.7544000000000004e-05,
+            "opus5_cost": 0.00566
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2100,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.4430408329999409,
+            "jev_cost": 8.82e-05,
+            "opus5_cost": 0.0105
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_co_symptom",
+            "question": "What cooling problem does the driver notice first?",
+            "answer_text": "The temperature climbs in traffic or at idle, and falls at speed",
+            "source": "report",
+            "option": "overheat_idle",
+            "probabilities": {
+              "white_smoke": 0.0,
+              "overheat_road": 0.0,
+              "not_stated": 0.0,
+              "coolant_loss": 0.0,
+              "overheat_idle": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_co_fan",
+            "question": "Does the radiator fan run when the engine is hot, or when the air conditioning is on?",
+            "answer_text": "fan doesn't cut in at 105 degrees, not with the aircon on either",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "yes": 0.01,
+              "no": 0.99
+            },
+            "confidence": 0.98,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "megane_motorway_hot",
+        "variant": "fan-out on",
+        "expected": "thermostat_stuck",
+        "final": null,
+        "final_status": "reask",
+        "correct": false,
+        "flag_step": null,
+        "score_step": null,
+        "final_score": null,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 2,
+        "missing_answers": [],
+        "independent_final": "thermostat_stuck",
+        "independent_score": 0.71,
+        "independent_flag_step": null,
+        "independent_correct": true,
+        "lanes_agree": false,
+        "stuck": "q_co_top_hose",
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 18908,
+          "output_tokens": 3007,
+          "jev_cost": 0.0007941360000000001,
+          "opus5_cost": 0.09454,
+          "compute_seconds": 3.162233333000586,
+          "wait_seconds": 1.7764172500001223
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10398,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 1.0472164170005271,
+            "jev_cost": 0.000436716,
+            "opus5_cost": 0.05199
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2017,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.7579581250001866,
+            "jev_cost": 8.4714e-05,
+            "opus5_cost": 0.010085
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1121,
+            "output_tokens": 136,
+            "model": "jev-1.13.0",
+            "seconds": 0.3493798749996131,
+            "jev_cost": 4.7082e-05,
+            "opus5_cost": 0.005605
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2089,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.3322806670003047,
+            "jev_cost": 8.7738e-05,
+            "opus5_cost": 0.010445
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1121,
+            "output_tokens": 136,
+            "model": "jev-1.13.0",
+            "seconds": 0.2955772909999723,
+            "jev_cost": 4.7082e-05,
+            "opus5_cost": 0.005605
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2162,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.37982095799998206,
+            "jev_cost": 9.080400000000001e-05,
+            "opus5_cost": 0.01081
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_co_symptom",
+            "question": "What cooling problem does the driver notice first?",
+            "answer_text": "The temperature gauge climbs on the open road or soon after start",
+            "source": "report",
+            "option": "overheat_road",
+            "probabilities": {
+              "overheat_idle": 0.0,
+              "overheat_road": 1.0,
+              "not_stated": 0.0,
+              "coolant_loss": 0.0,
+              "white_smoke": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_co_top_hose",
+            "question": "With the engine hot, is the top radiator hose hot too?",
+            "answer_text": "sort of warm? had gloves on, hard to say",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "yes": 0.0,
+              "not_sure": 0.38,
+              "no": 0.59,
+              "unclear": 0.03
+            },
+            "confidence": 0.45,
+            "outcome": "reask"
+          },
+          {
+            "step": 2,
+            "node_id": "q_co_top_hose",
+            "question": "With the engine hot, is the top radiator hose hot too?",
+            "answer_text": "sort of warm? had gloves on, hard to say",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "unclear": 0.03,
+              "no": 0.58,
+              "not_sure": 0.39,
+              "yes": 0.0
+            },
+            "confidence": 0.43,
+            "outcome": "reask"
+          }
+        ]
+      },
+      {
+        "id": "astra_sweet_smell",
+        "variant": "fan-out on",
+        "expected": "head_gasket",
+        "final": "head_gasket",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9081089134726413,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "head_gasket",
+        "independent_score": 1.0,
+        "independent_flag_step": 2,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 18429,
+          "output_tokens": 2926,
+          "jev_cost": 0.000774018,
+          "opus5_cost": 0.09214499999999999,
+          "compute_seconds": 3.3046587080007157,
+          "wait_seconds": 1.8389117920005447
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10399,
+            "output_tokens": 1906,
+            "model": "jev-1.13.0",
+            "seconds": 1.2146987090000039,
+            "jev_cost": 0.00043675800000000004,
+            "opus5_cost": 0.051995
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2018,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.8723508339999171,
+            "jev_cost": 8.4756e-05,
+            "opus5_cost": 0.01009
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1122,
+            "output_tokens": 144,
+            "model": "jev-1.13.0",
+            "seconds": 0.2945464170006744,
+            "jev_cost": 4.7124000000000005e-05,
+            "opus5_cost": 0.00561
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2092,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.2836870410001211,
+            "jev_cost": 8.7864e-05,
+            "opus5_cost": 0.01046
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 637,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.30970904100013286,
+            "jev_cost": 2.6754e-05,
+            "opus5_cost": 0.003185
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2161,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.3296666659998664,
+            "jev_cost": 9.0762e-05,
+            "opus5_cost": 0.010805
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_co_symptom",
+            "question": "What cooling problem does the driver notice first?",
+            "answer_text": "The coolant level falls, a warning shows, or there is a puddle or a sweet smell",
+            "source": "report",
+            "option": "coolant_loss",
+            "probabilities": {
+              "not_stated": 0.02,
+              "overheat_idle": 0.0,
+              "white_smoke": 0.0,
+              "coolant_loss": 0.98,
+              "overheat_road": 0.0
+            },
+            "confidence": 0.97,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_co_visible_leak",
+            "question": "Does a pressure test show a visible coolant leak, such as a wet hose, a crust at a clip, or a drip?",
+            "answer_text": "no external leak, holds pressure",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 1.0,
+              "not_sure": 0.0,
+              "yes": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_co_combustion_test",
+            "question": "Does a combustion leak test (block tester) show exhaust gas in the coolant?",
+            "answer_text": "block tester went yellow in 30 seconds",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "yes": 1.0,
+              "no": 0.0,
+              "not_sure": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "bmw_brake_shudder",
+        "variant": "fan-out on",
+        "expected": "warped_discs",
+        "final": "warped_discs",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 1,
+        "final_score": 0.9590826166275737,
+        "user_answers": 1,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "warped_discs",
+        "independent_score": 1.0,
+        "independent_flag_step": 0,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 4,
+          "input_tokens": 15653,
+          "output_tokens": 2593,
+          "jev_cost": 0.000657426,
+          "opus5_cost": 0.078265,
+          "compute_seconds": 2.315735040000618,
+          "wait_seconds": 1.2780155829996147
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10396,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 0.9575606660000631,
+            "jev_cost": 0.000436632,
+            "opus5_cost": 0.05198
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2015,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.7477071660005095,
+            "jev_cost": 8.463000000000001e-05,
+            "opus5_cost": 0.010075
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 1139,
+            "output_tokens": 137,
+            "model": "jev-1.13.0",
+            "seconds": 0.29001229100049386,
+            "jev_cost": 4.7838e-05,
+            "opus5_cost": 0.005695
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2103,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.32045491699955164,
+            "jev_cost": 8.832600000000001e-05,
+            "opus5_cost": 0.010515
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_br_symptom",
+            "question": "What is the main brake complaint?",
+            "answer_text": "The pedal or the steering wheel shakes when the car brakes",
+            "source": "report",
+            "option": "vibration",
+            "probabilities": {
+              "not_stated": 0.0,
+              "noise": 0.0,
+              "soft_pedal": 0.0,
+              "vibration": 1.0,
+              "pull": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_br_runout",
+            "question": "What is the disc run-out, measured with a dial gauge at the hub?",
+            "answer_text": "0.11 mm runout front left, 0.09 front right",
+            "source": "user",
+            "option": "high",
+            "probabilities": {
+              "high": 1.0,
+              "unclear": 0.0,
+              "not_sure": 0.0,
+              "ok": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "zafira_pulls_left",
+        "variant": "fan-out on",
+        "expected": "sticking_caliper",
+        "final": "sticking_caliper",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 0,
+        "final_score": 0.9468137015711916,
+        "user_answers": 0,
+        "report_answers": 2,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "sticking_caliper",
+        "independent_score": 0.99,
+        "independent_flag_step": 0,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 2,
+          "input_tokens": 12405,
+          "output_tokens": 2177,
+          "jev_cost": 0.00052101,
+          "opus5_cost": 0.062025,
+          "compute_seconds": 1.723170167999342,
+          "wait_seconds": 1.0072688339996603
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10393,
+            "output_tokens": 1900,
+            "model": "jev-1.13.0",
+            "seconds": 1.0072688339996603,
+            "jev_cost": 0.000436506,
+            "opus5_cost": 0.051965
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2012,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.7159013339996818,
+            "jev_cost": 8.4504e-05,
+            "opus5_cost": 0.01006
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_br_symptom",
+            "question": "What is the main brake complaint?",
+            "answer_text": "The car pulls to one side, or one wheel smells hot",
+            "source": "report",
+            "option": "pull",
+            "probabilities": {
+              "vibration": 0.0,
+              "noise": 0.0,
+              "soft_pedal": 0.0,
+              "not_stated": 0.0,
+              "pull": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 0,
+            "node_id": "q_br_wheel_temp",
+            "question": "After a drive, is one wheel much hotter than the others, or does one wheel drag when turned by hand?",
+            "answer_text": "Yes, one wheel is hot or drags",
+            "source": "report",
+            "option": "yes",
+            "probabilities": {
+              "yes": 0.95,
+              "no": 0.0,
+              "not_stated": 0.05
+            },
+            "confidence": 0.92,
+            "outcome": "accepted"
+          }
+        ]
+      }
+    ],
+    "fan-out off": [
+      {
+        "id": "golf_slow_crank",
+        "variant": "fan-out off",
+        "expected": "flat_battery",
+        "final": "flat_battery",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 3,
+        "final_score": 0.9384230695671267,
+        "user_answers": 3,
+        "report_answers": 0,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "flat_battery",
+        "independent_score": 0.38,
+        "independent_flag_step": null,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 8,
+          "input_tokens": 21097,
+          "output_tokens": 3193,
+          "jev_cost": 0.0008860739999999999,
+          "opus5_cost": 0.105485,
+          "compute_seconds": 3.891128083001604,
+          "wait_seconds": 2.149690041001122
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10410,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 0.9943456660002994,
+            "jev_cost": 0.00043722000000000005,
+            "opus5_cost": 0.05205
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2029,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.7369542920005188,
+            "jev_cost": 8.521800000000001e-05,
+            "opus5_cost": 0.010145
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 700,
+            "output_tokens": 69,
+            "model": "jev-1.13.0",
+            "seconds": 0.27825741700053186,
+            "jev_cost": 2.9400000000000003e-05,
+            "opus5_cost": 0.0035
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2128,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.3731651670004794,
+            "jev_cost": 8.9376e-05,
+            "opus5_cost": 0.01064
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 679,
+            "output_tokens": 70,
+            "model": "jev-1.13.0",
+            "seconds": 0.30735804199957784,
+            "jev_cost": 2.8518e-05,
+            "opus5_cost": 0.003395
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2210,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.363124708000214,
+            "jev_cost": 9.282000000000001e-05,
+            "opus5_cost": 0.01105
+          },
+          {
+            "step": 3,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 655,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.41905450000012934,
+            "jev_cost": 2.7510000000000003e-05,
+            "opus5_cost": 0.003275
+          },
+          {
+            "step": 3,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2286,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.41886829099985334,
+            "jev_cost": 9.6012e-05,
+            "opus5_cost": 0.01143
+          }
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "cranks over slow like it's struggling, then gives up",
+            "source": "user",
+            "option": "slow_crank",
+            "probabilities": {
+              "nothing": 0.0,
+              "normal_crank": 0.0,
+              "unclear": 0.0,
+              "slow_crank": 1.0,
+              "not_sure": 0.0,
+              "click_only": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_voltage",
+            "question": "What is the battery voltage at rest, with the engine off?",
+            "answer_text": "11.9V at rest",
+            "source": "user",
+            "option": "below_12_2",
+            "probabilities": {
+              "above_12_4": 0.0,
+              "mid": 0.0,
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "below_12_2": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 3,
+            "node_id": "q_ns_load_test",
+            "question": "After a full charge, does the battery pass a load or conductance test?",
+            "answer_text": "charged it overnight, passes the load test fine. battery's 3 yrs old",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "yes": 1.0,
+              "no": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "clio_single_click",
+        "variant": "fan-out off",
+        "expected": "starter_motor",
+        "final": "starter_motor",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9200056122346717,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "starter_motor",
+        "independent_score": 0.99,
+        "independent_flag_step": 1,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 17971,
+          "output_tokens": 2821,
+          "jev_cost": 0.0007547820000000001,
+          "opus5_cost": 0.089855,
+          "compute_seconds": 3.1387182080006824,
+          "wait_seconds": 1.7674548740005775
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10397,
+            "output_tokens": 1903,
+            "model": "jev-1.13.0",
+            "seconds": 0.9926239160004116,
+            "jev_cost": 0.000436674,
+            "opus5_cost": 0.051985
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2016,
+            "output_tokens": 274,
+            "model": "jev-1.13.0",
+            "seconds": 0.7581877090005946,
+            "jev_cost": 8.4672e-05,
+            "opus5_cost": 0.01008
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 636,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.30930987499959883,
+            "jev_cost": 2.6712000000000004e-05,
+            "opus5_cost": 0.00318
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2085,
+            "output_tokens": 274,
+            "model": "jev-1.13.0",
+            "seconds": 0.4624100000000908,
+            "jev_cost": 8.757e-05,
+            "opus5_cost": 0.010425
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 659,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.3124209580000752,
+            "jev_cost": 2.7678e-05,
+            "opus5_cost": 0.003295
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2178,
+            "output_tokens": 274,
+            "model": "jev-1.13.0",
+            "seconds": 0.30376574999991135,
+            "jev_cost": 9.1476e-05,
+            "opus5_cost": 0.01089
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "One click or rapid clicks, and the engine does not turn",
+            "source": "report",
+            "option": "click_only",
+            "probabilities": {
+              "not_stated": 0.0,
+              "slow_crank": 0.0,
+              "normal_crank": 0.0,
+              "click_only": 1.0,
+              "nothing": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ns_lights_dim",
+            "question": "Do the headlights go dim or out when the key turns to start?",
+            "answer_text": "headlights stay bright when you turn it, no dip at all",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "yes": 0.0,
+              "no": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_starter_voltage",
+            "question": "Is there more than 10 V at the starter solenoid terminal while the key is at start?",
+            "answer_text": "12.1 V at the solenoid terminal with the key held",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "no": 0.0,
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "yes": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "fiesta_cranks_no_fire",
+        "variant": "fan-out off",
+        "expected": "fuel_pump",
+        "final": "fuel_pump",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9408096831873826,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "fuel_pump",
+        "independent_score": 1.0,
+        "independent_flag_step": 2,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 17947,
+          "output_tokens": 2825,
+          "jev_cost": 0.000753774,
+          "opus5_cost": 0.08973500000000001,
+          "compute_seconds": 3.6569727510013763,
+          "wait_seconds": 2.2178200010012006
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10392,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 1.0214223330003733,
+            "jev_cost": 0.00043646400000000007,
+            "opus5_cost": 0.05196
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2011,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.7863467079996553,
+            "jev_cost": 8.4462e-05,
+            "opus5_cost": 0.010055
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 639,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.30149816700031806,
+            "jev_cost": 2.6838e-05,
+            "opus5_cost": 0.003195
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2088,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.30550883400064777,
+            "jev_cost": 8.769600000000001e-05,
+            "opus5_cost": 0.01044
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 645,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.8908888340001795,
+            "jev_cost": 2.7090000000000003e-05,
+            "opus5_cost": 0.003225
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2172,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.35130787500020233,
+            "jev_cost": 9.1224e-05,
+            "opus5_cost": 0.01086
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "The engine turns at normal speed but does not fire",
+            "source": "report",
+            "option": "normal_crank",
+            "probabilities": {
+              "click_only": 0.0,
+              "nothing": 0.0,
+              "not_stated": 0.0,
+              "normal_crank": 1.0,
+              "slow_crank": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ns_immobiliser",
+            "question": "Is the immobiliser, key or security light on or flashing while the engine cranks?",
+            "answer_text": "no immobiliser light, key symbol goes out",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 1.0,
+              "not_sure": 0.0,
+              "yes": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 0.99,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_fuel_pump_hum",
+            "question": "Does the fuel pump hum for approximately 2 seconds when the ignition turns on?",
+            "answer_text": "no prime noise from the tank at all, 0 bar on the rail gauge",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "not_sure": 0.0,
+              "yes": 0.0,
+              "unclear": 0.0,
+              "no": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "corolla_dead_silent",
+        "variant": "fan-out off",
+        "expected": "battery_terminals",
+        "final": "battery_terminals",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9437684869876461,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "battery_terminals",
+        "independent_score": 1.0,
+        "independent_flag_step": 2,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 17966,
+          "output_tokens": 2821,
+          "jev_cost": 0.0007545720000000001,
+          "opus5_cost": 0.08983,
+          "compute_seconds": 2.987510875001135,
+          "wait_seconds": 1.6583862080015024
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10403,
+            "output_tokens": 1900,
+            "model": "jev-1.13.0",
+            "seconds": 0.994895250000809,
+            "jev_cost": 0.000436926,
+            "opus5_cost": 0.052015
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2022,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.7536369999997987,
+            "jev_cost": 8.4924e-05,
+            "opus5_cost": 0.01011
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 637,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.2836094169997523,
+            "jev_cost": 2.6754e-05,
+            "opus5_cost": 0.003185
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2086,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.3534737910003969,
+            "jev_cost": 8.761200000000001e-05,
+            "opus5_cost": 0.01043
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 652,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.2918782500000816,
+            "jev_cost": 2.7384e-05,
+            "opus5_cost": 0.00326
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2166,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.31001716700029647,
+            "jev_cost": 9.097200000000001e-05,
+            "opus5_cost": 0.01083
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "No sound and no movement at all",
+            "source": "report",
+            "option": "nothing",
+            "probabilities": {
+              "slow_crank": 0.0,
+              "not_stated": 0.0,
+              "normal_crank": 0.0,
+              "click_only": 0.0,
+              "nothing": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ns_dash_lights",
+            "question": "Do the dashboard lights come on when the ignition is on?",
+            "answer_text": "no dash lights, nothing",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "yes": 0.0,
+              "no": 1.0,
+              "not_sure": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_terminals",
+            "question": "Are the battery terminals or the earth strap corroded, loose or hot to touch?",
+            "answer_text": "positive clamp is loose and there's green fur all over it",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "yes": 1.0,
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "no": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "passat_funny_mornings",
+        "variant": "fan-out off",
+        "expected": "battery_end_of_life",
+        "final": "battery_end_of_life",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 3,
+        "final_score": 0.9587025078840664,
+        "user_answers": 3,
+        "report_answers": 0,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "battery_end_of_life",
+        "independent_score": 1.0,
+        "independent_flag_step": 3,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 8,
+          "input_tokens": 21078,
+          "output_tokens": 3190,
+          "jev_cost": 0.0008852760000000002,
+          "opus5_cost": 0.10539000000000001,
+          "compute_seconds": 4.436246708999533,
+          "wait_seconds": 2.399556709000535
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10409,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 1.1121874579994255,
+            "jev_cost": 0.00043717800000000003,
+            "opus5_cost": 0.052045
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2028,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 1.4018780420001349,
+            "jev_cost": 8.5176e-05,
+            "opus5_cost": 0.01014
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 698,
+            "output_tokens": 69,
+            "model": "jev-1.13.0",
+            "seconds": 0.32213879199935036,
+            "jev_cost": 2.9316000000000002e-05,
+            "opus5_cost": 0.00349
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2126,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.3347422500000903,
+            "jev_cost": 8.9292e-05,
+            "opus5_cost": 0.01063
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 675,
+            "output_tokens": 65,
+            "model": "jev-1.13.0",
+            "seconds": 0.36316166699998575,
+            "jev_cost": 2.835e-05,
+            "opus5_cost": 0.003375
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2205,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.33264108300045336,
+            "jev_cost": 9.261e-05,
+            "opus5_cost": 0.011025
+          },
+          {
+            "step": 3,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 655,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.269722666999769,
+            "jev_cost": 2.7510000000000003e-05,
+            "opus5_cost": 0.003275
+          },
+          {
+            "step": 3,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2282,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.2997747500003243,
+            "jev_cost": 9.584400000000001e-05,
+            "opus5_cost": 0.01141
+          }
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "node_id": "q_ns_key_turn",
+            "question": "What happens when the driver turns the key or presses the start button?",
+            "answer_text": "turns over slowly, got there on the third go",
+            "source": "user",
+            "option": "slow_crank",
+            "probabilities": {
+              "slow_crank": 1.0,
+              "not_sure": 0.0,
+              "click_only": 0.0,
+              "normal_crank": 0.0,
+              "nothing": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ns_voltage",
+            "question": "What is the battery voltage at rest, with the engine off?",
+            "answer_text": "12.3",
+            "source": "user",
+            "option": "mid",
+            "probabilities": {
+              "mid": 1.0,
+              "not_sure": 0.0,
+              "below_12_2": 0.0,
+              "above_12_4": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 3,
+            "node_id": "q_ns_load_test",
+            "question": "After a full charge, does the battery pass a load or conductance test?",
+            "answer_text": "charged it, still fails the load test. battery date stamp 2016",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 1.0,
+              "yes": 0.0,
+              "unclear": 0.0,
+              "not_sure": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "transit_battery_light",
+        "variant": "fan-out off",
+        "expected": "alternator_failure",
+        "final": "alternator_failure",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 3,
+        "final_score": 0.9588797848862283,
+        "user_answers": 3,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "alternator_failure",
+        "independent_score": 1.0,
+        "independent_flag_step": 0,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 8,
+          "input_tokens": 20958,
+          "output_tokens": 3157,
+          "jev_cost": 0.0008802359999999998,
+          "opus5_cost": 0.10479000000000001,
+          "compute_seconds": 3.7216432080012964,
+          "wait_seconds": 2.033593708000808
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10400,
+            "output_tokens": 1902,
+            "model": "jev-1.13.0",
+            "seconds": 1.0225836660001733,
+            "jev_cost": 0.0004368,
+            "opus5_cost": 0.052
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2019,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.761000375000549,
+            "jev_cost": 8.4798e-05,
+            "opus5_cost": 0.010095
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 672,
+            "output_tokens": 55,
+            "model": "jev-1.13.0",
+            "seconds": 0.31394666699998197,
+            "jev_cost": 2.8224e-05,
+            "opus5_cost": 0.00336
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2113,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.33756629199979216,
+            "jev_cost": 8.874600000000001e-05,
+            "opus5_cost": 0.010565
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 645,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.32290020800064667,
+            "jev_cost": 2.7090000000000003e-05,
+            "opus5_cost": 0.003225
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2189,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.30118395799945574,
+            "jev_cost": 9.1938e-05,
+            "opus5_cost": 0.010945
+          },
+          {
+            "step": 3,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 650,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.3505435420001959,
+            "jev_cost": 2.73e-05,
+            "opus5_cost": 0.00325
+          },
+          {
+            "step": 3,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2270,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.3119185000005018,
+            "jev_cost": 9.534e-05,
+            "opus5_cost": 0.01135
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ch_symptom",
+            "question": "What electrical problem does the driver notice first?",
+            "answer_text": "The battery or charge warning light comes on while the car drives",
+            "source": "report",
+            "option": "warning_light",
+            "probabilities": {
+              "squeal": 0.0,
+              "warning_light": 1.0,
+              "not_stated": 0.0,
+              "dim_lights": 0.0,
+              "flat_overnight": 0.0
+            },
+            "confidence": 0.99,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ch_running_voltage",
+            "question": "What is the battery voltage with the engine at 2000 rpm and the lights on?",
+            "answer_text": "12.4 at 2000 rpm with the lights on",
+            "source": "user",
+            "option": "low",
+            "probabilities": {
+              "high": 0.0,
+              "unclear": 0.0,
+              "not_sure": 0.0,
+              "normal": 0.0,
+              "low": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_ch_belt",
+            "question": "Is the auxiliary belt glazed, cracked or loose, or does it squeal under load?",
+            "answer_text": "belt is fine, good tension, no noise",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "unclear": 0.0,
+              "no": 1.0,
+              "yes": 0.0,
+              "not_sure": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 3,
+            "node_id": "q_ch_terminals",
+            "question": "Are the battery terminals, the alternator cable or the earth strap corroded or loose?",
+            "answer_text": "all connections clean, alternator B+ nut tight",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 1.0,
+              "not_sure": 0.0,
+              "yes": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "mini_flat_mondays",
+        "variant": "fan-out off",
+        "expected": "parasitic_drain",
+        "final": "parasitic_drain",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 1,
+        "final_score": 0.9074460356586916,
+        "user_answers": 1,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "parasitic_drain",
+        "independent_score": 1.0,
+        "independent_flag_step": 1,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 4,
+          "input_tokens": 15156,
+          "output_tokens": 2506,
+          "jev_cost": 0.000636552,
+          "opus5_cost": 0.07578,
+          "compute_seconds": 2.4165634170003614,
+          "wait_seconds": 1.3674784590002673
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10400,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 1.0483805000003485,
+            "jev_cost": 0.0004368,
+            "opus5_cost": 0.052
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2019,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.7512706659999822,
+            "jev_cost": 8.4798e-05,
+            "opus5_cost": 0.010095
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 644,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.3190979589999188,
+            "jev_cost": 2.7048000000000003e-05,
+            "opus5_cost": 0.00322
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2093,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.2978142920001119,
+            "jev_cost": 8.790600000000001e-05,
+            "opus5_cost": 0.010465
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_ch_symptom",
+            "question": "What electrical problem does the driver notice first?",
+            "answer_text": "The battery goes flat after the car stands overnight or for a few days",
+            "source": "report",
+            "option": "flat_overnight",
+            "probabilities": {
+              "warning_light": 0.0,
+              "squeal": 0.0,
+              "dim_lights": 0.0,
+              "not_stated": 0.03,
+              "flat_overnight": 0.97
+            },
+            "confidence": 0.97,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_ch_drain",
+            "question": "What current does the battery supply when the car is locked and asleep, after 30 minutes?",
+            "answer_text": "320 mA after an hour, never goes to sleep",
+            "source": "user",
+            "option": "high",
+            "probabilities": {
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "high": 1.0,
+              "normal": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "octavia_shudder_uphill",
+        "variant": "fan-out off",
+        "expected": "ignition_coil",
+        "final": "ignition_coil",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9763370014595206,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "ignition_coil",
+        "independent_score": 1.0,
+        "independent_flag_step": 1,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 18041,
+          "output_tokens": 2828,
+          "jev_cost": 0.0007577220000000001,
+          "opus5_cost": 0.09020500000000001,
+          "compute_seconds": 3.3533993339997323,
+          "wait_seconds": 1.894526749999386
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10402,
+            "output_tokens": 1905,
+            "model": "jev-1.13.0",
+            "seconds": 1.129627999999684,
+            "jev_cost": 0.000436884,
+            "opus5_cost": 0.05201
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2021,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.8632571660000394,
+            "jev_cost": 8.4882e-05,
+            "opus5_cost": 0.010105
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 659,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.32381208300012077,
+            "jev_cost": 2.7678e-05,
+            "opus5_cost": 0.003295
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2108,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.31176245900041977,
+            "jev_cost": 8.853600000000001e-05,
+            "opus5_cost": 0.01054
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 657,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.28385295899988705,
+            "jev_cost": 2.7594e-05,
+            "opus5_cost": 0.003285
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2194,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.4410866669995812,
+            "jev_cost": 9.214800000000001e-05,
+            "opus5_cost": 0.01097
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_rb_symptom",
+            "question": "How does the engine run badly?",
+            "answer_text": "It shakes or stumbles, worse under load, and the engine light can flash",
+            "source": "report",
+            "option": "misfire",
+            "probabilities": {
+              "white_smoke": 0.0,
+              "rough_idle": 0.0,
+              "not_stated": 0.02,
+              "no_power": 0.0,
+              "misfire": 0.98
+            },
+            "confidence": 0.96,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_rb_one_cylinder",
+            "question": "Is the misfire on one cylinder only, for example one code from P0301 to P0308?",
+            "answer_text": "P0302 only, cyl 2",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "unclear": 0.0,
+              "no": 0.0,
+              "not_sure": 0.0,
+              "yes": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_rb_coil_swap",
+            "question": "When the coil of the bad cylinder goes on a different cylinder, does the misfire move with it?",
+            "answer_text": "swapped coil 2 with 3, now it throws P0303",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "no": 0.01,
+              "yes": 0.99,
+              "unclear": 0.0,
+              "not_sure": 0.0
+            },
+            "confidence": 0.98,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "yaris_hunting_idle",
+        "variant": "fan-out off",
+        "expected": "vacuum_leak",
+        "final": "specialist",
+        "final_status": "specialist",
+        "correct": false,
+        "flag_step": null,
+        "score_step": null,
+        "final_score": null,
+        "user_answers": 4,
+        "report_answers": 1,
+        "confirms": 1,
+        "reasks": 1,
+        "missing_answers": [],
+        "independent_final": "vacuum_leak",
+        "independent_score": 0.83,
+        "independent_flag_step": null,
+        "independent_correct": true,
+        "lanes_agree": false,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 10,
+          "input_tokens": 24172,
+          "output_tokens": 3476,
+          "jev_cost": 0.001015224,
+          "opus5_cost": 0.12086,
+          "compute_seconds": 4.844060039999022,
+          "wait_seconds": 2.837740749999284
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10397,
+            "output_tokens": 1905,
+            "model": "jev-1.13.0",
+            "seconds": 1.076582416999372,
+            "jev_cost": 0.000436674,
+            "opus5_cost": 0.051985
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2016,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.7857726660004118,
+            "jev_cost": 8.4672e-05,
+            "opus5_cost": 0.01008
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 659,
+            "output_tokens": 50,
+            "model": "jev-1.13.0",
+            "seconds": 0.3176762499997494,
+            "jev_cost": 2.7678e-05,
+            "opus5_cost": 0.003295
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2108,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.7191109579998738,
+            "jev_cost": 8.853600000000001e-05,
+            "opus5_cost": 0.01054
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 661,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.3235610000001543,
+            "jev_cost": 2.7762e-05,
+            "opus5_cost": 0.003305
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2203,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.3399643750008181,
+            "jev_cost": 9.252600000000002e-05,
+            "opus5_cost": 0.011015
+          },
+          {
+            "step": 3,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 661,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.2863152909994824,
+            "jev_cost": 2.7762e-05,
+            "opus5_cost": 0.003305
+          },
+          {
+            "step": 3,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2298,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.3795793749995937,
+            "jev_cost": 9.651600000000001e-05,
+            "opus5_cost": 0.01149
+          },
+          {
+            "step": 4,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 665,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.29299408299993956,
+            "jev_cost": 2.7930000000000002e-05,
+            "opus5_cost": 0.003325
+          },
+          {
+            "step": 4,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2504,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.3225036249996265,
+            "jev_cost": 0.00010516800000000001,
+            "opus5_cost": 0.01252
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_rb_symptom",
+            "question": "How does the engine run badly?",
+            "answer_text": "The idle is rough or hunts, and the engine can stall at idle",
+            "source": "report",
+            "option": "rough_idle",
+            "probabilities": {
+              "misfire": 0.0,
+              "not_stated": 0.0,
+              "white_smoke": 0.0,
+              "no_power": 0.0,
+              "rough_idle": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_rb_idle_hiss",
+            "question": "Is there a hiss at idle, or does the idle change when carb cleaner is sprayed near the intake?",
+            "answer_text": "hmm, might be something, might not. aircon was on, hard to tell",
+            "source": "user",
+            "option": "not_sure",
+            "probabilities": {
+              "yes": 0.0,
+              "not_sure": 1.0,
+              "unclear": 0.0,
+              "no": 0.0
+            },
+            "confidence": 0.99,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_rb_egr",
+            "question": "Is the EGR valve stuck open or heavy with carbon, or is an EGR code from P0400 to P0409 stored?",
+            "answer_text": "EGR clean",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 0.61,
+              "not_sure": 0.01,
+              "yes": 0.19,
+              "unclear": 0.19
+            },
+            "confidence": 0.48,
+            "outcome": "reask"
+          },
+          {
+            "step": 3,
+            "node_id": "q_rb_egr",
+            "question": "Is the EGR valve stuck open or heavy with carbon, or is an EGR code from P0400 to P0409 stored?",
+            "answer_text": "EGR clean",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "unclear": 0.17,
+              "no": 0.69,
+              "yes": 0.13,
+              "not_sure": 0.01
+            },
+            "confidence": 0.59,
+            "outcome": "confirm"
+          },
+          {
+            "step": 3,
+            "node_id": "q_rb_egr",
+            "question": "Is the EGR valve stuck open or heavy with carbon, or is an EGR code from P0400 to P0409 stored?",
+            "answer_text": "EGR clean",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "chosen"
+          },
+          {
+            "step": 4,
+            "node_id": "q_rb_maf",
+            "question": "Does the engine run better with the MAF sensor unplugged, or is a code from P0100 to P0104 stored?",
+            "answer_text": "no MAF code, unplugging it makes it worse",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "not_sure": 0.0,
+              "no": 0.91,
+              "yes": 0.03,
+              "unclear": 0.06
+            },
+            "confidence": 0.88,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "berlingo_sluggish",
+        "variant": "fan-out off",
+        "expected": "fuel_filter",
+        "final": "fuel_filter",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9253483015763568,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "fuel_filter",
+        "independent_score": 0.83,
+        "independent_flag_step": null,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 17954,
+          "output_tokens": 2825,
+          "jev_cost": 0.0007540680000000001,
+          "opus5_cost": 0.08977000000000002,
+          "compute_seconds": 3.4592689139999493,
+          "wait_seconds": 2.118490749000557
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10399,
+            "output_tokens": 1905,
+            "model": "jev-1.13.0",
+            "seconds": 1.0437410410004304,
+            "jev_cost": 0.00043675800000000004,
+            "opus5_cost": 0.051995
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2018,
+            "output_tokens": 273,
+            "model": "jev-1.13.0",
+            "seconds": 0.7514432909993047,
+            "jev_cost": 8.4756e-05,
+            "opus5_cost": 0.01009
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 634,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.2985444160003681,
+            "jev_cost": 2.6628e-05,
+            "opus5_cost": 0.00317
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2083,
+            "output_tokens": 275,
+            "model": "jev-1.13.0",
+            "seconds": 0.7272770409999794,
+            "jev_cost": 8.748600000000001e-05,
+            "opus5_cost": 0.010415
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 653,
+            "output_tokens": 50,
+            "model": "jev-1.13.0",
+            "seconds": 0.29079045799971937,
+            "jev_cost": 2.7426e-05,
+            "opus5_cost": 0.003265
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2167,
+            "output_tokens": 274,
+            "model": "jev-1.13.0",
+            "seconds": 0.34747266700014734,
+            "jev_cost": 9.1014e-05,
+            "opus5_cost": 0.010835
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_rb_symptom",
+            "question": "How does the engine run badly?",
+            "answer_text": "A flat spot or a loss of power when it accelerates, but a smooth idle",
+            "source": "report",
+            "option": "no_power",
+            "probabilities": {
+              "white_smoke": 0.0,
+              "not_stated": 0.1,
+              "no_power": 0.9,
+              "rough_idle": 0.0,
+              "misfire": 0.0
+            },
+            "confidence": 0.87,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_rb_fuel_pressure",
+            "question": "What does the fuel pressure do at full load?",
+            "answer_text": "drops to 2.1 bar at full throttle, spec is 3.5",
+            "source": "user",
+            "option": "drops",
+            "probabilities": {
+              "drops": 1.0,
+              "not_sure": 0.0,
+              "unclear": 0.0,
+              "holds": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_rb_filter_age",
+            "question": "When did the fuel filter last get replaced?",
+            "answer_text": "no record of the filter ever being done, 190k on it",
+            "source": "user",
+            "option": "overdue",
+            "probabilities": {
+              "recent": 0.0,
+              "overdue": 1.0,
+              "not_sure": 0.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "c3_hot_in_traffic",
+        "variant": "fan-out off",
+        "expected": "radiator_fan",
+        "final": "radiator_fan",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 1,
+        "final_score": 0.9756437021572721,
+        "user_answers": 1,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "radiator_fan",
+        "independent_score": 1.0,
+        "independent_flag_step": 0,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 4,
+          "input_tokens": 15176,
+          "output_tokens": 2503,
+          "jev_cost": 0.000637392,
+          "opus5_cost": 0.07587999999999999,
+          "compute_seconds": 3.0093934580008863,
+          "wait_seconds": 1.91062141600014
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10403,
+            "output_tokens": 1903,
+            "model": "jev-1.13.0",
+            "seconds": 0.9783054160006941,
+            "jev_cost": 0.000436926,
+            "opus5_cost": 0.052015
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2022,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.7479747920006048,
+            "jev_cost": 8.4924e-05,
+            "opus5_cost": 0.01011
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 651,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.3507972500001415,
+            "jev_cost": 2.7342000000000004e-05,
+            "opus5_cost": 0.003255
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2100,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.9323159999994459,
+            "jev_cost": 8.82e-05,
+            "opus5_cost": 0.0105
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_co_symptom",
+            "question": "What cooling problem does the driver notice first?",
+            "answer_text": "The temperature climbs in traffic or at idle, and falls at speed",
+            "source": "report",
+            "option": "overheat_idle",
+            "probabilities": {
+              "overheat_road": 0.0,
+              "not_stated": 0.0,
+              "white_smoke": 0.0,
+              "coolant_loss": 0.0,
+              "overheat_idle": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_co_fan",
+            "question": "Does the radiator fan run when the engine is hot, or when the air conditioning is on?",
+            "answer_text": "fan doesn't cut in at 105 degrees, not with the aircon on either",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "no": 0.99,
+              "not_sure": 0.0,
+              "yes": 0.01,
+              "unclear": 0.0
+            },
+            "confidence": 0.99,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "megane_motorway_hot",
+        "variant": "fan-out off",
+        "expected": "thermostat_stuck",
+        "final": null,
+        "final_status": "reask",
+        "correct": false,
+        "flag_step": null,
+        "score_step": null,
+        "final_score": null,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 2,
+        "missing_answers": [],
+        "independent_final": "thermostat_stuck",
+        "independent_score": 0.71,
+        "independent_flag_step": null,
+        "independent_correct": true,
+        "lanes_agree": false,
+        "stuck": "q_co_top_hose",
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 17946,
+          "output_tokens": 2831,
+          "jev_cost": 0.0007537319999999999,
+          "opus5_cost": 0.08972999999999999,
+          "compute_seconds": 2.9381306669993137,
+          "wait_seconds": 1.6987321659989902
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10398,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 1.0539299579995713,
+            "jev_cost": 0.000436716,
+            "opus5_cost": 0.05199
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2017,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.6969002089999776,
+            "jev_cost": 8.4714e-05,
+            "opus5_cost": 0.010085
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 640,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.358282582999891,
+            "jev_cost": 2.6880000000000004e-05,
+            "opus5_cost": 0.0032
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2089,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.26692800000000716,
+            "jev_cost": 8.7738e-05,
+            "opus5_cost": 0.010445
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 640,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.2865196249995279,
+            "jev_cost": 2.6880000000000004e-05,
+            "opus5_cost": 0.0032
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2162,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.27557029200033867,
+            "jev_cost": 9.080400000000001e-05,
+            "opus5_cost": 0.01081
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_co_symptom",
+            "question": "What cooling problem does the driver notice first?",
+            "answer_text": "The temperature gauge climbs on the open road or soon after start",
+            "source": "report",
+            "option": "overheat_road",
+            "probabilities": {
+              "overheat_idle": 0.0,
+              "overheat_road": 1.0,
+              "not_stated": 0.0,
+              "coolant_loss": 0.0,
+              "white_smoke": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_co_top_hose",
+            "question": "With the engine hot, is the top radiator hose hot too?",
+            "answer_text": "sort of warm? had gloves on, hard to say",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "unclear": 0.04,
+              "not_sure": 0.39,
+              "yes": 0.0,
+              "no": 0.57
+            },
+            "confidence": 0.42,
+            "outcome": "reask"
+          },
+          {
+            "step": 2,
+            "node_id": "q_co_top_hose",
+            "question": "With the engine hot, is the top radiator hose hot too?",
+            "answer_text": "sort of warm? had gloves on, hard to say",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "unclear": 0.04,
+              "not_sure": 0.36,
+              "yes": 0.0,
+              "no": 0.6
+            },
+            "confidence": 0.47,
+            "outcome": "reask"
+          }
+        ]
+      },
+      {
+        "id": "astra_sweet_smell",
+        "variant": "fan-out off",
+        "expected": "head_gasket",
+        "final": "head_gasket",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 2,
+        "final_score": 0.9038414161504119,
+        "user_answers": 2,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "head_gasket",
+        "independent_score": 1.0,
+        "independent_flag_step": 2,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 6,
+          "input_tokens": 17950,
+          "output_tokens": 2833,
+          "jev_cost": 0.0007539000000000001,
+          "opus5_cost": 0.08974999999999998,
+          "compute_seconds": 3.1018996679995325,
+          "wait_seconds": 1.655236167000112
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10399,
+            "output_tokens": 1906,
+            "model": "jev-1.13.0",
+            "seconds": 0.9679790000000139,
+            "jev_cost": 0.00043675800000000004,
+            "opus5_cost": 0.051995
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2018,
+            "output_tokens": 279,
+            "model": "jev-1.13.0",
+            "seconds": 0.7711465840002347,
+            "jev_cost": 8.4756e-05,
+            "opus5_cost": 0.01009
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 643,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.30335508299958747,
+            "jev_cost": 2.7006e-05,
+            "opus5_cost": 0.003215
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2092,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.3121317089999138,
+            "jev_cost": 8.7864e-05,
+            "opus5_cost": 0.01046
+          },
+          {
+            "step": 2,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 637,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.37216183399959846,
+            "jev_cost": 2.6754e-05,
+            "opus5_cost": 0.003185
+          },
+          {
+            "step": 2,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2161,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.37512545800018415,
+            "jev_cost": 9.0762e-05,
+            "opus5_cost": 0.010805
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_co_symptom",
+            "question": "What cooling problem does the driver notice first?",
+            "answer_text": "The coolant level falls, a warning shows, or there is a puddle or a sweet smell",
+            "source": "report",
+            "option": "coolant_loss",
+            "probabilities": {
+              "coolant_loss": 0.97,
+              "white_smoke": 0.0,
+              "not_stated": 0.03,
+              "overheat_road": 0.0,
+              "overheat_idle": 0.0
+            },
+            "confidence": 0.96,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_co_visible_leak",
+            "question": "Does a pressure test show a visible coolant leak, such as a wet hose, a crust at a clip, or a drip?",
+            "answer_text": "no external leak, holds pressure",
+            "source": "user",
+            "option": "no",
+            "probabilities": {
+              "unclear": 0.0,
+              "yes": 0.0,
+              "not_sure": 0.0,
+              "no": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 2,
+            "node_id": "q_co_combustion_test",
+            "question": "Does a combustion leak test (block tester) show exhaust gas in the coolant?",
+            "answer_text": "block tester went yellow in 30 seconds",
+            "source": "user",
+            "option": "yes",
+            "probabilities": {
+              "not_sure": 0.0,
+              "no": 0.0,
+              "yes": 1.0,
+              "unclear": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "bmw_brake_shudder",
+        "variant": "fan-out off",
+        "expected": "warped_discs",
+        "final": "warped_discs",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 1,
+        "final_score": 0.9590826166275737,
+        "user_answers": 1,
+        "report_answers": 1,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "warped_discs",
+        "independent_score": 1.0,
+        "independent_flag_step": 0,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 4,
+          "input_tokens": 15168,
+          "output_tokens": 2504,
+          "jev_cost": 0.000637056,
+          "opus5_cost": 0.07583999999999999,
+          "compute_seconds": 2.3588088319993403,
+          "wait_seconds": 1.3407806659997732
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10396,
+            "output_tokens": 1904,
+            "model": "jev-1.13.0",
+            "seconds": 0.966280665999875,
+            "jev_cost": 0.000436632,
+            "opus5_cost": 0.05198
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2015,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.6875559159998375,
+            "jev_cost": 8.463000000000001e-05,
+            "opus5_cost": 0.010075
+          },
+          {
+            "step": 1,
+            "lane": "flowchart",
+            "kind": "B",
+            "input_tokens": 654,
+            "output_tokens": 48,
+            "model": "jev-1.13.0",
+            "seconds": 0.37449999999989814,
+            "jev_cost": 2.7468e-05,
+            "opus5_cost": 0.00327
+          },
+          {
+            "step": 1,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2103,
+            "output_tokens": 276,
+            "model": "jev-1.13.0",
+            "seconds": 0.3304722499997297,
+            "jev_cost": 8.832600000000001e-05,
+            "opus5_cost": 0.010515
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_br_symptom",
+            "question": "What is the main brake complaint?",
+            "answer_text": "The pedal or the steering wheel shakes when the car brakes",
+            "source": "report",
+            "option": "vibration",
+            "probabilities": {
+              "noise": 0.0,
+              "pull": 0.0,
+              "soft_pedal": 0.0,
+              "vibration": 1.0,
+              "not_stated": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 1,
+            "node_id": "q_br_runout",
+            "question": "What is the disc run-out, measured with a dial gauge at the hub?",
+            "answer_text": "0.11 mm runout front left, 0.09 front right",
+            "source": "user",
+            "option": "high",
+            "probabilities": {
+              "ok": 0.0,
+              "unclear": 0.0,
+              "not_sure": 0.0,
+              "high": 1.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          }
+        ]
+      },
+      {
+        "id": "zafira_pulls_left",
+        "variant": "fan-out off",
+        "expected": "sticking_caliper",
+        "final": "sticking_caliper",
+        "final_status": "diagnosed",
+        "correct": true,
+        "flag_step": null,
+        "score_step": 0,
+        "final_score": 0.9503902113808383,
+        "user_answers": 0,
+        "report_answers": 2,
+        "confirms": 0,
+        "reasks": 0,
+        "missing_answers": [],
+        "independent_final": "sticking_caliper",
+        "independent_score": 0.99,
+        "independent_flag_step": 0,
+        "independent_correct": true,
+        "lanes_agree": true,
+        "stuck": null,
+        "error": null,
+        "totals": {
+          "requests": 2,
+          "input_tokens": 12405,
+          "output_tokens": 2177,
+          "jev_cost": 0.00052101,
+          "opus5_cost": 0.062025,
+          "compute_seconds": 1.878215208000256,
+          "wait_seconds": 1.120720375000019
+        },
+        "rows": [
+          {
+            "step": 0,
+            "lane": "flowchart",
+            "kind": "A",
+            "input_tokens": 10393,
+            "output_tokens": 1900,
+            "model": "jev-1.13.0",
+            "seconds": 1.120720375000019,
+            "jev_cost": 0.000436506,
+            "opus5_cost": 0.051965
+          },
+          {
+            "step": 0,
+            "lane": "independent",
+            "kind": "C",
+            "input_tokens": 2012,
+            "output_tokens": 277,
+            "model": "jev-1.13.0",
+            "seconds": 0.7574948330002371,
+            "jev_cost": 8.4504e-05,
+            "opus5_cost": 0.01006
+          }
+        ],
+        "steps": [
+          {
+            "step": 0,
+            "node_id": "q_br_symptom",
+            "question": "What is the main brake complaint?",
+            "answer_text": "The car pulls to one side, or one wheel smells hot",
+            "source": "report",
+            "option": "pull",
+            "probabilities": {
+              "vibration": 0.0,
+              "pull": 1.0,
+              "soft_pedal": 0.0,
+              "noise": 0.0,
+              "not_stated": 0.0
+            },
+            "confidence": 1.0,
+            "outcome": "accepted"
+          },
+          {
+            "step": 0,
+            "node_id": "q_br_wheel_temp",
+            "question": "After a drive, is one wheel much hotter than the others, or does one wheel drag when turned by hand?",
+            "answer_text": "Yes, one wheel is hot or drags",
+            "source": "report",
+            "option": "yes",
+            "probabilities": {
+              "yes": 0.96,
+              "not_stated": 0.04,
+              "no": 0.0
+            },
+            "confidence": 0.93,
+            "outcome": "accepted"
+          }
+        ]
+      }
+    ]
+  }
+}
